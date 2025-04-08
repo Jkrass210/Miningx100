@@ -1,0 +1,88 @@
+.drop-bown-catalog {
+  position: relative;
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--text-accent-default);
+  }
+  &__box {
+    padding: 24px;
+    border-radius: 8px;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -56px;
+    box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.1);
+    background: var(--background-normal);
+    .title {
+      margin-bottom: 24px;
+      white-space: nowrap;
+      display: flex;
+      gap: 6px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--text-neutral-header);
+      span {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        color: var(--text-neutral-light);
+      }
+    }
+    .catalog-wrapp {
+      display: flex;
+    }
+    .catalog-box {
+      min-width: 147px;
+      padding: 0 24px;
+      border-right: 1px solid var(--surface-default);
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border: none;
+      }
+      h4 {
+        margin-bottom: 12px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.02em;
+        color: var(--text-neutral-light);
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        li {
+          padding: 4px 0;
+        }
+        a {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 143%;
+          color: var(--text-neutral-button-default-dark);
+          transition: color 0.4s ease-in-out;
+          &:focus-visible,&:focus {
+            outline: none;
+          }
+          &:focus-visible,&:hover,&:active {
+            color: var(--text-accent-default);
+          }
+        }
+      }
+    }
+  }
+}

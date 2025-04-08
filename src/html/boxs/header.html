@@ -1,0 +1,78 @@
+<header class="header fixed" id="header">
+  <div class="header__container container2">
+    <div class="header__content">
+      <div class="header__left">
+        <div class="header__box-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="header__box-search">
+          @@include('../components/search1.html')
+        </div>
+      </div>
+      <div class="header__centre">
+        <div class="header__hidden-logo"></div>
+        @@include('../components/drop-bown-catalog.html')
+        <nav class="nav1">
+          <ul class="nav1__list list-reset">
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+            <li>
+              <a href="#">Вопросы & Ответы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="header__btn-info-group">
+          <a href="#" class="link like">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#like"></use>
+            </svg>
+            <span class="counter">
+              23
+            </span>
+          </a>
+          <a href="#" class="link comparison">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#comparison"></use>
+            </svg>
+            <span class="counter">
+              23
+            </span>
+          </a>
+        </div>
+        <div class="header__phone-box">
+          <div class="signal">
+            <span></span>
+          </div>
+          <a href="tel:89253569991">8 (925) 356-99-91</a>
+        </div>
+        <div class="header__network-group">
+          <a href="#" class="link tg">
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+              <use xlink:href="img/sprite.svg#tg"></use>
+            </svg>
+          </a>
+          <a href="#" class="link wu">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#wu"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__hidden-mob">
+          <button class="burger btn-reset">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

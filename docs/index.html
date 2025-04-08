@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список страниц - MINING100</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/fslightbox-min.js" defer></script>
+  <script type="module" src="js/main-min.js"></script>
+</head>
+
+  <style>
+    html,
+    body,
+    .page-wrapper {
+      height: 100%;
+    }
+    .page-wrapper {
+      overflow: auto;
+    }
+    .pages-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 100px 40px;
+    }
+    .pages-intro__logo {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: max-content;
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 32px;
+      color: #ffe100;
+      border: 2px solid #1a84cf;
+    }
+    .pages-intro__list {
+      margin: 0;
+      padding: 60px 0 0 20px;
+      list-style-type: none;
+      border-left: 2px solid #1a84cf;
+    }
+    .pages-intro__list > li {
+      position: relative;
+    }
+    .pages-intro__list > li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    .pages-intro__list > li:before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 2px);
+      right: calc(100% + 10px);
+      transform: translateY(-50%);
+      display: block;
+      width: 10px;
+      height: 2px;
+      background: #1a84cf;
+    }
+    .pages-intro__list > li > a {
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 600;
+      color: aqua;
+    }
+    .pages-intro__list > li > a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="pages-intro">
+      <div class="pages-intro__logo">
+        <img src="img/logo/logo.svg">
+      </div>
+      <ul class="pages-intro__list">
+        <li>
+          <a href="main.html">Главная</a>
+        </li>
+        <li>
+          <a href="#">...</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
