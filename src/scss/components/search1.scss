@@ -7,9 +7,19 @@
     display: none;
   }
   &__form {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__close {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: z-index 0.4s ease-in-out, visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
   }
   &__label {
     min-width: 240px;
@@ -17,12 +27,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 12px 8px 34px;
+    padding: 8px 34px;
+    border: 1px solid var(--background-normal);
     border-radius: 100px;
     background-color: var(--surface-light);
     background-image: url("../img/search1/search1.svg");
     background-repeat: no-repeat;
     background-position: 12px center;
+    transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    &:has(.search1__input:hover) {
+      border-color: var(--stroke-accent-dark);
+    }
+    &:has(.search1__input:focus) {
+      border-color: var(--stroke-accent-dark);
+      box-shadow: 0 0 0 2px var(--blue-300);
+      & + .search1__close {
+        z-index: 2;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
   &__input {
     width: 100%;
@@ -34,8 +58,55 @@
     font-size: 14px;
     line-height: 143%;
     color: var(--text-neutral-button-default-dark);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
   }
   &__submit {
     display: none;
+  }
+}
+
+@media (max-width: 1500px) {
+  .search1 {
+    padding: 10px 0 10px 12px;
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-neutral-button-default-dark);
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover,&:active {
+        color: var(--stroke-accent-dark);
+      }
+      &.active + .search1__form-wrapp {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+    &__form-wrapp {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--surface-darker-400);
+      transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+    }
+    &__label {
+      min-width: 320px;
+      border-radius: 12px;
+      padding: 14px 40px;
+      background-color: var(--background-normal);
+    }
   }
 }

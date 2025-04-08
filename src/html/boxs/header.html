@@ -12,40 +12,51 @@
         </div>
       </div>
       <div class="header__centre">
-        <div class="header__hidden-logo"></div>
+        <div class="header__hidden-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
         @@include('../components/drop-bown-catalog.html')
-        <nav class="nav1">
-          <ul class="nav1__list list-reset">
-            <li>
-              <a href="#">О компании</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-            <li>
-              <a href="#">Вопросы & Ответы</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header__nav-wrapp">
+          <nav class="nav1">
+            <ul class="nav1__list list-reset">
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+              <li>
+                <a href="#">Вопросы & Ответы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="header__right">
-        <div class="header__btn-info-group">
-          <a href="#" class="link like">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <use xlink:href="img/sprite.svg#like"></use>
-            </svg>
-            <span class="counter">
-              23
-            </span>
-          </a>
-          <a href="#" class="link comparison">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <use xlink:href="img/sprite.svg#comparison"></use>
-            </svg>
-            <span class="counter">
-              23
-            </span>
-          </a>
+        <div class="header__btn-info-group-wrapp">
+          <div class="header__btn-info-group">
+            <a href="#" class="link like">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#like"></use>
+              </svg>
+              <span class="counter">
+                23
+              </span>
+            </a>
+            <a href="#" class="link comparison">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#comparison"></use>
+              </svg>
+              <span class="counter">
+                23
+              </span>
+            </a>
+          </div>
         </div>
         <div class="header__phone-box">
           <div class="signal">
@@ -66,11 +77,54 @@
           </a>
         </div>
         <div class="header__hidden-mob">
-          <button class="burger btn-reset">
+          <button class="burger btn-reset" id="burger">
             <span></span>
             <span></span>
             <span></span>
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__burger-menu burger-menu" id-for-open="burger">
+    <div class="burger-menu__top-line">
+      <div class="burger-menu__container container2">
+        <div class="burger-menu__top-content">
+          <div class="header__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <button class="burger-menu__close close btn-reset">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#burgerClose"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="burger-menu__content">
+      <div class="burger-menu__container container">
+        <div class="burger-menu__box-group">
+          <div class="burger-menu__top-box">
+            <div class="burger-menu__box-search">
+              @@include('../components/search1.html')
+            </div>
+            <div class="burger-menu__box-nav1"></div>
+          </div>
+          <div class="burger-menu__bottom-box">
+            <ul class="burger-menu__list-link list-reset">
+              <li>
+                <a href="#">Telegram</a>
+              </li>
+              <li>
+                <a href="#">WhatsApp</a>
+              </li>
+              <li>
+                <a href="tel:+79253569991">8 (925) 356-99-91</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
