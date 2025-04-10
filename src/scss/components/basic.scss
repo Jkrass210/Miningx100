@@ -50,6 +50,10 @@ body.loading footer {
   padding-bottom: 140px;
 }
 
+.min-section {
+	padding-bottom: 96px;
+}
+
 .overlay {
   position: fixed;
   z-index: 3;
@@ -248,7 +252,16 @@ body.loading footer {
 	--component-positive-secondary-default-800: var(--green-200-800);
 }
 
+@media (max-width: 1030px) {
+	.min-section {
+		padding-bottom: 100px;
+	}
+}
+
 @media (max-width: 767px) {
+	.section {
+		padding-bottom: 96px;
+	}
   .container {
     padding: 0 24px;
   }

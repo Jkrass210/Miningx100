@@ -1,0 +1,103 @@
+.box-factoty {
+  &__content {
+    overflow: hidden;
+    position: relative;
+    padding: 32px;
+    border: 1px solid var(--stroke-neutral-lighter);
+    border-radius: 20px;
+    background-color: var(--surface-lighter);
+  }
+  &__left {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 552px;
+    min-height: 256px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--text-neutral-darker);
+  }
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: var(--text-neutral-dark);
+  }
+  &__box-btn {
+    display: flex;
+  }
+  &__btn {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 14px 12px;
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 133%;
+    color: var(--text-neutral-lightest);
+    background-color: var(--component-accent-primary-default);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--component-accent-primary-hover);
+    }
+  }
+  &__img {
+    position: absolute;
+    inset: 0 0 0 auto;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .box-factoty {
+    &__content {
+      padding: 24px;
+    }
+    &__left {
+      min-height: 210px;
+    }
+    &__btn {
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .box-factoty {
+    &__left {
+      max-width: 278px;
+    }
+    &__top {
+      gap: 8px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__desc {
+      font-size: 13px;
+    }
+  }
+}

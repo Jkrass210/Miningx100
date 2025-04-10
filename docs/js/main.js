@@ -2,6 +2,11 @@ import { handleResize } from './module/handleResize.js';
 import { toggleDropdown } from './module/toggleDropdown.js';
 import { toggleSearch } from './module/toggleSearch.js';
 import { toggleBurger } from './module/toggleBurger.js';
+import { responsiveSwiper } from './module/responsiveSwiper.js';
+import { testimonials } from './module/testimonials.js';
+import { animationReview } from './module/animationReview.js';
+import { initToggleTabs } from './module/initToggleTabs.js';
+
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -47,4 +52,26 @@ if (document.querySelectorAll('.search1')) {
 if (document.querySelector('#burger')) {
   toggleBurger('burger', '.burger-menu');
 }
+
+if (document.querySelectorAll('.box-offers__box-products')){
+  responsiveSwiper('.box-offers', '.box-offers__box-products', '.box-offers__list');
+}
+
+if (document.querySelectorAll('.testimonial')) {
+  testimonials()
+}
+
+if (document.querySelector('.box-reviews')) {
+  animationReview()
+}
+
+if (document.querySelector('.box-questions__list-wrapp')) {
+  initToggleTabs({
+    wrapperSelector: '.box-questions__list-wrapp',
+    buttonSelector: '.question__btn',
+    contentSelector: '.question__box-answer',
+    activeClass: 'active'
+  })
+}
+
 

@@ -1,0 +1,72 @@
+.card3 {
+  padding: 16px;
+  border: 1px solid var(--stroke-neutral-lighter);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--surface-lighter);
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: var(--text-neutral-darker);
+  }
+  &__bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      .box-img {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        img {
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+          border-radius: 100%;
+        }
+      }
+      .box-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      span {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+        color: var(--text-warning-default);
+      }
+    }
+  }
+  &__name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--text-neutral-darker);
+  }
+  &__platform {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--text-neutral-default);
+  }
+}

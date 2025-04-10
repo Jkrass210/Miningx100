@@ -1,0 +1,16 @@
+.section-title-desc {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--text-neutral-dark);
+}
+
+@media (max-width: 767px) {
+  .section-title-desc {
+    font-size: 13px;
+    text-align: start;
+  }
+}
