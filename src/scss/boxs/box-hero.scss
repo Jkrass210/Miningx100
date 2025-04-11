@@ -1,0 +1,86 @@
+.box-hero {
+  padding-top: 156px;
+  &__content {
+    max-width: 670px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+  }
+  &__top-wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .marker-main {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 12px;
+    padding: 8px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 123%;
+    color: var(--text-accent-default);
+    backdrop-filter: blur(6px);
+    background-color: var(--component-accent-secondary-default-800);
+  }
+  &__title-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 117%;
+    text-align: center;
+    color: var(--text-neutral-header);
+    span:last-child {
+      color: var(--text-accent-default);
+    }
+  }
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--text-neutral-dark);
+  }
+  &__bottom-wrapp {
+    .search1 {
+      &__form {
+        gap: 8px;
+      }
+      &__label {
+        border: 2px solid var(--stroke-accent-dark);
+        border-radius: 12px;
+        padding: 14px 34px;
+        background-color: var(--background-normal);
+      }
+      &__submit {
+        border-radius: 12px;
+        padding: 14px;
+        display: flex;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 133%;
+        color: var(--text-neutral-lightest);
+        transition: background-color 0.4s ease-in-out;
+        background-color: var(--component-accent-primary-default);
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          background-color: var(--component-accent-primary-hover);
+        }
+      }
+    }
+  }
+}

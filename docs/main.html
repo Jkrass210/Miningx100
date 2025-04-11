@@ -15,6 +15,7 @@
     });
   </script>
   
+  <script src="js/cleave-min.js" defer></script>
   <script src="js/swiper-bundle.min.js" defer></script>
   <script src="js/fslightbox-min.js" defer></script>
   <script src="js/gsap-min.js" defer></script>
@@ -53,9 +54,10 @@
         </svg>
       </button>
       <button class="search1__submit btn-reset" type="submit">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
           <use xlink:href="img/sprite.svg#search2"></use>
-        </svg>
+        </svg>-->
+        <span>Найти</span>
       </button>
     </form>
   </div>
@@ -225,9 +227,10 @@
         </svg>
       </button>
       <button class="search1__submit btn-reset" type="submit">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
           <use xlink:href="img/sprite.svg#search2"></use>
-        </svg>
+        </svg>-->
+        <span>Найти</span>
       </button>
     </form>
   </div>
@@ -254,6 +257,65 @@
   </div>
 </header>
   <main class="main">
+    <section class="box-hero">
+  <div class="box-hero__background">
+    <div class="box-hero__container container">
+      <div class="box-hero__content">
+        <div class="box-hero__top-wrapp">
+          <div class="marker-main">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+              <use xlink:href="img/sprite.svg#markerMain"></use>
+            </svg>
+            <span>
+              Самая низкая цена
+            </span>
+          </div>
+          <h1 class="box-hero__title-main">
+            <span>Оригинальные ASIC</span>
+            <svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+              <use xlink:href="img/sprite.svg#curve"></use>
+            </svg>
+            <span>майнеры</span>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <use xlink:href="img/sprite.svg#crossOne"></use>
+            </svg>
+            <span>без посредников</span>
+          </h1>
+          <p class="box-hero__desc">
+            Мы поставляем оригинальные ASIC-майнеры напрямую от завода производителя, что обеспечивает лучшую цену!
+          </p>
+        </div>
+        <div class="box-hero__bottom-wrapp">
+          <div class="search1">
+  <button class="search1__btn btn-reset">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <use xlink:href="img/sprite.svg#search2"></use>
+    </svg>
+  </button>
+  <div class="search1__form-wrapp">
+    <form class="search1__form">
+      <label class="search1__label">
+        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+      </label>
+      <button class="search1__close btn-reset">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#closeSearch"></use>
+        </svg>
+      </button>
+      <button class="search1__submit btn-reset" type="submit">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+        <span>Найти</span>
+      </button>
+    </form>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <section class="box-advantages section">
   <div class="box-advantages__container container">
     <div class="box-advantages__content">
@@ -2036,6 +2098,35 @@
         <a href="" class="box-questions__btn-all btn-reset">
           Открыть полностью
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-order section">
+  <div class="box-order__container container">
+    <div class="box-order__content">
+      <div class="box-order__wrapp-info">
+        <h2 class="box-order__title section-title">
+          Оставьте заявку на бесплатную консультацию
+        </h2>
+        <div class="box-order__wrapp_form">
+          <form class="box-order__form">
+            <label class="box-order__label">
+              <input type="text" name="phone" placeholder="Номер телефона">
+            </label>
+            <button type="submit" class="box-order__btn disabled btn-reset">
+              <span>Отправить</span>
+            </button>
+          </form>
+          <p class="box-order__desc">
+            Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a>
+          </p>
+        </div>
+      </div>
+      <div class="box-order__shipped none">
+        <p class="section-title">
+          Мы скоро свяжемся с вами!
+        </p>
       </div>
     </div>
   </div>

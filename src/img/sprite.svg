@@ -86,4 +86,16 @@
   <symbol id="btnQuestion" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M5 8.75L10 13.75L15 8.75" stroke="#9D9CA4" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
+
+  <symbol id="markerMain" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.23417 2.66666C8.07587 1.84187 9.22863 1.33333 10.5002 1.33333C13.0775 1.33333 15.1668 3.42267 15.1668 5.99999C15.1668 7.27155 14.6583 8.42433 13.8335 9.26602M5.50016 8.66666L6.50016 7.99999V11.6667M5.50016 11.6667H7.50016M11.1668 9.99999C11.1668 12.5773 9.07749 14.6667 6.50016 14.6667C3.92283 14.6667 1.8335 12.5773 1.8335 9.99999C1.8335 7.42267 3.92283 5.33333 6.50016 5.33333C9.07749 5.33333 11.1668 7.42267 11.1668 9.99999Z" stroke="#4263F7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="curve" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M29.8332 9.33333L19.3417 19.8248C18.8136 20.3529 18.5496 20.6169 18.2452 20.7158C17.9774 20.8028 17.6889 20.8028 17.4211 20.7158C17.1167 20.6169 16.8527 20.3529 16.3247 19.8248L12.675 16.1752C12.147 15.6471 11.883 15.3831 11.5785 15.2842C11.3107 15.1972 11.0223 15.1972 10.7545 15.2842C10.45 15.3831 10.186 15.6471 9.65801 16.1752L3.1665 22.6667M29.8332 9.33333H20.4998M29.8332 9.33333V18.6667" stroke="#18172A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="crossOne" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22.6668 9.33334L9.3335 22.6667M9.3335 9.33334L22.6668 22.6667" stroke="#18172A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
 </svg>

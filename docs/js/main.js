@@ -6,6 +6,7 @@ import { responsiveSwiper } from './module/responsiveSwiper.js';
 import { testimonials } from './module/testimonials.js';
 import { animationReview } from './module/animationReview.js';
 import { initToggleTabs } from './module/initToggleTabs.js';
+import { setupFormValidation } from './module/setupFormValidation.js';
 
 
 
@@ -74,4 +75,9 @@ if (document.querySelector('.box-questions__list-wrapp')) {
   })
 }
 
+if (document.querySelectorAll('.box-order__form')) {
+  document.querySelectorAll(".box-order__form").forEach(form => {
+    setupFormValidation(form, ".box-order__btn");
+  });
+}
 
