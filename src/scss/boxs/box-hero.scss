@@ -1,8 +1,106 @@
 .box-hero {
+  position: relative;
+  overflow: hidden;
   padding-top: 156px;
+
+  .grid {
+    position: absolute;
+    top: 63px;
+    left: 0;
+    bottom: 140px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);  /* 21 колонка */
+    grid-template-rows: repeat(9, 1fr);      /* 9 строк */
+  }
+
+  .grid-cell {
+    border-right: 1px solid rgba(126, 153, 255, 0.14);
+    border-bottom: 1px solid rgba(126, 153, 255, 0.14);
+  }
+
+  .grid-cell.colored {
+    background-color: #3b82f6; /* Меняйте цвет тут */
+    opacity: 0.2;
+  }
+
+  .grid-line {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #3b82f6);
+    opacity: 0;
+    animation: drop 3s infinite;
+  }
+
+  &__background {
+    position: relative;
+    .background-semicircle {
+      position: absolute;
+      border-radius: 150% 150% 0 0;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%) scale(1);
+      transition: transform 0.2s ease-out;
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+  }
+  &__background-semicircle-1 {
+    background: linear-gradient(180deg, rgba(126, 153, 255, 0.14) 0%, rgba(126, 153, 255, 0) 100%);
+    backdrop-filter: blur(6px);
+    width: 54%;
+    z-index: -3;
+  }
+  &__background-semicircle-2 {
+    background:linear-gradient(180deg, rgba(126, 153, 255, 0.14) 0%, rgba(126, 153, 255, 0) 100%);
+    backdrop-filter: blur(6px);
+    width: 44%;
+    z-index: -2;
+  }
+  &__background-semicircle-3 {
+    background: linear-gradient(180deg, rgba(126, 153, 255, 0.14) 0%, rgba(126, 153, 255, 0) 100%);
+    backdrop-filter: blur(6px);
+    width: 34%;
+    z-index: -1;
+  }
+  &__container {
+    padding-bottom: 80px;
+
+    .floating-image {
+      position: absolute;
+      opacity: 0;
+      border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transform: rotate(var(--rotate));
+      pointer-events: none;
+      z-index: 5;
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+    }
+
+    .debug-area {
+      position: absolute;
+      top: 20%;
+      height: 60%;
+      width: 150px;
+      border: 1px dashed rgba(255,0,0,0.3);
+      z-index: 1;
+    }
+    .debug-area.left {
+        left: calc(50% - 300px - 150px);
+    }
+    .debug-area.right {
+        right: calc(50% - 300px - 150px);
+    }
+  }
   &__content {
     max-width: 670px;
     margin: 0 auto;
+    margin-bottom: 395px;
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -45,6 +143,7 @@
     }
   }
   &__desc {
+    max-width: 640px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -53,6 +152,8 @@
     color: var(--text-neutral-dark);
   }
   &__bottom-wrapp {
+    position: relative;
+    z-index: 1;
     .search1 {
       &__form {
         gap: 8px;
@@ -83,4 +184,61 @@
       }
     }
   }
+  &__swiper {
+    position: relative;
+    max-width: 680px;
+    .swiper-logo {
+      &__gradient {
+        position: absolute;
+        height: 100%;
+        width: 20px;
+        z-index: 2;
+        background-color: var(--neutral-0);
+        //filter: blur(8px);
+        backdrop-filter: blur(30px);
+        &.left {
+          left: 0;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 20px;
+            width: 124px;
+            height: 100%;
+            background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+          }
+        }
+        &.right {
+          right: 0;
+          top: 0;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            width: 124px;
+            height: 100%;
+            background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+          }
+        }
+      }
+    }
+  }
+  &__list {
+    .swiper-slide {
+      width: auto;
+      height: auto;
+      .box-slide {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@keyframes drop {
+  0% { top: -150px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
 }

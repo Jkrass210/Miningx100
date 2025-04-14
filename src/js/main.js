@@ -7,6 +7,8 @@ import { testimonials } from './module/testimonials.js';
 import { animationReview } from './module/animationReview.js';
 import { initToggleTabs } from './module/initToggleTabs.js';
 import { setupFormValidation } from './module/setupFormValidation.js';
+import { gridAnimation } from './module/gridAnimation.js';
+import { iconAnimation } from './module/iconAnimation.js';
 
 
 
@@ -80,4 +82,44 @@ if (document.querySelectorAll('.box-order__form')) {
     setupFormValidation(form, ".box-order__btn");
   });
 }
+
+if (document.querySelector('.swiper-logo')) {
+  const swiperLogo = new Swiper('.swiper-logo', {
+    loop: true,
+    allowTouchMove: false, // запрет прокрутки мышью/пальцем
+    autoplay: {
+      delay: 2000, // время между автопрокрутками (в мс)
+      disableOnInteraction: false, // не отключать после взаимодействия
+      pauseOnMouseEnter: true, // остановка при наведении мышью
+    },
+    speed: 800, // скорость анимации
+    slidesPerView: 6, // если слайды разной ширины, или можно задать число
+    spaceBetween: 24, // отступы между слайдами
+  });
+}
+
+if(document.querySelectorAll(".background-semicircle")) {
+  document.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = 1000; // максимум скролла, до которого увеличивается
+    const maxScale = 2; // максимальный масштаб
+  
+    let scale = 1 + (scrollTop / maxScroll) * (maxScale - 1);
+    if (scale > maxScale) scale = maxScale;
+  
+    const circles = document.querySelectorAll(".background-semicircle");
+    circles.forEach((el) => {
+      el.style.transform = `translate(-50%, 50%) scale(${scale})`;
+    });
+  });
+}
+
+if(document.getElementById('grid')) {
+  gridAnimation()
+}
+
+if(document.querySelectorAll('.debug-area')) {
+  iconAnimation()
+}
+
 
