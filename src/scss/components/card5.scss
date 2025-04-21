@@ -1,0 +1,44 @@
+.card5 {
+  border: 1px solid var(--stroke-neutral-lighter);
+  border-radius: 20px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-lighter);
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 129%;
+    text-align: center;
+    color: var(--text-accent-default);
+  }
+  &__desc {
+    max-width: 185px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--text-neutral-darker);
+  }
+}
+@media (max-width: 767px) {
+  .card5 {
+    padding: 24px;
+    min-height: 180px;
+    &__title {
+      font-size: 24px;
+      line-height: 125%;
+    }
+    &__desc {
+      font-size: 12px;
+      line-height: 133%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.page404 {
+  padding-top: 80px;
+  &__box {
+    max-width: 464px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &-img {
+      display: flex;
+    }
+  }
+  &__desc {
+    p {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: var(--text-neutral-dark);
+      a {
+        transition: color 0.4s ease-in-out;
+        color: var(--text-accent-default);
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          color: var(--text-neutral-dark);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .page404 {
+    &__box {
+      gap: 24px;
+    }
+    &__desc {
+      p {
+        text-align: start;
+      }
+    }
+  }
+}

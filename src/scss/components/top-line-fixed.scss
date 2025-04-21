@@ -1,0 +1,25 @@
+.top-line-fixed {
+  padding-top: 24px;
+  z-index: 3;
+  background-color: var(--background-normal);
+  &::after {
+    display: block;
+    content: "";
+    width: calc(100% - 96px);
+    max-width: 1708px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: var(--stroke-neutral-lighter);
+  }
+  &__content {
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-line-fixed {
+    &::after {
+      width: calc(100% - 48px);
+    }
+  }
+}

@@ -9,6 +9,13 @@ import { initToggleTabs } from './module/initToggleTabs.js';
 import { setupFormValidation } from './module/setupFormValidation.js';
 import { gridAnimation } from './module/gridAnimation.js';
 import { iconAnimation } from './module/iconAnimation.js';
+import { topLineFixed } from './module/topLineFixed.js';
+import { dropDown1 } from './module/dropDown1.js';
+import { catalogSticky } from './module/catalogSticky.js';
+import { initMobileSwiper } from './module/initMobileSwiper.js';
+import { initAnchorNavigation } from './module/initAnchorNavigation.js';
+import { initStickyAnchor } from './module/initStickyAnchor.js';
+
 
 
 
@@ -77,6 +84,15 @@ if (document.querySelector('.box-questions__list-wrapp')) {
   })
 }
 
+if (document.querySelectorAll('.drop-down-filter')) {
+  initToggleTabs({
+    wrapperSelector: '.drop-down-filter',
+    buttonSelector: '.drop-down-filter__btn',
+    contentSelector: '.drop-down-filter__list',
+    activeClass: 'active'
+  })
+}
+
 if (document.querySelectorAll('.box-order__form')) {
   document.querySelectorAll(".box-order__form").forEach(form => {
     setupFormValidation(form, ".box-order__btn");
@@ -118,8 +134,48 @@ if(document.getElementById('grid')) {
   gridAnimation()
 }
 
-if(document.querySelectorAll('.debug-area')) {
+if(document.querySelector('.box-hero')) {
   iconAnimation()
 }
+
+if(document.querySelector('.top-line-fixed')) {
+  topLineFixed()
+}
+
+if(document.querySelector('.drop-down1')) {
+  dropDown1()
+}
+
+if(document.querySelector('.section-catalog__aside') && document.querySelector('.catalog-top-line')){
+  catalogSticky();
+}
+
+if (document.querySelector(".box-top-line-catalog__btn-group .search1") && document.querySelector(".box-top-line-catalog__btn-group .left") && document.querySelector(".box-top-line-catalog__btn-group .hidden-mob")) {
+  const btn = document.querySelector(".box-top-line-catalog__btn-group .search1");
+  const topSection = document.querySelector(".box-top-line-catalog__btn-group .left");
+  const mobileHidden = document.querySelector(".box-top-line-catalog__btn-group .hidden-mob");
+  handleResize(mobileHidden, btn, topSection, 767)
+  window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 767));
+}
+
+if(document.querySelectorAll('.box-about-sales__swiper')){
+  initMobileSwiper('.box-about-sales__swiper')
+}
+
+if(document.querySelectorAll('.box-anchor')){
+  initAnchorNavigation(
+    '.box-anchor', 
+    '.box-questions-answers__list', 0
+  );
+
+  initStickyAnchor(
+    '.box-questions-answers__container', // Контейнер
+    '.box-anchor', // Блок с якорями
+    '.box-questions-answers__content', // Контентный блок
+    60, // Высота хедера
+    20 // Дополнительный отступ
+  );
+}
+
 
 

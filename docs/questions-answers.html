@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопросы & Ответы - MINING100</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="js/cleave-min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/fslightbox-min.js" defer></script>
+  <script src="js/gsap-min.js" defer></script>
+  <script src="js/ScrollTrigger-min.js" defer></script>
+  <script type="module" src="js/main-min.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  <header class="header fixed" id="header">
+    <div class="header__container container2">
+      <div class="header__content">
+        <div class="header__left">
+          <div class="header__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <div class="header__box-search">
+            <div class="search1">
+              <button class="search1__btn btn-reset">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <use xlink:href="img/sprite.svg#search2"></use>
+                </svg>
+              </button>
+              <div class="search1__form-wrapp">
+                <form class="search1__form">
+                  <label class="search1__label">
+                    <input class="search1__input" type="text" name="search" placeholder="Поиск">
+                  </label>
+                  <button class="search1__close btn-reset">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <use xlink:href="img/sprite.svg#closeSearch"></use>
+                    </svg>
+                  </button>
+                  <button class="search1__submit btn-reset" type="submit">
+                    <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+                    <span>Найти</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__centre">
+          <div class="header__hidden-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <div class="drop-bown-catalog">
+            <button class="drop-bown-catalog__btn btn-reset">
+              <span>Каталог</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#catalogDrop"></use>
+              </svg>
+            </button>
+            <div class="drop-bown-catalog__box">
+              <h3 class="title">Майнеры<span>1 078</span></h3>
+              <div class="catalog-wrapp">
+                <div class="catalog-box">
+                  <h4>Производители</h4>
+                  <ul class="catalog-box__list list-reset">
+                    <li>
+                      <a href="">Bitmain</a>
+                    </li>
+                    <li>
+                      <a href="">MicroBT</a>
+                    </li>
+                    <li>
+                      <a href="">Goldschell</a>
+                    </li>
+                    <li>
+                      <a href="">ICERIVER</a>
+                    </li>
+                    <li>
+                      <a href="">JasMiner</a>
+                    </li>
+                    <li>
+                      <a href="">Canaan</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-box">
+                  <h4>Быстрый поиск</h4>
+                  <ul class="catalog-box__list list-reset">
+                    <li>
+                      <a href="">Рекомендуем</a>
+                    </li>
+                    <li>
+                      <a href="">Со скидкой</a>
+                    </li>
+                    <li>
+                      <a href="">Новинки</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__nav-wrapp">
+            <nav class="nav1">
+              <ul class="nav1__list list-reset">
+                <li>
+                  <a href="#">Каталог</a>
+                </li>
+                <li>
+                  <a href="#">О компании</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+                <li>
+                  <a href="#">Вопросы & Ответы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__btn-info-group-wrapp">
+            <div class="header__btn-info-group">
+              <a href="#" class="link like">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+                <span class="counter">
+                  23
+                </span>
+              </a>
+              <a href="#" class="link comparison">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#comparison"></use>
+                </svg>
+                <span class="counter">
+                  23
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="header__phone-box">
+            <div class="signal">
+              <span></span>
+            </div>
+            <a href="tel:89253569991">8 (925) 356-99-91</a>
+          </div>
+          <div class="header__network-group">
+            <a href="#" class="link tg">
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                <use xlink:href="img/sprite.svg#tg"></use>
+              </svg>
+            </a>
+            <a href="#" class="link wu">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#wu"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__hidden-mob">
+            <button class="burger btn-reset" id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__burger-menu burger-menu" id-for-open="burger">
+      <div class="burger-menu__top-line">
+        <div class="burger-menu__container container2">
+          <div class="burger-menu__top-content">
+            <div class="header__box-logo">
+              <a href="/" class="header__logo">
+                <img src="img/logo/logo.svg">
+              </a>
+            </div>
+            <button class="burger-menu__close close btn-reset">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#burgerClose"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="burger-menu__content">
+        <div class="burger-menu__container container">
+          <div class="burger-menu__box-group">
+            <div class="burger-menu__top-box">
+              <div class="burger-menu__box-search">
+                <div class="search1">
+                  <button class="search1__btn btn-reset">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <use xlink:href="img/sprite.svg#search2"></use>
+                    </svg>
+                  </button>
+                  <div class="search1__form-wrapp">
+                    <form class="search1__form">
+                      <label class="search1__label">
+                        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+                      </label>
+                      <button class="search1__close btn-reset">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <use xlink:href="img/sprite.svg#closeSearch"></use>
+                        </svg>
+                      </button>
+                      <button class="search1__submit btn-reset" type="submit">
+                        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+                        <span>Найти</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="burger-menu__box-nav1"></div>
+            </div>
+            <div class="burger-menu__bottom-box">
+              <ul class="burger-menu__list-link list-reset">
+                <li>
+                  <a href="#">Telegram</a>
+                </li>
+                <li>
+                  <a href="#">WhatsApp</a>
+                </li>
+                <li>
+                  <a href="tel:+79253569991">8 (925) 356-99-91</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="box-questions-answers">
+      <div class="box-questions-answers__container container2">
+        <div class="box-questions-answers__content">
+          <div class="box-questions-answers__box-title">
+            <p class="desc">
+              FAQ
+            </p>
+            <h2 class="box-questions-answers__title">
+              Вопросы & Ответы
+            </h2>
+          </div>
+          <ul class="box-questions-answers__list list-reset">
+            <li class="box-questions-answers__item">
+              <div class="question-info">
+                <h3>Общие вопросы</h3>
+                <h4>Что такое ASIC-майнер?</h4>
+                <p>ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное для
+                  добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров (CPU),
+                  ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в сети
+                  криптовалют</p>
+                <h4>Какие криптовалюты можно майнить с помощью ASIC?</h4>
+                <p>ASIC-майнеры работают с конкретными алгоритмами, поэтому их возможности ограничены поддерживаемыми
+                  криптовалютами. Например: <span>Bitcoin (BTC) – SHA-256, Litecoin (LTC) – Scrypt, Ethereum Classic
+                    (ETC) – Etchash, Zcash (ZEC) – Equihash</span></p>
+                <h4>Почему стоит покупать ASIC у нас, а не у других?</h4>
+                <p>Мы работаем напрямую с производителями, минуя посредников. Это гарантирует: оригинальную продукцию,
+                  гарантию от производителя, лучшие цены на рынке</p>
+              </div>
+            </li>
+            <li class="box-questions-answers__item">
+              <div class="question-info">
+                <h3>Выбор и оплата</h3>
+                <h4>При выборе ASIC-майнера важно учитывать:</h4>
+                <ol>
+                  <li>
+                    Алгоритм (под какую криптовалюту подходит устройство)
+                  </li>
+                  <li>
+                    Хешрейт (мощность вычислений, измеряемая в TH/s или GH/s)
+                  </li>
+                  <li>
+                    Энергопотребление (важно учитывать стоимость электричества)
+                  </li>
+                  <li>
+                    Окупаемость (срок возврата вложений, исходя из текущей сложности сети и цены на криптовалюту)
+                  </li>
+                </ol>
+                <h4>Почему стоит покупать майнеры у нас, а не у других?</h4>
+                <p>Мы работаем напрямую с производителями, минуя посредников. Это гарантирует: оригинальную продукцию,
+                  гарантию от производителя, лучшие цены на рынке.</p>
+                <h4>Как я могу оплатить покупку?</h4>
+                <p>💳 Банковские картой (Visa, Mastercard, МИР)<br>
+                  📃 Безналичный расчет для юридических лиц<br>
+                  В офисе по адресу: г Москва Остаповский пр., 5, стр. 17</p>
+                <p>Альтернативные способы оплаты, уточняйте у менеджера</p>
+              </div>
+            </li>
+            <li class="box-questions-answers__item">
+              <div class="question-info">
+                <h3>Доставка и самовывоз</h3>
+                <p>Мы доставляем оборудование по всей России, ориентировочное время доставки 1-3 дня.</p>
+                <p>Так же возможен самовывоз из нашего офиса по адресу: г. Москва, Остаповский пр., 5, стр 17</p>
+              </div>
+            </li>
+            <li class="box-questions-answers__item">
+              <div class="question-info">
+                <h3>Гарантия</h3>
+                <p>Все устройства имеют официальную гарантию от производителя (6-12 месяцев) Кроме этого на магазин дает
+                  гарантию 3 дня на самостоятельную проверку от заводского брака.</p>
+              </div>
+            </li>
+            <li class="box-questions-answers__item">
+              <div class="question-info">
+                <h3>Предзаказы</h3>
+                <p>С нами доступны предзаказы на новинки до старта продаж. Так же под ваш запрос можем привезти из Китая
+                  оборудование, которого нет в Москве.</p>
+              </div>
+            </li>
+            <li class="box-questions-answers__item">
+              <div class="question-info">
+                <h3>Настройка оборудования</h3>
+                <p>Послепродажное обслуживание включает в себя настройку, техническую поддержку и консультации по
+                  эксплуатации.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box-anchor">
+          <ul class="box-anchor__list list-reset">
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#anchorIcon"></use>
+                </svg>
+                <span class="text">
+                  Общие вопросы
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#anchorIcon"></use>
+                </svg>
+                <span class="text">
+                  Выбор и оплата
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#anchorIcon"></use>
+                </svg>
+                <span class="text">
+                  Доставка и самовывоз
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#anchorIcon"></use>
+                </svg>
+                <span class="text">
+                  Гарантия
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#anchorIcon"></use>
+                </svg>
+                <span class="text">
+                  Предзаказы
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#anchorIcon"></use>
+                </svg>
+                <span class="text">
+                  Настройка оборудования
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="box-order section">
+      <div class="box-order__container container">
+        <div class="box-order__content">
+          <div class="box-order__wrapp-info">
+            <h2 class="box-order__title section-title">
+              Оставьте заявку на бесплатную консультацию
+            </h2>
+            <div class="box-order__wrapp_form">
+              <form class="box-order__form">
+                <label class="box-order__label">
+                  <input type="text" name="phone" placeholder="Номер телефона">
+                </label>
+                <button type="submit" class="box-order__btn disabled btn-reset">
+                  <span>Отправить</span>
+                </button>
+              </form>
+              <p class="box-order__desc">
+                Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a>
+              </p>
+            </div>
+          </div>
+          <div class="box-order__shipped none">
+            <p class="section-title">
+              Мы скоро свяжемся с вами!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__top-box">
+          <div class="footer__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <div class="footer__top-centre">
+            <nav class="footer__nav2">
+              <a href="#" class="footer__title-link">Каталог</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="#">Рекомендуем</a>
+                </li>
+                <li>
+                  <a href="#">Со скидкой</a>
+                </li>
+                <li>
+                  <a href="#">Новинки</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__nav2">
+              <a href="#" class="footer__title-link">О компании</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="#">Отследить заказ</a>
+                </li>
+                <li>
+                  <a href="#">Вопросы & Ответы</a>
+                </li>
+                <li>
+                  <a href="#">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__top-end">
+            <nav class="footer__nav2 nav2">
+              <a href="#" class="footer__title-link">Контакты</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="tel:+79253569991">8 (925) 356-99-91</a>
+                </li>
+                <li>
+                  <a href="mailto:mailexample@gmail.com">mailexample@gmail.com</a>
+                </li>
+                <li>
+                  <a href="#">Остаповский проезд 5с17</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom-box">
+          <div class="footer__group-network">
+            <a href="#" class="footer__network-link">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#footerTg"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__network-link">
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+                <use xlink:href="img/sprite.svg#footerUt"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__bottom-line">
+            <p>© 2025 MININGX100. Все права защищены</p>
+            <ul class="footer__bottom-line-list list-reset">
+              <li>
+                <a href="#">Политика обработки файлов Cookie</a>
+              </li>
+              <li>
+                <a href="#">Пользовательское соглашение</a>
+              </li>
+              <li>
+                <a href="#">Политика конфиденциальности</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-fixed">
+      <div class="footer-fixed__container container">
+        <div class="footer-fixed__content">
+          <a href="#" class="footer-fixed__btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#footerFixedBtn"></use>
+            </svg>
+            <span class="text">
+              Каталог
+            </span>
+          </a>
+          <div class="footer-fixed__box-btn-info-group"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

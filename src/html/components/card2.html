@@ -4,9 +4,11 @@
       <a href="#" class="card2__img-link">
         <img src="@@urlImg" alt="img">
       </a>
-      <span class="card2__marker recommend">Рекомендуем</span>
-      <span class="card2__marker new">Новинка</span>
-      <span class="card2__marker domestic">Домашний</span>
+      <span class="card2__marker-wrapp">
+        <span class="card2__marker recommend">Рекомендуем</span>
+        <span class="card2__marker new">Новинка</span>
+        <span class="card2__marker domestic">Домашний</span>
+      </span>
     </div>
     <div class="card2__box-info">
       <div class="box-price">
@@ -54,11 +56,14 @@
       <button class="btn-order btn-reset">
         Заказать
       </button>
-      <button class="btn-reset like">
+      <a href="#" class="link like">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <use xlink:href="img/sprite.svg#likeCard"></use>
+          <use xlink:href="img/sprite.svg#like"></use>
         </svg>
-      </button>
+        <span class="counter">
+          23
+        </span>
+      </a>
       <label class="comparison">
         <input type="checkbox" name="comparison">
         <span>

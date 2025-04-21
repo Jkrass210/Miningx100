@@ -1,5 +1,15 @@
 .box-factoty {
   background-color: var(--background-normal);
+  &__container {
+    &.container3 {
+      display: flex;
+      justify-content: end;
+      .box-factoty-content-catalog {
+        width: 100%;
+        max-width: 1408px;
+      }
+    }
+  }
   &__content {
     overflow: hidden;
     position: relative;

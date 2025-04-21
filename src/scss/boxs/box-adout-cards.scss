@@ -1,0 +1,113 @@
+.box-adout-cards {
+  &__list {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    li:first-child {
+      .card5 {
+        position: relative;
+        border-radius: 0 20px 20px 20px;
+        &::after {
+          position: absolute;
+          left: -1px;
+          top: -53px;
+          display: inline-block;
+          content: "";
+          height: 53px;
+          width: 1px;
+          background-color: var(--stroke-neutral-lighter);
+        }
+        &::before {
+          position: absolute;
+          left: -53px;
+          top: -1px;
+          display: inline-block;
+          content: "";
+          height: 1px;
+          width: 53px;
+          background-color: var(--stroke-neutral-lighter);
+        }
+      }
+    }
+  }
+  &__box-video {
+    margin-bottom: 48px;
+    position: relative;
+    border: 1px solid var(--stroke-neutral-lighter);
+    min-height: 360px;
+    background-color: var(--surface-lighter);
+    border-radius: 20px 20px 0 20px;
+    &::after {
+      position: absolute;
+      right: -1px;
+      bottom: -53px;
+      display: inline-block;
+      content: "";
+      height: 53px;
+      width: 1px;
+      background-color: var(--stroke-neutral-lighter);
+    }
+    &::before {
+      position: absolute;
+      right: -53px;
+      bottom: -1px;
+      display: inline-block;
+      content: "";
+      height: 1px;
+      width: 53px;
+      background-color: var(--stroke-neutral-lighter);
+    }
+  }
+}
+@media (max-width: 1500px) {
+  .box-adout-cards {
+    &__list {
+      li:first-child {
+        .card5 {
+          &::after {
+            top: -40px;
+            height: 40px;
+          }
+          &::before {
+            left: -40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+    &__box-video {
+      &::after {
+        bottom: -40px;
+        height: 40px;
+      }
+      &::before {
+        right: -40px;
+        width: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .box-adout-cards {
+    &__list {
+      grid-template-columns: 1fr;
+      li:first-child {
+        .card5 {
+          border-radius: 20px;
+          &::after, &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    &__box-video {
+      margin-bottom: 24px;
+      border-radius: 20px;
+      min-height: 200px;
+      &::after,&::before {
+        display: none;
+      }
+    }
+  }
+}

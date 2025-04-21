@@ -1,0 +1,121 @@
+.card6 {
+  height: 100%;
+  border: 1px solid var(--stroke-neutral-lighter);
+  border-radius: 16px;
+  background-color: var(--surface-lighter);
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  &__box-img {
+    padding: 8px 8px 0;
+    margin-bottom: 24px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 248px;
+      border-radius: 12px;
+      background-color: var(--component-accent-secondary-default);
+    }
+  }
+  &__top-info {
+    padding: 0 16px;
+  }
+  &__name {
+    margin-bottom: 4px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: var(--text-neutral-header);
+  }
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--text-neutral-default);
+  }
+  &__bottom {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+  }
+  &__bottom-info {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 133%;
+      color: var(--text-neutral-darker);
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+    }
+  }
+  &__bottom-link {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--stroke-accent-default);
+    border-radius: 8px 8px 16px 16px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--text-accent-default);
+    background-color: var(--component-accent-secondary-default);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--stroke-accent-default);
+    }
+  }
+}
+@media (max-width: 767px) {
+  .card6 {
+    border: none;
+    background-color: transparent;
+    &__box-img {
+      margin-bottom: 10px;
+      padding: 0;
+    }
+    &__top-info {
+      padding: 0 8px;
+    }
+    &__name {
+      margin-bottom: 2px;
+      font-size: 13px;
+      line-height: 123%;
+    }
+    &__desc {
+      font-size: 12px;
+      line-height: 133%;
+    }
+    &__bottom {
+      padding: 0 8px;
+    }
+    &__bottom-info {
+      padding: 0;
+    }
+    &__bottom {
+      gap: 12px;
+    }
+    &__bottom-link {
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 123%;
+    }
+  }
+}

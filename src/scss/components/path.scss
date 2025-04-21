@@ -1,0 +1,37 @@
+.path {
+  margin-bottom: 16px;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    li {
+      display: flex;
+      align-items: center;
+      &:last-child {
+        a {
+          pointer-events: none;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-neutral-button-default);
+        transition: color 0.4s ease-in-out;
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          color: var(--text-accent-default);
+        }
+        span {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 143%;
+          transition: color 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+}

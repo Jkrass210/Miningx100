@@ -30,12 +30,17 @@
       outline: none;
     }
   }
-  &__marker {
-    padding: 8px 12px;
-    border-radius: 12px;
+  &__marker-wrapp {
     position: absolute;
     top: 6px;
     left: 6px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  &__marker {
+    padding: 8px 12px;
+    border-radius: 12px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 13px;
@@ -151,6 +156,13 @@
     }
     &__img-link {
       background: transparent;
+    }
+    &__marker-wrapp {
+      gap: 3px;
+    }
+    &__marker {
+      padding: 6px 12px;
+      font-size: 13px;
     }
     &__top-info {
       gap: 8px;

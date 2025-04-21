@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нашей компании - MINING100</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+  
+  <script src="js/cleave-min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/fslightbox-min.js" defer></script>
+  <script src="js/gsap-min.js" defer></script>
+  <script src="js/ScrollTrigger-min.js" defer></script>
+  <script type="module" src="js/main-min.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header fixed" id="header">
+  <div class="header__container container2">
+    <div class="header__content">
+      <div class="header__left">
+        <div class="header__box-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="header__box-search">
+          <div class="search1">
+  <button class="search1__btn btn-reset">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <use xlink:href="img/sprite.svg#search2"></use>
+    </svg>
+  </button>
+  <div class="search1__form-wrapp">
+    <form class="search1__form">
+      <label class="search1__label">
+        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+      </label>
+      <button class="search1__close btn-reset">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#closeSearch"></use>
+        </svg>
+      </button>
+      <button class="search1__submit btn-reset" type="submit">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+        <span>Найти</span>
+      </button>
+    </form>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="header__centre">
+        <div class="header__hidden-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="drop-bown-catalog">
+  <button class="drop-bown-catalog__btn btn-reset">
+    <span>Каталог</span>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#catalogDrop"></use>
+    </svg>
+  </button>
+  <div class="drop-bown-catalog__box">
+    <h3 class="title">Майнеры<span>1 078</span></h3>
+    <div class="catalog-wrapp">
+      <div class="catalog-box">
+        <h4>Производители</h4>
+        <ul class="catalog-box__list list-reset">
+          <li>
+            <a href="">Bitmain</a>
+          </li>
+          <li>
+            <a href="">MicroBT</a>
+          </li>
+          <li>
+            <a href="">Goldschell</a>
+          </li>
+          <li>
+            <a href="">ICERIVER</a>
+          </li>
+          <li>
+            <a href="">JasMiner</a>
+          </li>
+          <li>
+            <a href="">Canaan</a>
+          </li>
+        </ul>
+      </div>
+      <div class="catalog-box">
+        <h4>Быстрый поиск</h4>
+        <ul class="catalog-box__list list-reset">
+          <li>
+            <a href="">Рекомендуем</a>
+          </li>
+          <li>
+            <a href="">Со скидкой</a>
+          </li>
+          <li>
+            <a href="">Новинки</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="header__nav-wrapp">
+          <nav class="nav1">
+            <ul class="nav1__list list-reset">
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+              <li>
+                <a href="#">Вопросы & Ответы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header__right">
+        <div class="header__btn-info-group-wrapp">
+          <div class="header__btn-info-group">
+            <a href="#" class="link like">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#like"></use>
+              </svg>
+              <span class="counter">
+                23
+              </span>
+            </a>
+            <a href="#" class="link comparison">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#comparison"></use>
+              </svg>
+              <span class="counter">
+                23
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="header__phone-box">
+          <div class="signal">
+            <span></span>
+          </div>
+          <a href="tel:89253569991">8 (925) 356-99-91</a>
+        </div>
+        <div class="header__network-group">
+          <a href="#" class="link tg">
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+              <use xlink:href="img/sprite.svg#tg"></use>
+            </svg>
+          </a>
+          <a href="#" class="link wu">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#wu"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__hidden-mob">
+          <button class="burger btn-reset" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__burger-menu burger-menu" id-for-open="burger">
+    <div class="burger-menu__top-line">
+      <div class="burger-menu__container container2">
+        <div class="burger-menu__top-content">
+          <div class="header__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <button class="burger-menu__close close btn-reset">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#burgerClose"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="burger-menu__content">
+      <div class="burger-menu__container container">
+        <div class="burger-menu__box-group">
+          <div class="burger-menu__top-box">
+            <div class="burger-menu__box-search">
+              <div class="search1">
+  <button class="search1__btn btn-reset">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <use xlink:href="img/sprite.svg#search2"></use>
+    </svg>
+  </button>
+  <div class="search1__form-wrapp">
+    <form class="search1__form">
+      <label class="search1__label">
+        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+      </label>
+      <button class="search1__close btn-reset">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#closeSearch"></use>
+        </svg>
+      </button>
+      <button class="search1__submit btn-reset" type="submit">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+        <span>Найти</span>
+      </button>
+    </form>
+  </div>
+</div>
+            </div>
+            <div class="burger-menu__box-nav1"></div>
+          </div>
+          <div class="burger-menu__bottom-box">
+            <ul class="burger-menu__list-link list-reset">
+              <li>
+                <a href="#">Telegram</a>
+              </li>
+              <li>
+                <a href="#">WhatsApp</a>
+              </li>
+              <li>
+                <a href="tel:+79253569991">8 (925) 356-99-91</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="about-hero section">
+  <div class="about-hero__container container">
+    <div class="about-hero__content">
+      <div class="about-hero__marker">
+        <p>О нашей компании</p>
+      </div>
+      <div class="about-hero__box-title">
+        <h1 class="about-hero__title">
+          MINING X100 – надежный поставщик оборудования для майнинга криптовалют
+        </h1>
+        <p class="section-title-desc">Мы поставляем оборудование напрямую с завода. Наши ценности – честность, надёжность и долгосрочные отношения с клиентами</p>
+      </div>
+      <div class="about-hero__btn-group">
+        <a href="#" class="btn first">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#catalogFactoty"></use>
+          </svg>
+          <span>Наши товары</span>
+        </a>
+        <a href="#" class="btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#card1Tg"></use>
+          </svg>
+          <span>- Канал</span>
+        </a>
+        <a href="#" class="btn">
+          <span>Отзывы</span>
+        </a>
+        <a href="#" class="btn">
+          <span>Консультация</span>
+        </a>
+      </div>
+      <div class="about-hero__bottom-box">
+        <p class="desc">Более 320 отзывов</p>
+        <div class="estimation-box">
+          <div class="star">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <use xlink:href="img/sprite.svg#estimationStar"></use>
+            </svg>
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <use xlink:href="img/sprite.svg#estimationStar"></use>
+            </svg>
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <use xlink:href="img/sprite.svg#estimationStar"></use>
+            </svg>
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <use xlink:href="img/sprite.svg#estimationStar"></use>
+            </svg>
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <use xlink:href="img/sprite.svg#estimationStar"></use>
+            </svg>
+          </div>
+          <span>5.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-adout-cards section">
+  <div class="box-adout-cards__container container">
+    <div class="box-adout-cards__content">
+      <ul class="box-adout-cards__list list-reset">
+        <li>
+          <div class="card5">
+            <h3 class="card5__title">
+              10к+ сделок
+            </h3>
+            <p class="card5__desc">
+              Проведено за время нашей работы
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card5">
+            <h3 class="card5__title">
+              380+ отзывов
+            </h3>
+            <p class="card5__desc">
+              Популярный Telegram-канал и активный чат
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card5">
+            <h3 class="card5__title">
+              100 000+
+            </h3>
+            <p class="card5__desc">
+              Оборудования доставили за время работы
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card5">
+            <h3 class="card5__title">
+              от 1 до 3 дней
+            </h3>
+            <p class="card5__desc">
+              Средний срок доставки по всей России
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="box-adout-cards__box-video">
+
+      </div>
+      <div class="box-adout-cards__swiper-wrapp">
+        <div class="box-hero__swiper swiper swiper-logo">
+          <span class="swiper-logo__gradient left"></span>
+          <ul class="box-hero__list list-reset swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/1logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/2logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/3logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/4logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/5logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/6logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/3logo.svg" alt="img">
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="box-slide">
+                <img class="swiper-logo-img" src="img/swiper-logo/4logo.svg" alt="img">
+              </div>
+            </li>
+          </ul>
+          <span class="swiper-logo__gradient right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-about-sales section">
+  <div class="box-about-sales__container container">
+    <div class="box-about-sales__box-title">
+      <h2 class="box-about-sales__title">
+        Отдел продаж
+      </h2>
+      <p class="box-about-sales__desc">
+        Наша команда обладает глубокими знаниями в области майнинга криптовалют и готова помочь вам выбрать оборудование, соответствующее вашим конкретным задачам.
+      </p>
+    </div>
+  </div>
+  <div class="box-about-sales__content">
+    <div class="box-about-sales__swiper swiper">
+      <ul class="box-about-sales__list swiper-wrapper list-reset">
+        <li class="box-about-sales__swiper-slide swiper-slide">
+          <div class="card6">
+  <div class="card6__top">
+    <div class="card6__box-img">
+      <img src="img/box-about-sales/1.png" alt="img">
+    </div>
+    <div class="card6__top-info">
+      <h3 class="card6__name">
+        Мария Петрова
+      </h3>
+      <p class="card6__desc">
+        Менеджер
+      </p>
+    </div>
+  </div>
+  <div class="card6__bottom">
+    <div class="card6__bottom-info">
+      <a href="tel:+78008888080">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTel"></use>
+        </svg>
+        <span class="text">8 (800) 888-80-80</span>
+      </a>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTg1"></use>
+        </svg>
+        <span class="text">@Ivanov.me</span>
+      </a>
+    </div>
+    <a href="#" class="card6__bottom-link">
+      Написать
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-about-sales__swiper-slide swiper-slide">
+          <div class="card6">
+  <div class="card6__top">
+    <div class="card6__box-img">
+      <img src="img/box-about-sales/2.png" alt="img">
+    </div>
+    <div class="card6__top-info">
+      <h3 class="card6__name">
+        Мария Петрова
+      </h3>
+      <p class="card6__desc">
+        Менеджер
+      </p>
+    </div>
+  </div>
+  <div class="card6__bottom">
+    <div class="card6__bottom-info">
+      <a href="tel:+78008888080">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTel"></use>
+        </svg>
+        <span class="text">8 (800) 888-80-80</span>
+      </a>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTg1"></use>
+        </svg>
+        <span class="text">@Ivanov.me</span>
+      </a>
+    </div>
+    <a href="#" class="card6__bottom-link">
+      Написать
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-about-sales__swiper-slide swiper-slide">
+          <div class="card6">
+  <div class="card6__top">
+    <div class="card6__box-img">
+      <img src="img/box-about-sales/3.png" alt="img">
+    </div>
+    <div class="card6__top-info">
+      <h3 class="card6__name">
+        Мария Петрова
+      </h3>
+      <p class="card6__desc">
+        Менеджер
+      </p>
+    </div>
+  </div>
+  <div class="card6__bottom">
+    <div class="card6__bottom-info">
+      <a href="tel:+78008888080">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTel"></use>
+        </svg>
+        <span class="text">8 (800) 888-80-80</span>
+      </a>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTg1"></use>
+        </svg>
+        <span class="text">@Ivanov.me</span>
+      </a>
+    </div>
+    <a href="#" class="card6__bottom-link">
+      Написать
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-about-sales__swiper-slide swiper-slide">
+          <div class="card6">
+  <div class="card6__top">
+    <div class="card6__box-img">
+      <img src="img/box-about-sales/4.png" alt="img">
+    </div>
+    <div class="card6__top-info">
+      <h3 class="card6__name">
+        Мария Петрова
+      </h3>
+      <p class="card6__desc">
+        Менеджер
+      </p>
+    </div>
+  </div>
+  <div class="card6__bottom">
+    <div class="card6__bottom-info">
+      <a href="tel:+78008888080">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTel"></use>
+        </svg>
+        <span class="text">8 (800) 888-80-80</span>
+      </a>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTg1"></use>
+        </svg>
+        <span class="text">@Ivanov.me</span>
+      </a>
+    </div>
+    <a href="#" class="card6__bottom-link">
+      Написать
+    </a>
+  </div>
+</div>
+        </li>
+        <li class="box-about-sales__swiper-slide swiper-slide">
+          <div class="card6">
+  <div class="card6__top">
+    <div class="card6__box-img">
+      <img src="img/box-about-sales/5.png" alt="img">
+    </div>
+    <div class="card6__top-info">
+      <h3 class="card6__name">
+        Мария Петрова
+      </h3>
+      <p class="card6__desc">
+        Менеджер
+      </p>
+    </div>
+  </div>
+  <div class="card6__bottom">
+    <div class="card6__bottom-info">
+      <a href="tel:+78008888080">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTel"></use>
+        </svg>
+        <span class="text">8 (800) 888-80-80</span>
+      </a>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#linkTg1"></use>
+        </svg>
+        <span class="text">@Ivanov.me</span>
+      </a>
+    </div>
+    <a href="#" class="card6__bottom-link">
+      Написать
+    </a>
+  </div>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="box-factoty box-help section">
+  <div class="box-factoty__container container">
+    <div class="box-factoty__content">
+      <div class="box-factoty__left">
+        <div class="box-factoty__top">
+          <h2 class="box-factoty__title">
+            Поможем расчитать доходность вашего майнера!
+          </h2>
+        </div>
+        <div class="box-order__wrapp_form">
+          <form class="box-order__form">
+            <label class="box-order__label">
+              <input type="text" name="phone" placeholder="Номер телефона">
+            </label>
+            <button type="submit" class="box-order__btn disabled btn-reset">
+              <span>Отправить</span>
+            </button>
+          </form>
+          <p class="box-order__desc">
+            Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a>
+          </p>
+        </div>
+      </div>
+      <picture>
+        <source srcset="img/box-help/1-1030.png" media="(max-width: 1030px)">
+        <img class="box-factoty__img" src="img/box-help/1.png" alt="img">
+      </picture>
+    </div>
+  </div>
+</section>
+    
+
+    <section class="box-reviews section">
+  <div class="box-reviews__container container">
+    <div class="box-reviews__content">
+      <div class="box-reviews__top-box">
+        <h2 class="box-reviews__title">Отзывы</h2>
+        <p class="box-reviews__desc">
+          <a class="addition" href="#">Более 320 отзывов</a> популярный Telegram-канал, активный чат для обмена опытом <a class="addition" href="#">100% наших клиентов довольны!</a>
+        </p>
+      </div>
+      <div class="box-reviews__testimonials-wrapper">
+        <ul class="box-reviews__column first list-reset">
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Заказал в октябре у ребят L9 январский батч, получил,проверил, работает отлично. Спасибо Илье за оперативность🤝
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/1.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          No name
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Купил у этого магазина Jasminer X4-Q. В день оплаты они отправили мне майнер. Пришёл через несколько дней. Целый, без царапин и вмятин. Заявленный хешрейт выдаёт на Ура! Менеджеры всегда на связи и готовы помочь в любой момент!!!
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/2.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Creative Design
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Спасибо ребятам за сервис и хорошую консультацию по оборудованию. Приехал, пообщался, проверил и сразу забрал. Без всяких проблем. Рекомендую эту фирму
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/3.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Мария Петрова
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/y.svg" alt="img">
+          <span>Яндекс</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Спасибо за оперативную доставку Avalon Nano mini 3 37.5t и менеджеру Алексею за оперативное оформление документов!
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/4.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Исак
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Делал заказ на товар в пути. 1шт на пробу. Пришёл быстрей, чем планировали. Далее СДЭК сутки. Получил. Все прекрасно работает. Цена хорошая.
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/5.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Сергей Владиславович
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Делал заказ на товар в пути. 1шт на пробу. Пришёл быстрей, чем планировали. Далее СДЭК сутки. Получил. Все прекрасно работает. Цена хорошая.
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/5.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Сергей Владиславович
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+        </ul>
+        <ul class="box-reviews__column middle list-reset">
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Спасибо за отличную работу, сроки соблюдены, состояние поставки отличное, буду обращаться сам и смело смогу рекомендовать друзьям!
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/7.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Мария Петрова
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/y.svg" alt="img">
+          <span>Яндекс</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Доброе утро всем привет из Красноярска!!! Хотел поблагодарить менеджера Михаила, за внимательность к потенциальному покупателю, согласование лучшей цены в Москве, проверке, и человеческим отношением во всём рекомендую, был в офисе, купил три l9 17 по супер цене, заказывайте хорошие парни можно доверять!!!!
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/8.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Андрей Андреев
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Всем доброго времени суток. Хочу поблагодарить менеджера Александра. Всё очень доходчиво объяснил, прислал видео проверки моего асика,  помог с настройкой и советами. СДЭКом дошло за 3 дня за 7000км. Асик заработал отлично. Одни положительные эмоции. Буду заказывать ещё. Александру большое спасибо и успехов!👍
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/9.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Chip
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Покупал у ребят L9 17 , все быстро и подробно объяснили, проверили отправили!!! Спасибо 🙏
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/10.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Alex
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Всё отлично, покупал у менеджера Ильи, постоянно на связи,на все вопросы отвечал вежливо и по делу, привезли в срок. Аппаратом доволен работает без нареканий, ещё и цена ниже остальных магазинов
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/11.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Игорь
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Купил Т21 цена на момент покупки была самой низкой по рынку, менеджер Илья все оформил в лучшем виде в регион доставили за 5 дней, спасибо буду заказывать ещё!
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/12.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          sanya sevas
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+        </ul>
+        <ul class="box-reviews__column last list-reset">
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Спасибо продукт и оперативность ваших сотрудников. Все работает отлично, помогли с настройкой и доставкой до моего города! Отдельный респект менеджеру-консультанту Михаилу
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/13.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Мария Петрова
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/y.svg" alt="img">
+          <span>Яндекс</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Жаль что раньше не нашел этот магазин, третий раз закупаюсь тут и как всегда всё отлично и оперативно и цена адекватная. Спасибо Михаилу!
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/14.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Дмитрий
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Отличная компания. Обо всем проконсультировали подробно. Предоплата за заказ. Аппарат забирали сами. На месте все проверили. На все вопросы отвечают оперативно. Отдельное спасибо Илье. Рекомендую
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/15.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Пользователь
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Доброе утро! Покупал тут S19K 120 2 штуки. Полет нормальный, асики работают как надо. Парни молодцы подсказали, рассказали что и как да еще и чаем напоили. Парни процветания вам в вашем деле💪👍
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/15.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Андрей
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/tg.svg" alt="img">
+          <span>Телеграм</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Все прошло отлично. Предложили действительно самую низкую цену. Оплатил, и в тот же день отправили.
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/16.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Андрей
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+          <li class="testimonial">
+            <div class="card3">
+  <div class="card3__top">
+    <p class="card3__desc">
+      Купил 2 шт Asic Goldshell AL box 2 720G. Все пришло в договоренные сроки. Менеджер Илья подробно поясняет как что делать, доставили ТК СДЭК до моего города на следующий день. Оборудование работает хешрейты соответствуют!!! Всем советую данного продавца.
+    </p>
+  </div>
+  <div class="card3__bottom">
+    <div class="left">
+      <div class="box-img">
+        <img src="img/box-reviews/16.png" alt="img">
+      </div>
+      <div class="box-info">
+        <h3 class="card3__name">
+          Андрей
+        </h3>
+        <p class="card3__platform">
+          <img src="img/box-reviews/av.svg" alt="img">
+          <span>Авито</span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <use xlink:href="img/sprite.svg#starReviews"></use>
+      </svg>
+      <span>5.0</span>
+    </div>
+  </div>
+</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-questions section">
+  <div class="box-questions__container container">
+    <div class="box-questions__content">
+      <div class="box-questions__top-box">
+        <h2 class="box-questions__title section-title">
+          Основные вопросы
+        </h2>
+        <P class="box-questions__desc section-title-desc">
+          Вам нужна помощь? Здесь представлены наиболее часто задаваемые вопросы.
+        </P>
+      </div>
+      <div class="box-questions__list-wrapp">
+        <ul class="box-questions__list list-reset">
+          <li>
+            <div class="question">
+              <button class="question__btn btn-reset">
+                <span>
+                  What, when, where?
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                </svg>
+              </button>
+              <div class="question__box-answer">
+                <p class="question__desc">
+                  Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information on its origins, as well as
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <button class="question__btn btn-reset">
+                <span>
+                  What, when, where?
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                </svg>
+              </button>
+              <div class="question__box-answer">
+                <p class="question__desc">
+                  Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information on its origins, as well as
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <button class="question__btn btn-reset">
+                <span>
+                  What, when, where?
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                </svg>
+              </button>
+              <div class="question__box-answer">
+                <p class="question__desc">
+                  Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information on its origins, as well as
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <button class="question__btn btn-reset">
+                <span>
+                  What, when, where?
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                </svg>
+              </button>
+              <div class="question__box-answer">
+                <p class="question__desc">
+                  Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information on its origins, as well as
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <button class="question__btn btn-reset">
+                <span>
+                  What, when, where?
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                </svg>
+              </button>
+              <div class="question__box-answer">
+                <p class="question__desc">
+                  Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information on its origins, as well as
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <button class="question__btn btn-reset">
+                <span>
+                  What, when, where?
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                </svg>
+              </button>
+              <div class="question__box-answer">
+                <p class="question__desc">
+                  Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information on its origins, as well as
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="box-questions__btn-wrapp">
+        <a href="" class="box-questions__btn-all btn-reset">
+          Открыть полностью
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-order section">
+  <div class="box-order__container container">
+    <div class="box-order__content">
+      <div class="box-order__wrapp-info">
+        <h2 class="box-order__title section-title">
+          Оставьте заявку на бесплатную консультацию
+        </h2>
+        <div class="box-order__wrapp_form">
+          <form class="box-order__form">
+            <label class="box-order__label">
+              <input type="text" name="phone" placeholder="Номер телефона">
+            </label>
+            <button type="submit" class="box-order__btn disabled btn-reset">
+              <span>Отправить</span>
+            </button>
+          </form>
+          <p class="box-order__desc">
+            Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a>
+          </p>
+        </div>
+      </div>
+      <div class="box-order__shipped none">
+        <p class="section-title">
+          Мы скоро свяжемся с вами!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__content">
+      <div class="footer__top-box">
+        <div class="footer__box-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="footer__top-centre">
+          <nav class="footer__nav2">
+            <a href="#" class="footer__title-link">Каталог</a>
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#">Рекомендуем</a>
+              </li>
+              <li>
+                <a href="#">Со скидкой</a>
+              </li>
+              <li>
+                <a href="#">Новинки</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer__nav2">
+            <a href="#" class="footer__title-link">О компании</a>
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="#">Отследить заказ</a>
+              </li>
+              <li>
+                <a href="#">Вопросы & Ответы</a>
+              </li>
+              <li>
+                <a href="#">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__top-end">
+          <nav class="footer__nav2 nav2">
+            <a href="#" class="footer__title-link">Контакты</a>
+            <ul class="footer__list list-reset">
+              <li>
+                <a href="tel:+79253569991">8 (925) 356-99-91</a>
+              </li>
+              <li>
+                <a href="mailto:mailexample@gmail.com">mailexample@gmail.com</a>
+              </li>
+              <li>
+                <a href="#">Остаповский проезд 5с17</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom-box">
+        <div class="footer__group-network">
+          <a href="#" class="footer__network-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#footerTg"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__network-link">
+            <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+              <use xlink:href="img/sprite.svg#footerUt"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__bottom-line">
+          <p>© 2025 MININGX100. Все права защищены</p>
+          <ul class="footer__bottom-line-list list-reset">
+            <li>
+              <a href="#">Политика обработки файлов Cookie</a>
+            </li>
+            <li>
+              <a href="#">Пользовательское соглашение</a>
+            </li>
+            <li>
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-fixed">
+    <div class="footer-fixed__container container">
+      <div class="footer-fixed__content">
+        <a href="#" class="footer-fixed__btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <use xlink:href="img/sprite.svg#footerFixedBtn"></use>
+          </svg>
+          <span class="text">
+            Каталог
+          </span>
+        </a>
+        <div class="footer-fixed__box-btn-info-group"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

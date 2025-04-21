@@ -1,0 +1,65 @@
+.btn-filter {
+  padding: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  &.active {
+    background-color: var(--component-accent-secondary-default);
+    color: var(--text-accent-default);
+    .wrapp {
+      color: var(--text-accent-default);
+      .text {
+        color: var(--text-accent-default);
+      }
+    }
+    .numder {
+      color: var(--text-accent-default);
+    }
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    background-color: var(--component-accent-secondary-default);
+    color: var(--text-accent-default);
+    .wrapp {
+      color: var(--text-accent-default);
+      .text {
+        color: var(--text-accent-default);
+      }
+    }
+    .numder {
+      color: var(--text-accent-default);
+    }
+  }
+  .wrapp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--stroke-neutral-default);
+    transition: color 0.4s ease-in-out;
+    .text {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      color: var(--text-neutral-darker);
+      transition: color 0.4s ease-in-out;
+    }
+  }
+  .numder {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    color: var(--text-neutral-dark);
+    transition: color 0.4s ease-in-out;
+  }
+}

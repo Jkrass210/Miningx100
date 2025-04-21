@@ -1,4 +1,14 @@
 .footer {
+  &__container {
+    &.container3 {
+      display: flex;
+      justify-content: end;
+      .footer-content-catalog {
+        width: 100%;
+        max-width: 1408px;
+      }
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
