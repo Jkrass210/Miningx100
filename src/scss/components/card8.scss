@@ -1,0 +1,103 @@
+.card8 {
+  position: relative;
+  height: 1232px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 271px;
+  &__btn-close {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  &__box-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__box-img {
+    border: 1px solid var(--stroke-neutral-lighter);
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--component-neutral-default);
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 88%;
+    }
+  }
+  &__marker-wrapp {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    .card2__marker {
+      display: inline-block;
+    }
+  }
+  &__box-info {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    .box-price {
+      display: flex;
+      align-items: end;
+      flex-wrap: wrap;
+      gap: 8px;
+      span {
+        white-space: nowrap;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        &.actual-price {
+          color: var(--text-accent-default);
+        }
+        &.new-price {
+          color: var(--text-negative-default);
+        }
+        &.old-price {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 133%;
+          text-decoration: line-through;
+          color: var(--text-neutral-light);
+        }
+        &.percent-price {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 133%;
+          color: var(--text-negative-default);
+        }
+      }
+    }
+  }
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: var(--text-neutral-darker);
+    a {
+      transition: color 0.4s ease-in-out;
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover,&:active {
+        color: var(--text-accent-default);
+      }
+    }
+  }
+  &__box-bottom {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}

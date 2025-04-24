@@ -1,0 +1,83 @@
+.box-marks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      .number {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--text-neutral-darker);
+      }
+      .percent {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        text-align: right;
+        color: var(--text-neutral-default);
+        min-width: 31px;
+      }
+      div {
+        position: relative;
+        width: 100%;
+        border-radius: 100px;
+        max-width: 146px;
+        height: 5px;
+        background-color: var(--surface-default);
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          border-radius: 100px;
+          background-color: var(--component-warning-primary-default);
+        }
+        &.number5 {
+          span {
+            width: 70%;
+          }
+        }
+        &.number4 {
+          span {
+            width: 2%;
+          }
+        }
+      }
+    }
+  }
+  &__wrapp-btn {
+    display: flex;
+  }
+  &__btn {
+    display: flex;
+    width: 100%;
+    padding: 10px 14px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--stroke-accent-default);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--text-accent-default);
+    background-color: var(--component-accent-secondary-default);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--stroke-accent-default);
+    }
+  }
+}

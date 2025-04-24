@@ -1,0 +1,190 @@
+.detailed-card-sec3 {
+  &__top-line {
+    position: relative;
+    z-index: 0;
+    //padding-bottom: 16px;
+    border-bottom: 2px solid var(--stroke-neutral-lighter);
+  }
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  &__btn-group {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  &__btn {
+    position: relative;
+    z-index: 3;
+    padding-bottom: 16px;
+    white-space: nowrap;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-neutral-dark);
+    display: flex;
+    gap: 6px;
+    transition: color 0.4s ease-in-out;
+    &.active {
+      color: var(--text-neutral-header);
+      &::before {
+        background-color: var(--stroke-neutral-darkest);
+      }
+    }
+    span {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 133%;
+      color: var(--text-neutral-light);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -2px;
+      z-index: 4;
+      background-color: transparent;
+      transition: background-color 0.4s ease-in-out;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--text-neutral-header);
+      &::before {
+        background-color: var(--stroke-neutral-darkest);
+      }
+    }
+    &.mobile {
+      display: none;
+    }
+  }
+  &__detailed-info {
+    padding-top: 32px;
+  }
+  &__box-content {
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+  &__wrapp {
+    width: 100%;
+    display: flex;
+    gap: calc(64 / 1104 * 100%);
+    &.questions {
+      flex-direction: column;
+    }
+  }
+  &__about {
+    width: calc(529 / 1104 * 100%);
+  }
+  &__list-about {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    li {
+      h4 {
+        margin-bottom: 16px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--text-neutral-darker);
+      }
+      p {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.02em;
+        color: var(--text-neutral-darker);
+        span {
+          color: var(--text-accent-button-default);
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 26px;  // отступ у всех, кроме последнего
+        }
+      }
+      ol, ul {
+        padding-inline-start: 20px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.02em;
+        color: var(--text-neutral-darker);
+        &:not(:last-of-type) {
+          margin-bottom: 26px;  // отступ у всех, кроме последнего
+        }
+        &:first-of-type {
+          margin-bottom: 26px;
+        }
+      }
+    }
+  }
+  &__characteristic-wrapp {
+    flex: 1;
+  }
+  &__list-reviews {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__btn-wrapp {
+    display: flex;
+    gap: 8px;
+  }
+}
+@media (max-width: 1030px) {
+  .detailed-card-sec3 {
+    padding-bottom: 100px;
+    overflow: hidden;
+    &__top-line {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &__container {
+      overflow: visible;
+    }
+    &__btn {
+      &:first-child {
+        display: none;
+      }
+      &.mobile {
+        display: flex;
+      }
+      &:last-child {
+        padding-right: 24px;
+        &::before {
+          width: calc(100% - 24px);
+        } 
+      }
+    }
+    &__about {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .detailed-card-sec3 {
+    &__btn {
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0.02em;
+    }
+  }
+}

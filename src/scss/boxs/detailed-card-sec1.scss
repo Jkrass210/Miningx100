@@ -1,0 +1,408 @@
+.detailed-card-sec1 {
+  &__content {
+    display: flex;
+    gap: calc(64 / 1104 * 100%);
+  }
+  &__box-left {
+    width: calc(508 / 1104 * 100%);
+  }
+  &__box-right {
+    flex: 1;
+  }
+  &__marker-wrapp {
+    margin-bottom: 16px;
+    .card2__marker-wrapp {
+      position: static;
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 122%;
+    color: var(--text-neutral-header);
+  }
+  &__box-price {
+    margin-bottom: 16px;
+    .box-price {
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      span {
+        white-space: nowrap;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        &.actual-price {
+          color: var(--text-accent-default);
+        }
+        &.new-price {
+          color: var(--text-negative-default);
+        }
+        &.old-price {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          text-decoration: line-through;
+          color: var(--text-neutral-light);
+        }
+        &.percent-price {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          color: var(--text-negative-default);
+        }
+        
+      }
+    }
+  }
+  &__bottom-wrapp {
+    margin-bottom: 32px;
+    .top {
+      display: flex;
+      gap: 12px;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        .estimation {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 133%;
+          color: var(--text-neutral-darker);
+        }
+        .reviews {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 133%;
+          color: var(--text-neutral-light);
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        .signal {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: var(--component-positive-primary-default);
+            transition: background-color 0.4s ease-in-out;
+            animation-name: scalePulse;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+          }
+        }
+        p {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 133%;
+          color: var(--text-neutral-darker);
+        }
+      }
+    }
+  }
+  &__guarantee-box {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .top {
+      border: 1px solid var(--stroke-neutral-lighter);
+      border-radius: 12px;
+      padding: 14px 16px;
+      background-color: var(--surface-lighter);
+      .guarantee {
+        padding-left: 32px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--text-neutral-header);
+        background-image: url("../img/icon/guaranteeIcon.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+      .cheaper {
+        padding-left: 32px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.02em;
+        color: var(--text-neutral-default);
+      }
+    }
+    .bottom {
+      .tradein {
+        border-radius: 12px;
+        padding: 14px 16px 14px 48px;
+        background-color: #defae5;
+        background-image: url("../img/icon/tradnIn.svg");
+        background-repeat: no-repeat;
+        background-position: left 16px center;
+      }
+    }
+  }
+  &__box-characteristic {
+    margin-bottom: 48px;
+    h4 {
+      margin-bottom: 8px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--text-neutral-header);
+    }
+  }
+  &__table {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__table-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--stroke-neutral-light);
+    p {
+      flex: 1;
+    }
+    p:first-child {
+      max-width: 258px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 133%;
+      color: var(--text-neutral-default);
+    }
+    p:last-child{
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0.02em;
+      color: var(--text-neutral-darker);
+    }
+  }
+  &__btn-all {
+    padding: 4px 0px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--text-neutral-button-default-dark);
+    border-bottom: 1px solid var(--stroke-neutral-default);
+    transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--text-neutral-header);
+      border-color: var(--stroke-neutral-darkest);
+    }
+  }
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    .btn-order {
+      border: none;
+      padding: 10px 14px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      color: var(--text-neutral-lightest);
+      background-color: var(--component-accent-primary-default);
+      &:focus-visible,&:hover,&:active {
+        background-color: var(--component-accent-primary-hover);
+      }
+    }
+    .like {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      border: 1px solid var(--stroke-neutral-lighter);
+      border-radius: 8px;
+      background-color: var(--background-normal);
+      transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+      .counter {
+        display: none;
+      }
+      &.active {
+        border-color: var(--stroke-negative-default);
+        color: var(--stroke-negative-dark);
+        background-color: var(--component-negative-secondary-default);
+      }
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover {
+        color: var(--stroke-negative-dark);
+      }
+      &:active {
+        border-color: var(--stroke-negative-default);
+        color: var(--stroke-negative-dark);
+        background-color: var(--component-negative-secondary-default);
+      }
+    }
+    .comparison {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      border: 1px solid var(--stroke-neutral-lighter);
+      border-radius: 8px;
+      background-color: var(--background-normal);
+      color: var();
+      transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+      &.active {
+        border-color: var(--stroke-negative-default);
+        color: var(--stroke-negative-dark);
+        background-color: var(--component-negative-secondary-default);
+      }
+      &:focus-visible, &:hover {
+        color: var(--stroke-negative-dark);
+      }
+      &:active {
+        border-color: var(--stroke-negative-default);
+        color: var(--stroke-negative-dark);
+        background-color: var(--component-negative-secondary-default);
+      }
+      &:has(input:focus-visible) {
+        color: var(--stroke-negative-dark);
+      }
+      &:has(input:checked) {
+        border-color: var(--stroke-negative-default);
+        color: var(--stroke-negative-dark);
+        background-color: var(--component-negative-secondary-default);
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        visibility: 0;
+        width: 0;
+        height: 0;
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+      }
+      span {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .detailed-card-sec1 {
+    padding-bottom: 100px;
+    overflow: hidden;
+    &__content {
+      gap: 48px;
+      flex-direction: column;
+    }
+    &__box-left {
+      width: 100%;
+    }
+    &__btn-group {
+      display: none;
+    }
+    &__box-characteristic {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .detailed-card-sec1 {
+    &__content {
+      gap: 32px;
+    }
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: var(--text-neutral-header);
+    }
+    &__box-price {
+      .box-price {
+        span {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 133%;
+          &.old-price {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.02em;
+          }
+          &.percent-price {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+    }
+    &__guarantee-box {
+      .top {
+        .guarantee {
+          padding-left: 24px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: 0.02em;
+          background-image: url("../img/icon/guaranteeIcon767.svg");
+        }
+        .cheaper {
+          padding-left: 24px;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 123%;
+        }
+      }
+      .bottom {
+        .tradein {
+          padding: 14px 16px 14px 40px;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: 0.02em;
+          color: var(--text-neutral-header);
+          background-image: url("../img/icon/tradnIn767.svg");
+          background-position: left 16px center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/components/head.html',{"title":"Детальная карта товара - MINING100"})
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+    <div class="detailed-card-top-line">
+      <div class="path">
+        <div class="path__container container3">
+          <ul class="path__list list-reset">
+            <li>
+              <a href="/">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#home"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#pathArr"></use>
+                </svg>
+                <span>
+                  Каталог
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#pathArr"></use>
+                </svg>
+                <span>
+                  NovaMiner
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="active" href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#pathArr"></use>
+                </svg>
+                <span>
+                  NovaMiner L9, 17 GH/s
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    @@include('html/boxs/detailed-card-sec1.html')
+    @@include('html/boxs/box-advantages-1.html')
+    @@include('html/boxs/detailed-card-sec3.html')
+    @@include('html/boxs/box-offers-1.html')
+    @@include('html/boxs/detailed-reviews.html')
+    @@include('html/boxs/box-questions.html')
+    @@include('html/boxs/box-order.html')
+  </main>
+  @@include('html/boxs/footer-detailed.html')
+</body>
+</html>

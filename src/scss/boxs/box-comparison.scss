@@ -1,0 +1,116 @@
+.box-comparison {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  &__container-top {
+    margin-bottom: 64px;
+  }
+  &__container-bottom {
+    overflow: hidden;
+    padding: 0 106px;
+  }
+  &__top-line {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__btn-group {
+        display: flex;
+        &.left {
+          border-radius: 10px;
+          padding: 2px;
+          min-height: 40px;
+          background-color: var(--surface-lighter);
+        }
+        &.right {
+          gap: 8px;
+        }
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--text-neutral-header);
+    span {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0.02em;
+      color: var(--text-neutral-default);
+    }
+  }
+  &__btn {
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--text-neutral-light);
+    background-color: transparent;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.06);
+      color: var(--text-neutral-lightest);
+      background-color: var(--component-accent-primary-default);
+    }
+    &.active {
+      box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.06);
+      color: var(--text-neutral-lightest);
+      background-color: var(--component-accent-primary-default);
+    }
+  }
+  &__delete-list {
+    padding: 10px 14px 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--stroke-neutral-lighter);
+    border-radius: 8px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    color: var(--text-neutral-darker);
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--stroke-neutral-lighter);
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media (max-width: 1920px) {
+  .box-comparison {
+    &__container-bottom {
+      padding-left: calc(48px + (106 - 48) * ((100vw - 1804px) / (1920 - 1804)));
+      padding-right: calc(48px + (106 - 48) * ((100vw - 1804px) / (1920 - 1804)));
+    }
+  }
+}
+@media (max-width: 1804px) {
+  .box-comparison {
+    &__container-bottom {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+}

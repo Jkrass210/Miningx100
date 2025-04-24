@@ -9,6 +9,11 @@
     height: 800px;
     background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
   }
+  &.box-advantages-1 {
+    &::before {
+      display: none;
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;

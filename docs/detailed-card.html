@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Детальная карта товара - MINING100</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="js/cleave-min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/fslightbox-min.js" defer></script>
+  <script src="js/gsap-min.js" defer></script>
+  <script src="js/ScrollTrigger-min.js" defer></script>
+  <script type="module" src="js/main-min.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  <header class="header fixed" id="header">
+    <div class="header__container container2">
+      <div class="header__content">
+        <div class="header__left">
+          <div class="header__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <div class="header__box-search">
+            <div class="search1">
+              <button class="search1__btn btn-reset">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <use xlink:href="img/sprite.svg#search2"></use>
+                </svg>
+              </button>
+              <div class="search1__form-wrapp">
+                <form class="search1__form">
+                  <label class="search1__label">
+                    <input class="search1__input" type="text" name="search" placeholder="Поиск">
+                  </label>
+                  <button class="search1__close btn-reset">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <use xlink:href="img/sprite.svg#closeSearch"></use>
+                    </svg>
+                  </button>
+                  <button class="search1__submit btn-reset" type="submit">
+                    <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+                    <span>Найти</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__centre">
+          <div class="header__hidden-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <div class="drop-bown-catalog">
+            <button class="drop-bown-catalog__btn btn-reset">
+              <span>Каталог</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#catalogDrop"></use>
+              </svg>
+            </button>
+            <div class="drop-bown-catalog__box">
+              <h3 class="title">Майнеры<span>1 078</span></h3>
+              <div class="catalog-wrapp">
+                <div class="catalog-box">
+                  <h4>Производители</h4>
+                  <ul class="catalog-box__list list-reset">
+                    <li>
+                      <a href="">Bitmain</a>
+                    </li>
+                    <li>
+                      <a href="">MicroBT</a>
+                    </li>
+                    <li>
+                      <a href="">Goldschell</a>
+                    </li>
+                    <li>
+                      <a href="">ICERIVER</a>
+                    </li>
+                    <li>
+                      <a href="">JasMiner</a>
+                    </li>
+                    <li>
+                      <a href="">Canaan</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-box">
+                  <h4>Быстрый поиск</h4>
+                  <ul class="catalog-box__list list-reset">
+                    <li>
+                      <a href="">Рекомендуем</a>
+                    </li>
+                    <li>
+                      <a href="">Со скидкой</a>
+                    </li>
+                    <li>
+                      <a href="">Новинки</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__nav-wrapp">
+            <nav class="nav1">
+              <ul class="nav1__list list-reset">
+                <li>
+                  <a href="#">Каталог</a>
+                </li>
+                <li>
+                  <a href="#">О компании</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+                <li>
+                  <a href="#">Вопросы & Ответы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__btn-info-group-wrapp">
+            <div class="header__btn-info-group">
+              <a href="#" class="link like">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+                <span class="counter">
+                  23
+                </span>
+              </a>
+              <a href="#" class="link comparison">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#comparison"></use>
+                </svg>
+                <span class="counter">
+                  23
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="header__phone-box">
+            <div class="signal">
+              <span></span>
+            </div>
+            <a href="tel:89253569991">8 (925) 356-99-91</a>
+          </div>
+          <div class="header__network-group">
+            <a href="#" class="link tg">
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                <use xlink:href="img/sprite.svg#tg"></use>
+              </svg>
+            </a>
+            <a href="#" class="link wu">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#wu"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__hidden-mob">
+            <button class="burger btn-reset" id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__burger-menu burger-menu" id-for-open="burger">
+      <div class="burger-menu__top-line">
+        <div class="burger-menu__container container2">
+          <div class="burger-menu__top-content">
+            <div class="header__box-logo">
+              <a href="/" class="header__logo">
+                <img src="img/logo/logo.svg">
+              </a>
+            </div>
+            <button class="burger-menu__close close btn-reset">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#burgerClose"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="burger-menu__content">
+        <div class="burger-menu__container container">
+          <div class="burger-menu__box-group">
+            <div class="burger-menu__top-box">
+              <div class="burger-menu__box-search">
+                <div class="search1">
+                  <button class="search1__btn btn-reset">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <use xlink:href="img/sprite.svg#search2"></use>
+                    </svg>
+                  </button>
+                  <div class="search1__form-wrapp">
+                    <form class="search1__form">
+                      <label class="search1__label">
+                        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+                      </label>
+                      <button class="search1__close btn-reset">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <use xlink:href="img/sprite.svg#closeSearch"></use>
+                        </svg>
+                      </button>
+                      <button class="search1__submit btn-reset" type="submit">
+                        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+                        <span>Найти</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="burger-menu__box-nav1"></div>
+            </div>
+            <div class="burger-menu__bottom-box">
+              <ul class="burger-menu__list-link list-reset">
+                <li>
+                  <a href="#">Telegram</a>
+                </li>
+                <li>
+                  <a href="#">WhatsApp</a>
+                </li>
+                <li>
+                  <a href="tel:+79253569991">8 (925) 356-99-91</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="detailed-card-top-line">
+      <div class="path">
+        <div class="path__container container3">
+          <ul class="path__list list-reset">
+            <li>
+              <a href="/">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#home"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#pathArr"></use>
+                </svg>
+                <span>
+                  Каталог
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#pathArr"></use>
+                </svg>
+                <span>
+                  NovaMiner
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="active" href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#pathArr"></use>
+                </svg>
+                <span>
+                  NovaMiner L9, 17 GH/s
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="detailed-card-sec1 section">
+      <div class="detailed-card-sec1__container container">
+        <div class="detailed-card-sec1__content">
+          <div class="detailed-card-sec1__box-left">
+            <div class="detailed-swiper-container">
+              <div class="detailed-swiper swiper">
+                <ul class="detailed-swiper-wrapper swiper-wrapper list-reset">
+                  <li class="detailed-swiper-slide swiper-slide">
+                    <a data-fslightbox="gallery" href="img/detailed-swiper/1.png">
+                      <span class="detailed-swiper__box-img">
+                        <img src="img/detailed-swiper/1.png" alt="img">
+                      </span>
+                    </a>
+                  </li>
+                  <li class="detailed-swiper-slide swiper-slide">
+                    <a data-fslightbox="gallery" href="img/detailed-swiper/1.png">
+                      <span class="detailed-swiper__box-img">
+                        <img src="img/detailed-swiper/1.png" alt="img">
+                      </span>
+                    </a>
+                  </li>
+                  <li class="detailed-swiper-slide swiper-slide">
+                    <a data-fslightbox="gallery" href="img/detailed-swiper/1.png">
+                      <span class="detailed-swiper__box-img">
+                        <img src="img/detailed-swiper/1.png" alt="img">
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="detailed-swiper-preview swiper">
+                <ul class="detailed-swiper-preview-wrapper swiper-wrapper list-reset">
+                  <li class="detailed-swiper-preview-swiper-slide swiper-slide">
+                    <div class="detailed-swiper-preview__box-img">
+                      <img src="img/detailed-swiper/1.png" alt="img">
+                    </div>
+                  </li>
+                  <li class="detailed-swiper-preview-swiper-slide swiper-slide">
+                    <div class="detailed-swiper-preview__box-img">
+                      <img src="img/detailed-swiper/1.png" alt="img">
+                    </div>
+                  </li>
+                  <li class="detailed-swiper-preview-swiper-slide swiper-slide">
+                    <div class="detailed-swiper-preview__box-img">
+                      <img src="img/detailed-swiper/1.png" alt="img">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="detailed-card-sec1__box-right">
+            <div class="detailed-card-sec1__marker-wrapp">
+              <span class="card2__marker-wrapp">
+                <span class="card2__marker recommend">Рекомендуем</span>
+                <span class="card2__marker new">Новинка</span>
+                <span class="card2__marker domestic">Домашний</span>
+              </span>
+            </div>
+            <h2 class="detailed-card-sec1__title">
+              NovaMiner L9, 17 GH/s
+            </h2>
+            <div class="detailed-card-sec1__box-price">
+              <div class="box-price">
+                <span class="actual-price">460 340 ₽</span>
+                <span class="new-price">460 340 ₽</span>
+                <span class="old-price">560 340 ₽</span>
+                <span class="percent-price">-23%</span>
+              </div>
+            </div>
+            <div class="detailed-card-sec1__bottom-wrapp">
+              <div class="top">
+                <div class="left">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                  <span class="estimation">5.0</span>
+                  <span class="reviews">(34 отзыва)</span>
+                </div>
+                <div class="right">
+                  <div class="signal">
+                    <span></span>
+                  </div>
+                  <p>Доступен предзаказ</p>
+                </div>
+              </div>
+            </div>
+            <div class="detailed-card-sec1__guarantee-box">
+              <div class="top">
+                <p class="guarantee">Гарантия лучшей цены</p>
+                <p class="cheaper">Если нашли дешевле - сообщите менеджеру и мы договоримся</p>
+              </div>
+              <div class="bottom">
+                <p class="tradein">Доступен trade-in</p>
+              </div>
+            </div>
+            <div class="detailed-card-sec1__box-characteristic">
+              <h4>Характеристики</h4>
+              <ul class="detailed-card-sec1__table list-reset">
+                <li class="detailed-card-sec1__table-row">
+                  <p>Хэшрейт</p>
+                  <p><span>3680 МН/s</span></p>
+                </li>
+                <li class="detailed-card-sec1__table-row">
+                  <p>Алгоритм</p>
+                  <p><span>Etchash/Ethash</span></p>
+                </li>
+                <li class="detailed-card-sec1__table-row">
+                  <p>Добываемые монеты</p>
+                  <p><span>ETC/ETHW</span></p>
+                </li>
+                <li class="detailed-card-sec1__table-row">
+                  <p>Потребление, Вт/ч</p>
+                  <p><span>2200 + 10%</span></p>
+                </li>
+              </ul>
+              <button class="detailed-card-sec1__btn-all btn-reset">
+                Все характеристики
+              </button>
+            </div>
+            <div class="detailed-card-sec1__btn-group">
+              <button class="btn-order btn-reset">
+                Быстрый заказ
+              </button>
+              <a href="#" class="link like">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+                <span class="counter">
+                  23
+                </span>
+              </a>
+              <label class="comparison">
+                <input type="checkbox" name="comparison">
+                <span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use xlink:href="img/sprite.svg#comparCard"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="box-advantages box-advantages-1 section">
+      <div class="box-advantages__container container">
+        <div class="box-advantages__content">
+          <ul class="box-advantages__list list-reset">
+            <li>
+              <div class="card1">
+                <div class="card1__top-box">
+                  <img src="img/box-advantages/1.svg" alt="img">
+                  <p class="card1__desc">
+                    Мы <a href="#">работаем напрямую</a> с заводами без посредников, это позволяет нам гарантировать
+                    лучшую цену
+                  </p>
+                </div>
+                <div class="card1__bottom-box">
+                  <a href="#">
+                    <span>Каталог</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card1">
+                <div class="card1__top-box">
+                  <img src="img/box-advantages/2.svg" alt="img">
+                  <p class="card1__desc">
+                    <a href="#">Более 10 000 успешных сделок,</a> активный Telegram-канал и сообщество профессионалов с
+                    реальными отзывами
+                  </p>
+                </div>
+                <div class="card1__bottom-box">
+                  <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#card1Tg"></use>
+                    </svg>
+                    <span> - Каталог</span>
+                  </a>
+                  <a href="#">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+                      <use xlink:href="img/sprite.svg#card1Ut"></use>
+                    </svg>
+                    <span> - Каталог</span>
+                  </a>
+                  <a href="#">
+                    <span>Отзывы</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card1">
+                <div class="card1__top-box">
+                  <img src="img/box-advantages/3.svg" alt="img">
+                  <p class="card1__desc">
+                    Бесплатный подбор оборудования под ваши задачи и полное <a href="#">сопровождение в настройке</a>
+                  </p>
+                </div>
+                <div class="card1__bottom-box">
+                  <a href="#">
+                    <span>Поддержка</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="detailed-card-sec3 section">
+      <div class="detailed-card-sec3__top-line">
+        <div class="detailed-card-sec3__container container">
+          <div class="detailed-card-sec3__btn-group">
+            <button class="detailed-card-sec3__btn active btn-reset" id="aboutAndFeatures">
+              О товаре & Характеристики
+            </button>
+            <button class="detailed-card-sec3__btn mobile btn-reset" id="about">
+              О товаре
+            </button>
+            <button class="detailed-card-sec3__btn mobile btn-reset" id="features">
+              Характеристики
+            </button>
+            <button class="detailed-card-sec3__btn btn-reset" id="reviews">
+              Отзывы<span>24</span>
+            </button>
+            <button class="detailed-card-sec3__btn btn-reset" id="questions">
+              Основные вопросы
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="detailed-card-sec3__container container">
+        <div class="detailed-card-sec3__detailed-info">
+          <div class="detailed-card-sec3__box-content active" data-window-id="aboutAndFeatures">
+            <div class="detailed-card-sec3__wrapp">
+              <div class="detailed-card-sec3__about">
+                <ul class="detailed-card-sec3__list-about list-reset">
+                  <li>
+                    <h4>Описание</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                    <p>
+                      ASIC-майнеры работают с конкретными алгоритмами, поэтому их возможности ограничены поддерживаемыми
+                      криптовалютами. Например: <span>Bitcoin (BTC) – SHA-256, Litecoin (LTC) – Scrypt, Ethereum Classic
+                        (ETC) – Etchash, Zcash (ZEC) – Equihash</span>
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Какую криптовалюту можно добывать?</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Особенности оборудования</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Где лучше всего поставить данное оборудование</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                  <li>
+                    <h4>О производителе</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="detailed-card-sec3__characteristic-wrapp">
+                <div class="detailed-card-sec1__box-characteristic">
+                  <h4>Характеристики</h4>
+                  <ul class="detailed-card-sec1__table list-reset">
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Хэшрейт</p>
+                      <p><span>3680 МН/s</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Алгоритм</p>
+                      <p><span>Etchash/Ethash</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Добываемые монеты</p>
+                      <p><span>ETC/ETHW</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Потребление, Вт/ч</p>
+                      <p><span>2200 + 10%</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Добываемые монеты</p>
+                      <p><span>ETC/ETHW</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Источник питания</p>
+                      <p><span>Интегрированный</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Охлаждение</p>
+                      <p><span>Воздушное</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Рабочая температура, °С</p>
+                      <p><span>от 5 – 40 °С</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Уровень шума, дБ</p>
+                      <p><span>63 дБ</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Габариты Asic, мм</p>
+                      <p><span>550 x 195.5 x 310</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Габариты коробки, мм</p>
+                      <p><span>722 x 322 x 427</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detailed-card-sec3__box-content" data-window-id="about">
+            <div class="detailed-card-sec3__wrapp">
+              <div class="detailed-card-sec3__about">
+                <ul class="detailed-card-sec3__list-about list-reset">
+                  <li>
+                    <h4>Описание</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                    <p>
+                      ASIC-майнеры работают с конкретными алгоритмами, поэтому их возможности ограничены поддерживаемыми
+                      криптовалютами. Например: <span>Bitcoin (BTC) – SHA-256, Litecoin (LTC) – Scrypt, Ethereum Classic
+                        (ETC) – Etchash, Zcash (ZEC) – Equihash</span>
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Какую криптовалюту можно добывать?</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Особенности оборудования</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Где лучше всего поставить данное оборудование</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                  <li>
+                    <h4>О производителе</h4>
+                    <p>
+                      ASIC-майнер (Application-Specific Integrated Circuit) – это устройство, специально разработанное
+                      для добычи криптовалюты с высокой эффективностью. В отличие от видеокарт (GPU) и процессоров
+                      (CPU), ASIC-майнеры оптимизированы под выполнение одной конкретной задачи – хеширования блоков в
+                      сети криптовалют
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="detailed-card-sec3__box-content" data-window-id="features">
+            <div class="detailed-card-sec3__wrapp">
+              <div class="detailed-card-sec3__characteristic-wrapp">
+                <div class="detailed-card-sec1__box-characteristic">
+                  <h4>Характеристики</h4>
+                  <ul class="detailed-card-sec1__table list-reset">
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Хэшрейт</p>
+                      <p><span>3680 МН/s</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Алгоритм</p>
+                      <p><span>Etchash/Ethash</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Добываемые монеты</p>
+                      <p><span>ETC/ETHW</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Потребление, Вт/ч</p>
+                      <p><span>2200 + 10%</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Добываемые монеты</p>
+                      <p><span>ETC/ETHW</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Источник питания</p>
+                      <p><span>Интегрированный</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Охлаждение</p>
+                      <p><span>Воздушное</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Рабочая температура, °С</p>
+                      <p><span>от 5 – 40 °С</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Уровень шума, дБ</p>
+                      <p><span>63 дБ</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Габариты Asic, мм</p>
+                      <p><span>550 x 195.5 x 310</span></p>
+                    </li>
+                    <li class="detailed-card-sec1__table-row">
+                      <p>Габариты коробки, мм</p>
+                      <p><span>722 x 322 x 427</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detailed-card-sec3__box-content" data-window-id="reviews">
+            <div class="detailed-card-sec3__wrapp">
+              <div class="detailed-card-sec3__reviews">
+                <ul class="detailed-card-sec3__list-reviews list-reset">
+                  <li>
+                    <div class="card7">
+                      <p class="card7__desc">
+                        Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен
+                        своей покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел
+                        быстро, и все товары оригинальные. Я очень доволен своей покупкой
+                      </p>
+                      <div class="card7__bottom-box">
+                        <div class="left">
+                          <p><time datetime="2024-04-21">21.04.2024</time></p>
+                          <h4>Мария Петрова</h4>
+                        </div>
+                        <div class="right">
+                          <div>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span class="text">4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card7">
+                      <p class="card7__desc">
+                        Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен
+                        своей покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел
+                        быстро, и все товары оригинальные. Я очень доволен своей покупкой
+                      </p>
+                      <div class="card7__bottom-box">
+                        <div class="left">
+                          <p><time datetime="2024-04-21">21.04.2024</time></p>
+                          <h4>Мария Петрова</h4>
+                        </div>
+                        <div class="right">
+                          <div>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span>4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card7">
+                      <p class="card7__desc">
+                        Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен
+                        своей покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел
+                        быстро, и все товары оригинальные. Я очень доволен своей покупкой
+                      </p>
+                      <div class="card7__bottom-box">
+                        <div class="left">
+                          <p><time datetime="2024-04-21">21.04.2024</time></p>
+                          <h4>Мария Петрова</h4>
+                        </div>
+                        <div class="right">
+                          <div>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span>4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card7">
+                      <p class="card7__desc">
+                        Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен
+                        своей покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел
+                        быстро, и все товары оригинальные. Я очень доволен своей покупкой
+                      </p>
+                      <div class="card7__bottom-box">
+                        <div class="left">
+                          <p><time datetime="2024-04-21">21.04.2024</time></p>
+                          <h4>Мария Петрова</h4>
+                        </div>
+                        <div class="right">
+                          <div>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span>4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card7">
+                      <p class="card7__desc">
+                        Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен
+                        своей покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел
+                        быстро, и все товары оригинальные. Я очень доволен своей покупкой
+                      </p>
+                      <div class="card7__bottom-box">
+                        <div class="left">
+                          <p><time datetime="2024-04-21">21.04.2024</time></p>
+                          <h4>Мария Петрова</h4>
+                        </div>
+                        <div class="right">
+                          <div>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span>4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="detailed-card-sec3__btn-wrapp">
+                  <button class="box-questions__btn-all btn-reset">
+                    Посмотреть еще
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detailed-card-sec3__box-content" data-window-id="questions">
+            <div class="detailed-card-sec3__wrapp questions">
+              <div class="box-questions__list-wrapp">
+                <ul class="box-questions__list list-reset">
+                  <li>
+                    <div class="question">
+                      <button class="question__btn btn-reset">
+                        <span>
+                          What, when, where?
+                        </span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                        </svg>
+                      </button>
+                      <div class="question__box-answer">
+                        <p class="question__desc">
+                          Reference site about Lorem Ipsum, giving information on its origins, as well as site about
+                          Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving
+                          information on its origins, as well as
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question">
+                      <button class="question__btn btn-reset">
+                        <span>
+                          What, when, where?
+                        </span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                        </svg>
+                      </button>
+                      <div class="question__box-answer">
+                        <p class="question__desc">
+                          Reference site about Lorem Ipsum, giving information on its origins, as well as site about
+                          Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving
+                          information on its origins, as well as
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question">
+                      <button class="question__btn btn-reset">
+                        <span>
+                          What, when, where?
+                        </span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                        </svg>
+                      </button>
+                      <div class="question__box-answer">
+                        <p class="question__desc">
+                          Reference site about Lorem Ipsum, giving information on its origins, as well as site about
+                          Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving
+                          information on its origins, as well as
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question">
+                      <button class="question__btn btn-reset">
+                        <span>
+                          What, when, where?
+                        </span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                        </svg>
+                      </button>
+                      <div class="question__box-answer">
+                        <p class="question__desc">
+                          Reference site about Lorem Ipsum, giving information on its origins, as well as site about
+                          Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving
+                          information on its origins, as well as
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question">
+                      <button class="question__btn btn-reset">
+                        <span>
+                          What, when, where?
+                        </span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                        </svg>
+                      </button>
+                      <div class="question__box-answer">
+                        <p class="question__desc">
+                          Reference site about Lorem Ipsum, giving information on its origins, as well as site about
+                          Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving
+                          information on its origins, as well as
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="question">
+                      <button class="question__btn btn-reset">
+                        <span>
+                          What, when, where?
+                        </span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                        </svg>
+                      </button>
+                      <div class="question__box-answer">
+                        <p class="question__desc">
+                          Reference site about Lorem Ipsum, giving information on its origins, as well as site about
+                          Lorem Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving
+                          information on its origins, as well as
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="box-questions__btn-wrapp">
+                <a href="" class="box-questions__btn-all btn-reset">
+                  Открыть полностью
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="box-offers box-offers-1 min-section">
+      <div class="box-offers__container container">
+        <div class="box-offers__content">
+          <div class="box-offers__top-line">
+            <h2 class="box-offers__title">
+              Похожие товары
+            </h2>
+            <div class="box-offers__btn-swiper-group">
+              <button class="btn-swiper btn-swiper-prev btn-reset">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#btnSwiper"></use>
+                </svg>
+              </button>
+              <button class="btn-swiper btn-swiper-next btn-reset">
+                <span class="text">Еще</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="img/sprite.svg#btnSwiper"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="box-offers__box-products-wrapper">
+            <div class="box-offers__box-products">
+              <ul class="box-offers__list list-reset">
+                <li>
+                  <div class="card2">
+                    <div class="card2__top-info">
+                      <div class="card2__box-img">
+                        <a href="#" class="card2__img-link">
+                          <img src="img/box-orders/1.png" alt="img">
+                        </a>
+                        <span class="card2__marker-wrapp">
+                          <span class="card2__marker recommend">Рекомендуем</span>
+                          <span class="card2__marker new">Новинка</span>
+                          <span class="card2__marker domestic">Домашний</span>
+                        </span>
+                      </div>
+                      <div class="card2__box-info">
+                        <div class="box-price">
+                          <span class="actual-price">460 340 ₽</span>
+                          <span class="new-price">460 340 ₽</span>
+                          <span class="old-price">560 340 ₽</span>
+                          <span class="percent-price">-23%</span>
+                        </div>
+                        <h3 class="card2__title">
+                          <a href="#">NovaMiner L9, 17 GH/s</a>
+                        </h3>
+                        <div class="card2__list-specific list-reset">
+                          <div>
+                            <span class="name">Хешрейт</span>
+                            <span class="info">20 GH/s</span>
+                          </div>
+                          <div>
+                            <span class="name">Добываемые монеты</span>
+                            <span class="info">BTC/BCH/BCV</span>
+                          </div>
+                          <div>
+                            <span class="name">Алгоритм</span>
+                            <span class="info">kHeavyHash</span>
+                          </div>
+                          </в>
+                        </div>
+                      </div>
+                      <div class="card2__bottom-info">
+                        <div class="top">
+                          <div class="left">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span class="estimation">5.0</span>
+                            <span class="reviews">(34 отзыва)</span>
+                          </div>
+                          <div class="right">
+                            <div class="signal">
+                              <span></span>
+                            </div>
+                            <p>Доступен предзаказ</p>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn-order btn-reset">
+                            Заказать
+                          </button>
+                          <a href="#" class="link like">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#like"></use>
+                            </svg>
+                            <span class="counter">
+                              23
+                            </span>
+                          </a>
+                          <label class="comparison">
+                            <input type="checkbox" name="comparison">
+                            <span>
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <use xlink:href="img/sprite.svg#comparCard"></use>
+                              </svg>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                  <div class="card2">
+                    <div class="card2__top-info">
+                      <div class="card2__box-img">
+                        <a href="#" class="card2__img-link">
+                          <img src="img/box-orders/2.png" alt="img">
+                        </a>
+                        <span class="card2__marker-wrapp">
+                          <span class="card2__marker recommend">Рекомендуем</span>
+                          <span class="card2__marker new">Новинка</span>
+                          <span class="card2__marker domestic">Домашний</span>
+                        </span>
+                      </div>
+                      <div class="card2__box-info">
+                        <div class="box-price">
+                          <span class="actual-price">460 340 ₽</span>
+                          <span class="new-price">460 340 ₽</span>
+                          <span class="old-price">560 340 ₽</span>
+                          <span class="percent-price">-23%</span>
+                        </div>
+                        <h3 class="card2__title">
+                          <a href="#">NovaMiner L9, 17 GH/s</a>
+                        </h3>
+                        <div class="card2__list-specific list-reset">
+                          <div>
+                            <span class="name">Хешрейт</span>
+                            <span class="info">20 GH/s</span>
+                          </div>
+                          <div>
+                            <span class="name">Добываемые монеты</span>
+                            <span class="info">BTC/BCH/BCV</span>
+                          </div>
+                          <div>
+                            <span class="name">Алгоритм</span>
+                            <span class="info">kHeavyHash</span>
+                          </div>
+                          </в>
+                        </div>
+                      </div>
+                      <div class="card2__bottom-info">
+                        <div class="top">
+                          <div class="left">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span class="estimation">5.0</span>
+                            <span class="reviews">(34 отзыва)</span>
+                          </div>
+                          <div class="right">
+                            <div class="signal">
+                              <span></span>
+                            </div>
+                            <p>Доступен предзаказ</p>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn-order btn-reset">
+                            Заказать
+                          </button>
+                          <a href="#" class="link like">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#like"></use>
+                            </svg>
+                            <span class="counter">
+                              23
+                            </span>
+                          </a>
+                          <label class="comparison">
+                            <input type="checkbox" name="comparison">
+                            <span>
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <use xlink:href="img/sprite.svg#comparCard"></use>
+                              </svg>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                  <div class="card2">
+                    <div class="card2__top-info">
+                      <div class="card2__box-img">
+                        <a href="#" class="card2__img-link">
+                          <img src="img/box-orders/3.png" alt="img">
+                        </a>
+                        <span class="card2__marker-wrapp">
+                          <span class="card2__marker recommend">Рекомендуем</span>
+                          <span class="card2__marker new">Новинка</span>
+                          <span class="card2__marker domestic">Домашний</span>
+                        </span>
+                      </div>
+                      <div class="card2__box-info">
+                        <div class="box-price">
+                          <span class="actual-price">460 340 ₽</span>
+                          <span class="new-price">460 340 ₽</span>
+                          <span class="old-price">560 340 ₽</span>
+                          <span class="percent-price">-23%</span>
+                        </div>
+                        <h3 class="card2__title">
+                          <a href="#">NovaMiner L9, 17 GH/s</a>
+                        </h3>
+                        <div class="card2__list-specific list-reset">
+                          <div>
+                            <span class="name">Хешрейт</span>
+                            <span class="info">20 GH/s</span>
+                          </div>
+                          <div>
+                            <span class="name">Добываемые монеты</span>
+                            <span class="info">BTC/BCH/BCV</span>
+                          </div>
+                          <div>
+                            <span class="name">Алгоритм</span>
+                            <span class="info">kHeavyHash</span>
+                          </div>
+                          </в>
+                        </div>
+                      </div>
+                      <div class="card2__bottom-info">
+                        <div class="top">
+                          <div class="left">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span class="estimation">5.0</span>
+                            <span class="reviews">(34 отзыва)</span>
+                          </div>
+                          <div class="right">
+                            <div class="signal">
+                              <span></span>
+                            </div>
+                            <p>Доступен предзаказ</p>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn-order btn-reset">
+                            Заказать
+                          </button>
+                          <a href="#" class="link like">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#like"></use>
+                            </svg>
+                            <span class="counter">
+                              23
+                            </span>
+                          </a>
+                          <label class="comparison">
+                            <input type="checkbox" name="comparison">
+                            <span>
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <use xlink:href="img/sprite.svg#comparCard"></use>
+                              </svg>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                  <div class="card2">
+                    <div class="card2__top-info">
+                      <div class="card2__box-img">
+                        <a href="#" class="card2__img-link">
+                          <img src="img/box-orders/4.png" alt="img">
+                        </a>
+                        <span class="card2__marker-wrapp">
+                          <span class="card2__marker recommend">Рекомендуем</span>
+                          <span class="card2__marker new">Новинка</span>
+                          <span class="card2__marker domestic">Домашний</span>
+                        </span>
+                      </div>
+                      <div class="card2__box-info">
+                        <div class="box-price">
+                          <span class="actual-price">460 340 ₽</span>
+                          <span class="new-price">460 340 ₽</span>
+                          <span class="old-price">560 340 ₽</span>
+                          <span class="percent-price">-23%</span>
+                        </div>
+                        <h3 class="card2__title">
+                          <a href="#">NovaMiner L9, 17 GH/s</a>
+                        </h3>
+                        <div class="card2__list-specific list-reset">
+                          <div>
+                            <span class="name">Хешрейт</span>
+                            <span class="info">20 GH/s</span>
+                          </div>
+                          <div>
+                            <span class="name">Добываемые монеты</span>
+                            <span class="info">BTC/BCH/BCV</span>
+                          </div>
+                          <div>
+                            <span class="name">Алгоритм</span>
+                            <span class="info">kHeavyHash</span>
+                          </div>
+                          </в>
+                        </div>
+                      </div>
+                      <div class="card2__bottom-info">
+                        <div class="top">
+                          <div class="left">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <span class="estimation">5.0</span>
+                            <span class="reviews">(34 отзыва)</span>
+                          </div>
+                          <div class="right">
+                            <div class="signal">
+                              <span></span>
+                            </div>
+                            <p>Доступен предзаказ</p>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn-order btn-reset">
+                            Заказать
+                          </button>
+                          <a href="#" class="link like">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <use xlink:href="img/sprite.svg#like"></use>
+                            </svg>
+                            <span class="counter">
+                              23
+                            </span>
+                          </a>
+                          <label class="comparison">
+                            <input type="checkbox" name="comparison">
+                            <span>
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <use xlink:href="img/sprite.svg#comparCard"></use>
+                              </svg>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="detailed-reviews section">
+      <div class="detailed-reviews__container container">
+        <div class="detailed-reviews__top-line">
+          <h3 class="detailed-reviews__title">
+            <span class="title">Отзывы</span>
+            <span class="box-star">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#star"></use>
+              </svg>
+              <span>4.8</span>
+            </span>
+            <span class="quantity">24 отзыва</span>
+          </h3>
+          <div class="detailed-reviews__hidden-mobile"></div>
+        </div>
+        <div class="detailed-reviews__content">
+          <div class="detailed-reviews__left">
+            <ul class="detailed-reviews__left-list list-reset">
+              <li>
+                <div class="card7">
+                  <p class="card7__desc">
+                    Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен своей
+                    покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел быстро, и все
+                    товары оригинальные. Я очень доволен своей покупкой
+                  </p>
+                  <div class="card7__bottom-box">
+                    <div class="left">
+                      <p><time datetime="2024-04-21">21.04.2024</time></p>
+                      <h4>Мария Петрова</h4>
+                    </div>
+                    <div class="right">
+                      <div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        <span class="text">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card7">
+                  <p class="card7__desc">
+                    Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен своей
+                    покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел быстро, и все
+                    товары оригинальные. Я очень доволен своей покупкой
+                  </p>
+                  <div class="card7__bottom-box">
+                    <div class="left">
+                      <p><time datetime="2024-04-21">21.04.2024</time></p>
+                      <h4>Мария Петрова</h4>
+                    </div>
+                    <div class="right">
+                      <div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        <span class="text">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card7">
+                  <p class="card7__desc">
+                    Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен своей
+                    покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел быстро, и все
+                    товары оригинальные. Я очень доволен своей покупкой
+                  </p>
+                  <div class="card7__bottom-box">
+                    <div class="left">
+                      <p><time datetime="2024-04-21">21.04.2024</time></p>
+                      <h4>Мария Петрова</h4>
+                    </div>
+                    <div class="right">
+                      <div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        <span class="text">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card7">
+                  <p class="card7__desc">
+                    Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен своей
+                    покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел быстро, и все
+                    товары оригинальные. Я очень доволен своей покупкой
+                  </p>
+                  <div class="card7__bottom-box">
+                    <div class="left">
+                      <p><time datetime="2024-04-21">21.04.2024</time></p>
+                      <h4>Мария Петрова</h4>
+                    </div>
+                    <div class="right">
+                      <div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        <span class="text">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card7">
+                  <p class="card7__desc">
+                    Продукция просто великолепная! Заказ пришел быстро, и все товары оригинальные. Я очень доволен своей
+                    покупкой! шел быстро, и все товары оригинальные. Я очень доволен своей покупкой шел быстро, и все
+                    товары оригинальные. Я очень доволен своей покупкой
+                  </p>
+                  <div class="card7__bottom-box">
+                    <div class="left">
+                      <p><time datetime="2024-04-21">21.04.2024</time></p>
+                      <h4>Мария Петрова</h4>
+                    </div>
+                    <div class="right">
+                      <div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                        <span class="text">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="detailed-card-sec3__btn-wrapp">
+              <button class="box-questions__btn-all btn-reset">
+                Посмотреть еще
+              </button>
+              <div class="detailed-reviews__for-btn-mobile">
+                <button class="box-questions__btn-all btn-reset">
+                  Оставить отзыв
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="detailed-reviews__right">
+            <div class="box-marks">
+              <ul class="box-marks__list list-reset">
+                <li>
+                  <p class="number">5</p>
+                  <div class="number5"><span></span></div>
+                  <p class="percent">70%</p>
+                </li>
+                <li>
+                  <p class="number">4</p>
+                  <div class="number4"><span></span></div>
+                  <p class="percent">2%</p>
+                </li>
+                <li>
+                  <p class="number">3</p>
+                  <div class="number3"><span></span></div>
+                  <p class="percent">0%</p>
+                </li>
+                <li>
+                  <p class="number">2</p>
+                  <div class="number2"><span></span></div>
+                  <p class="percent">0%</p>
+                </li>
+                <li>
+                  <p class="number">1</p>
+                  <div class="number1"><span></span></div>
+                  <p class="percent">0%</p>
+                </li>
+              </ul>
+              <div class="box-marks__wrapp-btn">
+                <button class="box-marks__btn btn-reset">
+                  Оставить отзыв
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="box-questions section">
+      <div class="box-questions__container container">
+        <div class="box-questions__content">
+          <div class="box-questions__top-box">
+            <h2 class="box-questions__title section-title">
+              Основные вопросы
+            </h2>
+            <P class="box-questions__desc section-title-desc">
+              Вам нужна помощь? Здесь представлены наиболее часто задаваемые вопросы.
+            </P>
+          </div>
+          <div class="box-questions__list-wrapp">
+            <ul class="box-questions__list list-reset">
+              <li>
+                <div class="question">
+                  <button class="question__btn btn-reset">
+                    <span>
+                      What, when, where?
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                    </svg>
+                  </button>
+                  <div class="question__box-answer">
+                    <p class="question__desc">
+                      Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem
+                      Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information
+                      on its origins, as well as
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <button class="question__btn btn-reset">
+                    <span>
+                      What, when, where?
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                    </svg>
+                  </button>
+                  <div class="question__box-answer">
+                    <p class="question__desc">
+                      Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem
+                      Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information
+                      on its origins, as well as
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <button class="question__btn btn-reset">
+                    <span>
+                      What, when, where?
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                    </svg>
+                  </button>
+                  <div class="question__box-answer">
+                    <p class="question__desc">
+                      Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem
+                      Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information
+                      on its origins, as well as
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <button class="question__btn btn-reset">
+                    <span>
+                      What, when, where?
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                    </svg>
+                  </button>
+                  <div class="question__box-answer">
+                    <p class="question__desc">
+                      Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem
+                      Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information
+                      on its origins, as well as
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <button class="question__btn btn-reset">
+                    <span>
+                      What, when, where?
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                    </svg>
+                  </button>
+                  <div class="question__box-answer">
+                    <p class="question__desc">
+                      Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem
+                      Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information
+                      on its origins, as well as
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <button class="question__btn btn-reset">
+                    <span>
+                      What, when, where?
+                    </span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#btnQuestion"></use>
+                    </svg>
+                  </button>
+                  <div class="question__box-answer">
+                    <p class="question__desc">
+                      Reference site about Lorem Ipsum, giving information on its origins, as well as site about Lorem
+                      Ipsum, giving information on its origins, as well as as site about Lorem Ipsum, giving information
+                      on its origins, as well as
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="box-questions__btn-wrapp">
+            <a href="" class="box-questions__btn-all btn-reset">
+              Открыть полностью
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="box-order section">
+      <div class="box-order__container container">
+        <div class="box-order__content">
+          <div class="box-order__wrapp-info">
+            <h2 class="box-order__title section-title">
+              Оставьте заявку на бесплатную консультацию
+            </h2>
+            <div class="box-order__wrapp_form">
+              <form class="box-order__form">
+                <label class="box-order__label">
+                  <input type="text" name="phone" placeholder="Номер телефона">
+                </label>
+                <button type="submit" class="box-order__btn disabled btn-reset">
+                  <span>Отправить</span>
+                </button>
+              </form>
+              <p class="box-order__desc">
+                Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a>
+              </p>
+            </div>
+          </div>
+          <div class="box-order__shipped none">
+            <p class="section-title">
+              Мы скоро свяжемся с вами!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer detailed" id="footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__top-box">
+          <div class="footer__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <div class="footer__top-centre">
+            <nav class="footer__nav2">
+              <a href="#" class="footer__title-link">Каталог</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="#">Рекомендуем</a>
+                </li>
+                <li>
+                  <a href="#">Со скидкой</a>
+                </li>
+                <li>
+                  <a href="#">Новинки</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__nav2">
+              <a href="#" class="footer__title-link">О компании</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="#">Отследить заказ</a>
+                </li>
+                <li>
+                  <a href="#">Вопросы & Ответы</a>
+                </li>
+                <li>
+                  <a href="#">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__top-end">
+            <nav class="footer__nav2 nav2">
+              <a href="#" class="footer__title-link">Контакты</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="tel:+79253569991">8 (925) 356-99-91</a>
+                </li>
+                <li>
+                  <a href="mailto:mailexample@gmail.com">mailexample@gmail.com</a>
+                </li>
+                <li>
+                  <a href="#">Остаповский проезд 5с17</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom-box">
+          <div class="footer__group-network">
+            <a href="#" class="footer__network-link">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#footerTg"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__network-link">
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+                <use xlink:href="img/sprite.svg#footerUt"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__bottom-line">
+            <p>© 2025 MININGX100. Все права защищены</p>
+            <ul class="footer__bottom-line-list list-reset">
+              <li>
+                <a href="#">Политика обработки файлов Cookie</a>
+              </li>
+              <li>
+                <a href="#">Пользовательское соглашение</a>
+              </li>
+              <li>
+                <a href="#">Политика конфиденциальности</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-fixed">
+      <div class="footer-fixed__container container">
+        <div class="footer-fixed__content">
+          <a href="#" class="footer-fixed__btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#footerFixedBtn"></use>
+            </svg>
+            <span class="text">
+              Каталог
+            </span>
+          </a>
+          <div class="footer-fixed__box-btn-info-group"></div>
+        </div>
+      </div>
+      <div class="footer-fixed__container-detailed container">
+        <div class="detailed-card-sec1__btn-group">
+          <button class="btn-order btn-reset">
+            Быстрый заказ
+          </button>
+          <a href="#" class="link like">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#like"></use>
+            </svg>
+            <span class="counter">
+              23
+            </span>
+          </a>
+          <label class="comparison">
+            <input type="checkbox" name="comparison">
+            <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#comparCard"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

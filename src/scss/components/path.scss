@@ -4,6 +4,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    white-space: nowrap;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     li {
       display: flex;
       align-items: center;
@@ -18,6 +25,15 @@
         gap: 8px;
         color: var(--text-neutral-button-default);
         transition: color 0.4s ease-in-out;
+        svg {
+          transition: color 0.4s ease-in-out;
+        }
+        &.active {
+          svg {
+            color: var(--text-neutral-button-default);
+          }
+          color: var(--text-neutral-darker);
+        }
         &:focus,&:focus-visible {
           outline: none;
         }

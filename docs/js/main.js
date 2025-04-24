@@ -15,8 +15,8 @@ import { catalogSticky } from './module/catalogSticky.js';
 import { initMobileSwiper } from './module/initMobileSwiper.js';
 import { initAnchorNavigation } from './module/initAnchorNavigation.js';
 import { initStickyAnchor } from './module/initStickyAnchor.js';
-
-
+import { initSwipers } from './module/initSwipers.js';
+import { initTabs } from './module/initTabs.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -47,6 +47,14 @@ if (document.querySelector(".header__btn-info-group") && document.querySelector(
   const btn = document.querySelector(".header__btn-info-group");
   const topSection = document.querySelector(".header__btn-info-group-wrapp");
   const mobileHidden = document.querySelector(".footer-fixed__box-btn-info-group");
+  handleResize(mobileHidden, btn, topSection, 1030)
+  window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 1030));
+}
+
+if (document.querySelector(".box-marks__btn") && document.querySelector(".box-marks__wrapp-btn") && document.querySelector(".detailed-reviews__hidden-mobile")) {
+  const btn = document.querySelector(".box-marks__btn");
+  const topSection = document.querySelector(".box-marks__wrapp-btn");
+  const mobileHidden = document.querySelector(".detailed-reviews__hidden-mobile");
   handleResize(mobileHidden, btn, topSection, 1030)
   window.addEventListener("resize", () => handleResize(mobileHidden, btn, topSection, 1030));
 }
@@ -174,6 +182,21 @@ if(document.querySelectorAll('.box-anchor')){
     '.box-questions-answers__content', // Контентный блок
     60, // Высота хедера
     20 // Дополнительный отступ
+  );
+}
+
+if(document.querySelectorAll('.detailed-swiper-container')){
+  initSwipers(
+    '.detailed-swiper', // Основной слайдер
+    '.detailed-swiper-preview', // Слайдер превью
+    5 // Количество видимых превью (можно изменить)
+  );
+}
+
+if(document.querySelectorAll('.detailed-card-sec3')){
+  initTabs(
+    'detailed-card-sec3__btn', // Класс кнопок
+    'detailed-card-sec3__box-content' // Класс блоков контента
   );
 }
 

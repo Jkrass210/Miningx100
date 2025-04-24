@@ -30,7 +30,7 @@
         &:focus-visible,&:hover,&:active {
           color: var(--text-neutral-button-default-dark);
           svg {
-            opacity: 1;
+            //opacity: 1;
           }
         }
         &.active {

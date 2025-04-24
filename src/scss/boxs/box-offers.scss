@@ -1,5 +1,21 @@
 .box-offers {
   background-color: var(--background-normal);
+  &.box-offers-1 {
+    .box-offers__top-line {
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--stroke-neutral-lighter);
+      .box-offers__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--text-neutral-header);
+      }
+    }
+    .box-offers__btn-swiper-group {
+      display: none;
+    }
+  }
   &__top-line {
     margin-bottom: 32px;
     display: flex;

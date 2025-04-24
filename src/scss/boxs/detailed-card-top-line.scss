@@ -1,0 +1,22 @@
+.detailed-card-top-line {
+  padding-top: 24px;
+  .path {
+    margin-bottom: 24px;
+  }
+  .container3 {
+    max-width: 1200px;
+    padding: 0 48px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .detailed-card-top-line {
+    .path {
+      margin-bottom: 20px;
+    }
+    .container3 {
+      padding: 0 24px;
+    }
+  }
+}
