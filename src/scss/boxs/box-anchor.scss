@@ -4,7 +4,7 @@
   top: 150px;
   transition: top 0.3s ease, transform 0.3s ease;
   &__list {
-    max-width: 200px;
+    max-width: 264px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -21,6 +21,7 @@
         color: var(--text-neutral-button-default);
         transition: color 0.4s ease-in-out;
         svg {
+          min-width: 16px;
           opacity: 0;
           transition: opacity 0.4s ease-in-out;
         }
@@ -47,6 +48,9 @@
 @media (max-width: 1500px) {
   .box-anchor {
     padding-left: 0;
+    &__list {
+      max-width: 200px;
+    }
   }
 }
 

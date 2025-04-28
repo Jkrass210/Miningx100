@@ -190,7 +190,15 @@
 @media (max-width: 1500px) {
   .section-catalog {
     &__aside {
-      display: none;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      padding: 0;
+      background: var(--surface-darker-400);
     }
     &__content {
       width: 100%;

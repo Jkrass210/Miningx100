@@ -8,7 +8,7 @@ import { animationReview } from './module/animationReview.js';
 import { initToggleTabs } from './module/initToggleTabs.js';
 import { setupFormValidation } from './module/setupFormValidation.js';
 import { gridAnimation } from './module/gridAnimation.js';
-import { iconAnimation } from './module/iconAnimation.js';
+//import { iconAnimation } from './module/iconAnimation.js';
 import { topLineFixed } from './module/topLineFixed.js';
 import { dropDown1 } from './module/dropDown1.js';
 import { catalogSticky } from './module/catalogSticky.js';
@@ -17,6 +17,9 @@ import { initAnchorNavigation } from './module/initAnchorNavigation.js';
 import { initStickyAnchor } from './module/initStickyAnchor.js';
 import { initSwipers } from './module/initSwipers.js';
 import { initTabs } from './module/initTabs.js';
+import { initTabsBox } from './module/initTabsBox.js';
+import { cryptoAnimation } from './module/cryptoAnimation.js';
+import { animationLine } from './module/animationLine.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -108,7 +111,8 @@ if (document.querySelectorAll('.box-order__form')) {
 }
 
 if (document.querySelector('.swiper-logo')) {
-  const swiperLogo = new Swiper('.swiper-logo', {
+  animationLine()
+  /*const swiperLogo = new Swiper('.swiper-logo', {
     loop: true,
     allowTouchMove: false, // запрет прокрутки мышью/пальцем
     autoplay: {
@@ -119,7 +123,7 @@ if (document.querySelector('.swiper-logo')) {
     speed: 800, // скорость анимации
     slidesPerView: 6, // если слайды разной ширины, или можно задать число
     spaceBetween: 24, // отступы между слайдами
-  });
+  });*/
 }
 
 if(document.querySelectorAll(".background-semicircle")) {
@@ -142,9 +146,9 @@ if(document.getElementById('grid')) {
   gridAnimation()
 }
 
-if(document.querySelector('.box-hero')) {
+/*if(document.querySelector('.box-hero')) {
   iconAnimation()
-}
+}*/
 
 if(document.querySelector('.top-line-fixed')) {
   topLineFixed()
@@ -200,5 +204,60 @@ if(document.querySelectorAll('.detailed-card-sec3')){
   );
 }
 
+/*if(document.querySelectorAll('.drop-down-box__swiper')){
+  var swiper = new Swiper(".drop-down-box__swiper", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    mousewheel: true,
+  });
+}*/
 
+if(document.querySelectorAll('.box-comparison__swiper')){
+  new Swiper('.box-comparison__swiper', {
+    slidesPerView: 2, // Фиксированное количество видимых слайдов
+    spaceBetween: 6, // Отступ 24px между слайдами
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+    //mousewheel: true,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".btn-swiper-comparison-next",
+      prevEl: ".btn-swiper-comparison-prev",
+    },
+    breakpoints: {
+      // Адаптация для мобильных устройств
+      767: {
+        slidesPerView: 2.5,
+        spaceBetween: 16,
+      },
+      1030: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+      1500: {
+        slidesPerView: 6,
+        spaceBetween: 24,
+      }
+    }
+  });
+}
 
+if(document.querySelectorAll('.drop-down-box')){
+  initTabsBox('card8__drop-down', 'drop-down-box__btn', 'drop-down-box__content');
+}
+
+if(document.querySelector('.box-hero__bottom-wrapp .search1__input')) {
+  document.querySelector('.box-hero__bottom-wrapp .search1__input').placeholder = '';
+  console.log(document.querySelector('.box-hero__bottom-wrapp .search1__input'))
+}
+
+if(document.querySelector('.crypto-box')){
+  cryptoAnimation()
+}

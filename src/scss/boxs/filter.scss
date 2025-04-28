@@ -15,6 +15,9 @@
     background-color: var(--surface-darker);
     border-radius: 100px;
   }
+  &__top-line {
+    display: none;
+  }
   &__options {
     display: flex;
     flex-direction: column;
@@ -67,5 +70,34 @@
   .filter {
     scrollbar-width: thin;
     scrollbar-color: var(--surface-darker) transparent;
+  }
+}
+@media (max-width: 1500px) {
+  .filter {
+    &__top-line {
+      display: flex;
+      padding: 24px 16px 32px 16px;
+      background-color: var(--background-normal);
+      justify-content: space-between;
+    }
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: var(--text-neutral-header);
+    }
+    &__close {
+      display: flex;
+      color: var(--text-neutral-header);
+      transition: color 0.4s ease-in-out;
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover,&:active {
+        content: var(--text-accent-default);
+      }
+    }
   }
 }

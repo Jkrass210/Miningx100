@@ -7,15 +7,44 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    svg {
+      transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+    }
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+      & + .drop-down-box__content {
+        display: block;
+      }
+    }
     .text {
       font-family: var(--font-family);
       font-weight: 500;
       font-size: 14px;
       line-height: 143%;
+      transition: color 0.4s ease-in-out;
       color: var(--text-neutral-button-default-dark);
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--text-accent-default);
+      .text {
+        color: var(--text-accent-default);
+      }
     }
   }
   &__content {
+    display: none;
+    overflow-y: auto;
+    max-height: 754px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .top {
       display: flex;
       gap: 12px;
@@ -70,7 +99,6 @@
         }
       }
     }
-
     .detailed-card-sec1 {
       &__table {
         &-row {
