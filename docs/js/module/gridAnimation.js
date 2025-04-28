@@ -209,7 +209,7 @@ export function gridAnimation() {
     if (currentCols === newCols) return;
     
     currentCols = newCols;
-    const allCells = createGrid(newCols, 9); // Всегда 9 строк
+    const allCells = createGrid(newCols, 11); // Всегда 10 строк
     
     // Закрашиваем нужные квадраты
     targetCells.forEach(index => {

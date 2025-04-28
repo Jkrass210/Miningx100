@@ -196,9 +196,21 @@
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 200;
+      z-index: -2;
       padding: 0;
-      background: var(--surface-darker-400);
+      background-color: transparent;
+      pointer-events: none;
+      transition: opacity 0.4s ease, background-color 0.4s ease-in-out, z-index 0.4s ease-in-out;
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+        z-index: 200;
+        background-color: var(--surface-darker-400);
+        .filter {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+      }
     }
     &__content {
       width: 100%;

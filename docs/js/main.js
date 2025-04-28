@@ -20,6 +20,7 @@ import { initTabs } from './module/initTabs.js';
 import { initTabsBox } from './module/initTabsBox.js';
 import { cryptoAnimation } from './module/cryptoAnimation.js';
 import { animationLine } from './module/animationLine.js';
+import { openModalStopScroll } from './module/openModalStopScroll.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -260,4 +261,8 @@ if(document.querySelector('.box-hero__bottom-wrapp .search1__input')) {
 
 if(document.querySelector('.crypto-box')){
   cryptoAnimation()
+}
+
+if(document.querySelector('#openFilter')){
+  openModalStopScroll('openFilter')
 }

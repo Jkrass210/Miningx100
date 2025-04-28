@@ -483,7 +483,7 @@ body.loading footer {
   background-color: var(--component-positive-primary-default);
   transition: background-color 0.4s ease-in-out;
   animation-name: scalePulse;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-delay: 0s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
@@ -875,11 +875,20 @@ body.loading footer {
   font-size: 14px;
   line-height: 143%;
   color: var(--text-accent-default);
+  /*&:focus-visible,&:hover,&:active {
+    & + .drop-bown-catalog__box {
+      visibility: visible;
+      opacity: 1;
+      z-index: 2;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+  }*/
 }
 .drop-bown-catalog__btn:focus, .drop-bown-catalog__btn:focus-visible {
   outline: none;
 }
-.drop-bown-catalog__btn:focus-visible, .drop-bown-catalog__btn:hover,
 .drop-bown-catalog__btn svg {
   transition: transform 0.4s ease-in-out;
 }
@@ -1013,6 +1022,7 @@ body.loading footer {
 .box-advantages::before {
   content: "";
   position: absolute;
+  z-index: 2;
   top: -800px;
   width: 100%;
   height: 800px;
@@ -1972,7 +1982,9 @@ body.loading footer {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(21, 1fr); /* 21 колонка */
-  grid-template-rows: repeat(9, 1fr); /* 9 строк */
+  grid-template-rows: repeat(11, 1fr); /* 10 строк */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  opacity: 0.8;
 }
 .box-hero .grid-cell {
   border-right: 1px solid rgba(126, 153, 255, 0.14);
@@ -1996,6 +2008,7 @@ body.loading footer {
 }
 .box-hero__background .background-semicircle {
   position: absolute;
+  z-index: 2;
   border-radius: 150% 150% 0 0;
   bottom: 0;
   left: 50%;
@@ -2027,6 +2040,8 @@ body.loading footer {
 }
 .box-hero__container {
   padding-bottom: 80px;
+  position: relative;
+  z-index: 3;
   /*.floating-image {
     position: absolute;
     opacity: 0;
@@ -2085,13 +2100,13 @@ body.loading footer {
 .box-hero__title-main {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  column-gap: 12px;
   align-items: center;
   justify-content: center;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 48px;
-  line-height: 117%;
+  line-height: 112%;
   text-align: center;
   color: var(--text-neutral-header);
 }
@@ -2110,6 +2125,9 @@ body.loading footer {
 .box-hero__bottom-wrapp {
   position: relative;
   z-index: 1;
+}
+.box-hero__bottom-wrapp .search1 {
+  padding: 0;
 }
 .box-hero__bottom-wrapp .search1__form {
   gap: 8px;
@@ -3061,9 +3079,21 @@ body.loading footer {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 200;
+    z-index: -2;
     padding: 0;
-    background: var(--surface-darker-400);
+    background-color: transparent;
+    pointer-events: none;
+    transition: opacity 0.4s ease, background-color 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  }
+  .section-catalog__aside.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 200;
+    background-color: var(--surface-darker-400);
+  }
+  .section-catalog__aside.active .filter {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
   }
   .section-catalog__content {
     width: 100%;
@@ -3274,18 +3304,40 @@ body.loading footer {
   }
 }
 @media (max-width: 1500px) {
+  .filter {
+    min-width: 286px;
+    gap: 0;
+    max-height: 100vh;
+    opacity: 0;
+    transform: scale(0) rotate(12.5deg);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .filter::-webkit-scrollbar {
+    width: 18px; /* Общая ширина скроллбара */
+    background-color: transparent; /* Прозрачный фон трека */
+  }
+  .filter::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 6px 0; /* Вертикальные отступы */
+  }
+  .filter::-webkit-scrollbar-thumb {
+    background-color: var(--background-normal);
+    border-radius: 100px;
+    border: 6px solid transparent; /* Горизонтальные отступы */
+    background-clip: content-box; /* Ограничиваем фон только областью контента */
+    min-height: 40px; /* Минимальная высота ползунка */
+  }
   .filter__top-line {
     display: flex;
     padding: 24px 16px 32px 16px;
     background-color: var(--background-normal);
     justify-content: space-between;
   }
-  .filter__title {
+  .filter__main-title {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    text-align: center;
     color: var(--text-neutral-header);
   }
   .filter__close {
@@ -3298,6 +3350,14 @@ body.loading footer {
   }
   .filter__close:focus-visible, .filter__close:hover, .filter__close:active {
     content: var(--text-accent-default);
+  }
+  .filter__options {
+    padding: 0 16px;
+    background-color: var(--background-normal);
+  }
+  .filter__buttons {
+    padding: 0 16px 16px;
+    background-color: var(--background-normal);
   }
 }
 .btn-filter {
@@ -5743,6 +5803,63 @@ body.loading footer {
   font-size: 24px;
   line-height: 125%;
   color: var(--text-neutral-header);
+}
+
+.cookies {
+  display: none;
+  max-width: 360px;
+  position: fixed;
+  z-index: 202;
+  left: 24px;
+  bottom: 24px;
+}
+.cookies.active {
+  display: block;
+}
+.cookies__form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+  border-radius: 20px;
+  border: 1px solid var(--stroke-accent-default);
+  background-color: var(--background-normal);
+}
+.cookies__desc {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  color: var(--text-neutral-darker);
+}
+.cookies__desc a {
+  color: var(--text-accent-button-default);
+  transition: color 0.4s ease-in-out;
+}
+.cookies__desc a:focus, .cookies__desc a:focus-visible {
+  outline: none;
+}
+.cookies__desc a:focus-visible, .cookies__desc a:hover, .cookies__desc a:active {
+  color: var(--text-neutral-darker);
+}
+.cookies__btn {
+  border-radius: 8px;
+  padding: 10px 10px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--text-neutral-lightest);
+  background-color: var(--component-accent-primary-default);
+  transition: background-color 0.4s ease-in-out;
+}
+.cookies__btn:focus, .cookies__btn:focus-visible {
+  outline: none;
+}
+.cookies__btn:focus-visible, .cookies__btn:hover, .cookies__btn:active {
+  background-color: var(--component-accent-primary-hover);
 }
 
 .footer__container.container3 {

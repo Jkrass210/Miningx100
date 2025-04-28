@@ -11,7 +11,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(21, 1fr);  /* 21 колонка */
-    grid-template-rows: repeat(9, 1fr);      /* 9 строк */
+    grid-template-rows: repeat(11, 1fr);      /* 10 строк */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    opacity: 0.8;
   }
 
   .grid-cell {
@@ -41,6 +43,7 @@
     position: relative;
     .background-semicircle {
       position: absolute;
+      z-index: 2;
       border-radius: 150% 150% 0 0;
       bottom: 0;
       left: 50%;
@@ -73,7 +76,8 @@
   }
   &__container {
     padding-bottom: 80px;
-
+    position: relative;
+    z-index: 3;
     /*.floating-image {
       position: absolute;
       opacity: 0;
@@ -132,13 +136,13 @@
   &__title-main {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    column-gap: 12px;
     align-items: center;
     justify-content: center;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 48px;
-    line-height: 117%;
+    line-height: 112%;
     text-align: center;
     color: var(--text-neutral-header);
     span:last-child {
@@ -158,6 +162,7 @@
     position: relative;
     z-index: 1;
     .search1 {
+      padding: 0;
       &__form {
         gap: 8px;
       }
