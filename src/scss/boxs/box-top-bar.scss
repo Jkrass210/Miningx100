@@ -1,18 +1,26 @@
 .box-top-bar {
-  padding-top: 16px;
+  padding-top: 79px;
   padding-bottom: 24px;
   &__background {
+    position: relative;
     padding: 42px;
     border-radius: 20px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../img/catalog/background/CatalogHeader.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  }
+  &__img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   &__box-info {
+    position: relative;
     max-width: 415px;
     display: flex;
     align-items: center;
@@ -22,22 +30,6 @@
   }
   &__desc {
     font-size: 12px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .box-top-bar {
-    &__background {
-      background-image: url("../img/catalog/background/CatalogHeader(1200).jpg");
-    }
-  }
-}
-
-@media (max-width: 1030px) {
-  .box-top-bar {
-    &__background {
-      background-image: url("../img/catalog/background/CatalogHeader(768).jpg");
-    }
   }
 }
 

@@ -1,4 +1,4 @@
-export function animationLine() {
+/*export function animationLine() {
   const logoList = document.getElementById('logoList');
   const logos = [
     'img/swiper-logo/1logo.svg',
@@ -26,7 +26,7 @@ export function animationLine() {
   items.forEach(item => logoList.appendChild(item));
 
   // Настройки анимации
-  const speed = 1; // Скорость прокрутки (пикселей за кадр)
+  const speed = 0.5; // Скорость прокрутки (пикселей за кадр)
   let position = 0;
   const listWidth = logoList.scrollWidth / 2; // Так как мы удвоили элементы
 
@@ -51,91 +51,91 @@ export function animationLine() {
     // Обновляем ширину списка при ресайзе
     listWidth = logoList.scrollWidth / 2;
   });
-}
+}*/
 
-
-/*export function animationLine() {
+export function animationLine() {
   const logoList = document.getElementById('logoList');
-  const container = document.querySelector('.box-hero__list-container');
   const logos = [
     'img/swiper-logo/1logo.svg',
     'img/swiper-logo/2logo.svg',
     'img/swiper-logo/3logo.svg',
     'img/swiper-logo/4logo.svg',
     'img/swiper-logo/5logo.svg',
-    'img/swiper-logo/6logo.svg'
+    'img/swiper-logo/6logo.svg',
+    'img/swiper-logo/3logo.svg',
+    'img/swiper-logo/4logo.svg'
   ];
-  
-  // Создаем два набора элементов для бесшовной прокрутки
-  function createListItems() {
-    return logos.map(logo => {
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <div class="box-slide">
-          <img class="swiper-logo-img" src="${logo}" alt="logo">
-        </div>
-      `;
-      return li;
-    });
-  }
-  
-  // Добавляем элементы в список (два идентичных набора)
-  const items = createListItems();
-  items.forEach(item => {
-    logoList.appendChild(item.cloneNode(true));
-    logoList.appendChild(item.cloneNode(true));
+
+  // Очищаем список перед добавлением новых элементов
+  logoList.innerHTML = '';
+
+  // Создаем элементы
+  logos.forEach(logo => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <div class="box-slide">
+        <img class="swiper-logo-img" src="${logo}" alt="logo">
+      </div>
+    `;
+    logoList.appendChild(li);
   });
-  
+
+  // Клонируем элементы для бесшовной прокрутки
+  const cloneItems = Array.from(logoList.children).forEach(item => {
+    const clone = item.cloneNode(true);
+    logoList.appendChild(clone);
+  });
+
   // Настройки анимации
-  const speed = 0.5; // Меньшая скорость для более плавного движения
-  let animationId;
+  const speed = 0.5; // Уменьшили скорость
   let position = 0;
-  let itemWidth = 0;
-  
-  // Рассчитываем ширину одного элемента
-  function calculateItemWidth() {
-    if (items.length > 0 && items[0].firstElementChild) {
-      itemWidth = items[0].firstElementChild.offsetWidth + 40; // 40px = padding 20px с каждой стороны
-    }
-    return itemWidth;
-  }
-  
-  // Рассчитываем общую ширину одного набора элементов
-  function calculateSingleSetWidth() {
-    return logos.length * calculateItemWidth();
-  }
-  
-  // Функция анимации
-  function animate() {
-    position -= speed;
-    const singleSetWidth = calculateSingleSetWidth();
+  let animationId;
+  let lastTimestamp = 0;
+  const frameRate = 60; // Целевой FPS
+  const frameInterval = 1000 / frameRate;
+
+  function animate(timestamp) {
+    if (!lastTimestamp) lastTimestamp = timestamp;
+    const deltaTime = timestamp - lastTimestamp;
     
-    // Когда первый набор полностью ушел влево, перемещаем его в конец
-    if (position <= -singleSetWidth) {
-      position += singleSetWidth;
+    // Ограничиваем частоту кадров для плавности
+    if (deltaTime >= frameInterval) {
+      position -= speed;
+      lastTimestamp = timestamp;
+      
+      // Получаем ширину оригинального набора элементов (без клонов)
+      const originalWidth = logoList.scrollWidth / 2;
+      
+      // Сбрасываем позицию, когда прокрутили оригинальную ширину
+      if (Math.abs(position) >= originalWidth) {
+        position = 0;
+      }
+      
+      logoList.style.transform = `translateX(${position}px)`;
     }
     
-    logoList.style.transform = `translateX(${position}px)`;
     animationId = requestAnimationFrame(animate);
   }
-  
-  // Инициализация
-  function init() {
-    calculateItemWidth();
-    // Убедимся, что элементы имеют правильные размеры
-    setTimeout(() => {
-      calculateItemWidth();
-      animate();
-    }, 100);
-  }
-  
-  // Запускаем инициализацию
-  init();
-  
-  // Обработка изменения размера окна
+
+  // Запускаем анимацию
+  animationId = requestAnimationFrame(animate);
+
+  // Оптимизация для ресайза
+  let resizeTimeout;
   window.addEventListener('resize', function() {
-    cancelAnimationFrame(animationId);
-    calculateItemWidth();
-    animate();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      cancelAnimationFrame(animationId);
+      position = 0;
+      logoList.style.transform = `translateX(0)`;
+      animationId = requestAnimationFrame(animate);
+    }, 100);
   });
-}*/
+
+  // Очистка при уничтожении компонента
+  return () => {
+    cancelAnimationFrame(animationId);
+    window.removeEventListener('resize', this);
+  };
+}
+

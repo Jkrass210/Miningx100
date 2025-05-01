@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/components/head.html',{"title":"Страница Каталога - MINING100"})
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  @@include('html/boxs/box-top-bar.html')
+  <div class="top-line-fixed">
+    <div class="top-line-fixed__content">
+      @@include('html/components/path.html',{"page":"Каталог"})
+      @@include('html/boxs/box-top-line-catalog.html')
+    </div>
+  </div>
+  <div class="catalog-page">
+    <div class="catalog-page__container container3">
+      <div class="catalog-page__content">
+        @@include('html/boxs/section-catalog-page-aside.html')
+        @@include('html/boxs/section-catalog-page-top-line.html')
+        @@include('html/boxs/section-catalog-page.html')
+        @@include('html/boxs/box-factoty-catalog.html')
+        @@include('html/boxs/footer-catalog.html')
+      </div>
+    </div>
+  </div>
+</body>
+</html>

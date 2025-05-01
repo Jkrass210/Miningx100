@@ -21,6 +21,8 @@ import { initTabsBox } from './module/initTabsBox.js';
 import { cryptoAnimation } from './module/cryptoAnimation.js';
 import { animationLine } from './module/animationLine.js';
 import { openModalStopScroll } from './module/openModalStopScroll.js';
+import { placeholderEffect } from './module/placeholderEffect.js';
+import { catalogPageFixed } from './module/catalogPageFixed.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -105,6 +107,15 @@ if (document.querySelectorAll('.drop-down-filter')) {
   })
 }
 
+if (document.querySelectorAll('.drop-down1')) {
+  initToggleTabs({
+    wrapperSelector: '.drop-down1',
+    buttonSelector: '.drop-down1__btn',
+    contentSelector: '.drop-down1__list',
+    activeClass: 'active'
+  })
+}
+
 if (document.querySelectorAll('.box-order__form')) {
   document.querySelectorAll(".box-order__form").forEach(form => {
     setupFormValidation(form, ".box-order__btn");
@@ -151,13 +162,13 @@ if(document.getElementById('grid')) {
   iconAnimation()
 }*/
 
-if(document.querySelector('.top-line-fixed')) {
+/*if(document.querySelector('.top-line-fixed')) {
   topLineFixed()
-}
+}*/
 
-if(document.querySelector('.drop-down1')) {
+/*if(document.querySelector('.drop-down1')) {
   dropDown1()
-}
+}*/
 
 if(document.querySelector('.section-catalog__aside') && document.querySelector('.catalog-top-line')){
   catalogSticky();
@@ -256,7 +267,8 @@ if(document.querySelectorAll('.drop-down-box')){
 
 if(document.querySelector('.box-hero__bottom-wrapp .search1__input')) {
   document.querySelector('.box-hero__bottom-wrapp .search1__input').placeholder = '';
-  console.log(document.querySelector('.box-hero__bottom-wrapp .search1__input'))
+
+  placeholderEffect()
 }
 
 if(document.querySelector('.crypto-box')){
@@ -266,3 +278,8 @@ if(document.querySelector('.crypto-box')){
 if(document.querySelector('#openFilter')){
   openModalStopScroll('openFilter')
 }
+
+if(document.querySelector('.catalog-page')){
+  catalogPageFixed()
+}
+

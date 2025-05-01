@@ -10,6 +10,11 @@
       }
     }
   }
+  &.catalog-page {
+    .box-factoty__container {
+      padding: 0;
+    }
+  }
   &__content {
     width: 100%;
     overflow: hidden;
