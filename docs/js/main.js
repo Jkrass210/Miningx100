@@ -23,6 +23,7 @@ import { animationLine } from './module/animationLine.js';
 import { openModalStopScroll } from './module/openModalStopScroll.js';
 import { placeholderEffect } from './module/placeholderEffect.js';
 import { catalogPageFixed } from './module/catalogPageFixed.js';
+import { initFixedCardInfo } from './module/initFixedCardInfo.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -281,5 +282,9 @@ if(document.querySelector('#openFilter')){
 
 if(document.querySelector('.catalog-page')){
   catalogPageFixed()
+}
+
+if(document.querySelectorAll('.card8')){
+  //initFixedCardInfo()
 }
 

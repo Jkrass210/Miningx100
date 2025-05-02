@@ -2409,7 +2409,7 @@ body.loading footer {
   top: 0;
   width: 124px;
   height: 100%;
-  background: linear-gradient(90deg, #fafaff 0%, rgba(250, 250, 255, 0) 100%);
+  background: linear-gradient(90deg, #f5f7fe 0%, rgba(250, 250, 255, 0) 100%);
 }
 .box-hero__list-container::before {
   content: "";
@@ -2419,7 +2419,7 @@ body.loading footer {
   z-index: 2;
   width: 124px;
   height: 100%;
-  background: linear-gradient(270deg, #fafbff 0%, rgba(250, 251, 255, 0) 100%);
+  background: linear-gradient(270deg, #f5f7fe 0%, rgba(250, 251, 255, 0) 100%);
 }
 .box-hero__list {
   display: flex;
@@ -5638,16 +5638,15 @@ body.loading footer {
 .card8 {
   position: relative;
   height: 100%;
-  max-height: 1232px;
-  overflow-x: auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  /*&::-webkit-scrollbar {
+    display: none;
+  }*/
 }
-.card8::-webkit-scrollbar {
-  display: none;
+.card8 .detailed-card-sec1__table {
+  margin-bottom: 0;
 }
 .card8__btn-close {
   display: flex;
@@ -5689,6 +5688,20 @@ body.loading footer {
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+.card8__box-info.fixed-el {
+  position: fixed;
+  background-color: var(--background-normal);
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  padding-bottom: 40px;
+}
+.card8__box-info.fixed-el.active {
+  opacity: 1;
+  z-index: 4;
+  visibility: visible;
 }
 .card8__box-info .box-price {
   display: flex;
