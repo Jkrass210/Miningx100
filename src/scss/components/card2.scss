@@ -154,6 +154,13 @@
         padding-top: 95%;
       }
     }
+    &__box-info {
+      .box-price {
+        margin-bottom: 8px;
+        column-gap: 8px;
+        row-gap: 0;
+      }
+    }
     &__img-link {
       background: transparent;
     }

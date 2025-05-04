@@ -285,6 +285,6 @@ if(document.querySelector('.catalog-page')){
 }
 
 if(document.querySelectorAll('.card8')){
-  //initFixedCardInfo()
+  initFixedCardInfo()
 }
 

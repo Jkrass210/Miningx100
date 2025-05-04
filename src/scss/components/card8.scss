@@ -56,17 +56,23 @@
     flex-direction: column;
     gap: 2px;
     &.fixed-el {
-      position: fixed;
+      top: 0;
+      position: absolute;
       background-color: var(--background-normal);
+      width: 100%;
       opacity: 0;
       z-index: -1;
       visibility: hidden;
-      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, z-index 0.4s ease-in-out;
+      //transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, z-index 0.4s ease-in-out;
       padding-bottom: 40px;
+      will-change: transform;
+      
       &.active {
+        padding-top: 70px;
         opacity: 1;
-        z-index: 4;
+        z-index: 10;
         visibility: visible;
+        position: absolute;
       }
     }
     .box-price {

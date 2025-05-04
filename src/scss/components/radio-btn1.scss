@@ -15,6 +15,11 @@
     &:focus,&:focus-visible {
       outline: none;
     }
+    &:focus-visible,&:hover,&:active {
+      & + .radio-btn1__castom::before {
+        opacity: 1;
+      }
+    }
   }
   &__castom {
     position: relative;

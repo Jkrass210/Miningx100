@@ -5,6 +5,7 @@
   max-width: 236px;
   max-height: calc(100vh - 300px);
   overflow: auto;
+  padding-bottom: 96px;
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -78,8 +79,9 @@
     gap: 0;
     max-height: 100vh;
     opacity: 0;
-    transform: scale(0) rotate(12.5deg);
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    padding-bottom: 0;
+    //transform: scale(0) rotate(12.5deg);
+    //transition: transform 0.4s ease, opacity 0.4s ease;
     &::-webkit-scrollbar {
       width: 18px; /* Общая ширина скроллбара */
       background-color: transparent; /* Прозрачный фон трека */
@@ -126,6 +128,17 @@
     &__buttons {
       padding: 0 16px 16px;
       background-color: var(--background-normal);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .filter {
+    min-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }
