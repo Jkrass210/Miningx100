@@ -166,9 +166,8 @@
         gap: 8px;
       }
       &__label {
-        display: inline-block;
+        display: block;
         position: relative;
-        z-index: 1;
         min-width: 267px;
         border: 2px solid var(--stroke-accent-dark);
         border-radius: 12px;
@@ -180,8 +179,9 @@
           position: absolute;
           pointer-events: none;
           inset: -4px;
-          z-index: 0;
+          z-index: -1;
           border-radius: 12px;
+          background-color: var(--blue-300);
           border: 2px solid var(--blue-300);
         }
         &.input-container {
@@ -320,7 +320,7 @@
       } 
       &.pulse {
         span {
-          transform: translate(-50%, -50%) scale(1.2) !important;
+          transform: translate(-50%, -50%) scale(1) !important;
           transition: all 0.2s ease-out;
         }
       }
@@ -408,11 +408,13 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        width: 32px;
-        min-width: 32px;
-        height: 32px;
+        width: 27px;
+        min-width: 27px;
+        height: 27px;
         border-radius: 8px;
-        border: 1px solid var(--blue-300);
+        &.border {
+          border: 1px solid var(--blue-300);
+        }
         img {
           max-width: 120%;
           height: 120%;
