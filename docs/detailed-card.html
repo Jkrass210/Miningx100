@@ -1436,7 +1436,7 @@
             Посмотреть еще
           </button>
           <div class="detailed-reviews__for-btn-mobile">
-            <button class="box-questions__btn-all btn-reset">
+            <button class="box-questions__btn-all btn-reset open-modal-1">
               Оставить отзыв
             </button>
           </div>
@@ -1472,25 +1472,25 @@
             </li>
           </ul>
           <div class="box-marks__wrapp-btn">
-            <button class="box-marks__btn btn-reset">
+            <button class="box-marks__btn btn-reset open-modal-1">
               Оставить отзыв
             </button>
           </div>
         </div>
       </div>
-      <div class="review-modal">
+      <div class="review-modal modal-1">
   <div class="review-modal__wrapper modal">
-    <button class="modal__close btn-reset">
+    <button class="modal__close btn-reset close">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
         <use xlink:href="img/sprite.svg#filtrClose"></use>
       </svg>
     </button>
     <div class="modal__wrapper">
+      <h1 class="modal__title">
+        Оставить отзыв
+      </h1>
       <form class="modal__form">
         <div class="modal__input-group">
-          <h1 class="modal__title">
-            Оставить отзыв
-          </h1>
           <ul class="modal__list list-reset">
             <li>
               <div class="modal__top-box">
@@ -1553,6 +1553,19 @@
           <p>Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a></p>
         </div>
       </form>
+      <div class="modal__box-thanks">
+        <div class="modal__thanks-top-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#yesOk"></use>
+          </svg>
+          <p class="desc">
+            Спасибо за ваш отзыв! Он успешно отправлен и скоро появится на сайте.
+          </p>
+        </div>
+        <button class="modal__thanks-close close-2 btn-reset">
+          Закрыть
+        </button>
+      </div>
     </div>
   </div>
 </div>

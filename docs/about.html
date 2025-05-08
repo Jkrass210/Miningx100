@@ -285,9 +285,9 @@
         <a href="#" class="btn">
           <span>Отзывы</span>
         </a>
-        <a href="#" class="btn">
+        <button href="#" class="btn btn-reset open-modal-2">
           <span>Консультация</span>
-        </a>
+        </button>
       </div>
       <div class="about-hero__bottom-box">
         <p class="desc">Более 320 отзывов</p>
@@ -312,6 +312,61 @@
           <span>5.0</span>
         </div>
       </div>
+      <div class="consultation-modal modal-2">
+  <div class="consultation-modal__wrapper modal">
+    <button class="modal__close btn-reset close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <use xlink:href="img/sprite.svg#filtrClose"></use>
+      </svg>
+    </button>
+    <div class="modal__wrapper">
+      <h1 class="modal__title">
+        Консультация
+      </h1>
+      <form class="modal__form">
+        <div class="modal__input-group">
+          <ul class="modal__list list-reset">
+            <li>
+              <div class="modal__top-box">
+                <p>Ваше имя</p>
+              </div>
+              <label class="modal__label">
+                <input type="text" name="name" placeholder="Имя">
+              </label>
+            </li>
+            <li>
+              <div class="modal__top-box">
+                <p>Номер телефона</p>
+              </div>
+              <label class="modal__label">
+                <input type="text" name="phone" placeholder="Телефон">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="modal__submit-box">
+          <button class="modal__submit btn-reset">
+            Отправить
+          </button>
+          <p>Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a></p>
+        </div>
+      </form>
+      <div class="modal__box-thanks">
+        <div class="modal__thanks-top-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#yesOk"></use>
+          </svg>
+          <p class="desc">
+            Спасибо за ваш отзыв! Он успешно отправлен и скоро появится на сайте.
+          </p>
+        </div>
+        <button class="modal__thanks-close close-2 btn-reset">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -361,7 +416,14 @@
         </li>
       </ul>
       <div class="box-adout-cards__box-video">
-
+        <div class="box-adout-cards__box-video-wrapper">
+          <!--<iframe src="https://vk.com/video_ext.php?oid=-73528734&id=456239160" allow="fullscreen; encrypted-media; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>-->
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video1.webm" type="video/webm">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
       </div>
       <div class="box-adout-cards__swiper-wrapp">
         <div class="box-hero__swiper swiper-logo">

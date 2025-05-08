@@ -11,4 +11,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--surface-darker-400);
+  &.active {
+    z-index: 201;
+    opacity: 1;
+    visibility: visible;
+  }
 }

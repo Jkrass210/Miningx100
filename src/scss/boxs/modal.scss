@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   max-width: 360px;
+  width: 100%;
   &__close {
     position: absolute;
     top: 18px;
@@ -25,7 +26,9 @@
   }
   &__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 16px;
     justify-content: center;
   }
   &__form {
@@ -43,6 +46,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 130%;
+    width: 100%;
     color: var(--text-neutral-header);
   }
   &__list {
@@ -151,7 +155,7 @@
       }
     }
   }
-  &__submit {
+  &__submit, .modal__thanks-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,6 +173,33 @@
     }
     &:focus-visible,&:hover,&:active {
       background-color: var(--component-accent-primary-hover);
+    }
+  }
+  &__box-thanks {
+    display: none;
+    flex-direction: column;
+    gap: 64px;
+    &.active {
+      display: flex;
+    }
+  }
+  &__thanks-top-box {
+    width: 100%;
+    align-items: start;
+    border: 1px solid var(--stroke-positive-default);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    background-color: var(--component-positive-secondary-default);
+    p.desc{
+      max-width: 250px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0.02em;
+      color: var(--text-neutral-darker);
     }
   }
 }

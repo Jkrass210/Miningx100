@@ -24,6 +24,7 @@ import { openModalStopScroll } from './module/openModalStopScroll.js';
 import { placeholderEffect } from './module/placeholderEffect.js';
 import { catalogPageFixed } from './module/catalogPageFixed.js';
 import { initFixedCardInfo } from './module/initFixedCardInfo.js';
+import { initModals } from './module/initModals.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -286,5 +287,27 @@ if(document.querySelector('.catalog-page')){
 
 if(document.querySelectorAll('.card8')){
   initFixedCardInfo()
+}
+
+const modals = initModals();
+
+if(document.querySelectorAll('.modal-1')){
+  modals.setup(
+    'open-modal-1', // класс кнопки открытия
+    'modal-1',   // класс модального окна
+    'review-modal', // класс контейнера (для закрытия по клику вне)
+    'close',  // класс кнопки закрытия (крестика)
+    'close-2'
+  );
+}
+
+if(document.querySelectorAll('.modal-2')){
+  modals.setup(
+    'open-modal-2', // класс кнопки открытия
+    'modal-2',   // класс модального окна
+    'consultation-modal', // класс контейнера (для закрытия по клику вне)
+    'close',  // класс кнопки закрытия (крестика)
+    'close-2'
+  );
 }
 
