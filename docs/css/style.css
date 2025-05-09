@@ -152,6 +152,10 @@ body.loading footer {
   padding-top: 63px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 :root {
   --font-family: "Onest", sans-serif;
   --second-family: "VelaSans", sans-serif;
@@ -4285,7 +4289,14 @@ body.loading footer {
   }
 }
 .box-help .box-factoty__content {
+  min-height: 320px;
   padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-help .box-factoty__content:has(.box-order__shipped.none) {
+  display: block;
 }
 .box-help .box-factoty__title {
   font-family: var(--font-family);
@@ -4322,6 +4333,7 @@ body.loading footer {
   }
   .box-help .box-factoty__content {
     padding: 20px;
+    min-height: 260px;
   }
   .box-help .box-factoty__title {
     font-size: 20px;

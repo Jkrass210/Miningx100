@@ -357,7 +357,7 @@
             <use xlink:href="img/sprite.svg#yesOk"></use>
           </svg>
           <p class="desc">
-            Спасибо за ваш отзыв! Он успешно отправлен и скоро появится на сайте.
+            Ваша заявка принята, наш менеджер скоро свяжется с вами.
           </p>
         </div>
         <button class="modal__thanks-close close-2 btn-reset">
@@ -643,7 +643,7 @@
     <section class="box-factoty box-help section">
   <div class="box-factoty__container container">
     <div class="box-factoty__content">
-      <div class="box-factoty__left">
+      <div class="box-factoty__left hidden">
         <div class="box-factoty__top">
           <h2 class="box-factoty__title">
             Поможем расчитать доходность вашего майнера!
@@ -663,10 +663,16 @@
           </p>
         </div>
       </div>
-      <picture>
+      <picture class="hidden">
         <source srcset="img/box-help/1-1030.png" media="(max-width: 1030px)">
         <img class="box-factoty__img" src="img/box-help/1.png" alt="img">
       </picture>
+
+      <div class="box-order__shipped">
+        <p class="section-title">
+          Мы скоро свяжемся с вами!
+        </p>
+      </div>
     </div>
   </div>
 </section>

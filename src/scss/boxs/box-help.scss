@@ -1,7 +1,13 @@
 .box-help {
   .box-factoty__content {
-    //max-height: 320px;
+    min-height: 320px;
     padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:has(.box-order__shipped.none) {
+      display: block;
+    }
   }
   .box-factoty__title {
     font-family: var(--font-family);
@@ -41,6 +47,7 @@
     }
     .box-factoty__content {
       padding: 20px;
+      min-height: 260px;
     }
     .box-factoty__title {
       font-size: 20px;
