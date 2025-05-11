@@ -25,6 +25,7 @@ import { placeholderEffect } from './module/placeholderEffect.js';
 import { catalogPageFixed } from './module/catalogPageFixed.js';
 import { initFixedCardInfo } from './module/initFixedCardInfo.js';
 import { initModals } from './module/initModals.js';
+import { initRatingStars } from './module/initRatingStars.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -121,6 +122,12 @@ if (document.querySelectorAll('.drop-down1')) {
 if (document.querySelectorAll('.box-order__form')) {
   document.querySelectorAll(".box-order__form").forEach(form => {
     setupFormValidation(form, ".box-order__btn");
+  });
+}
+
+if (document.querySelectorAll('.modal__form')) {
+  document.querySelectorAll(".modal__form").forEach(form => {
+    setupFormValidation(form, ".modal__submit");
   });
 }
 
@@ -309,5 +316,9 @@ if(document.querySelectorAll('.modal-2')){
     'close',  // класс кнопки закрытия (крестика)
     'close-2'
   );
+}
+
+if(document.querySelector('.modal__box-estimation')) {
+  initRatingStars('.modal__box-estimation');
 }
 

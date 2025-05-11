@@ -35,7 +35,7 @@
   &__form {
     max-width: 350px;
     display: flex;
-    border: 2px solid var(--stroke-positive-default);
+    border: 2px solid var(--stroke-neutral-lighter);
     //--stroke-neutral-lighter
     border-radius: 12px;
     padding: 4px;
@@ -47,8 +47,8 @@
     &:has(.box-order__label>input.error) {
       border-color: var(--stroke-negative-dark);
     }
-    &:has(.box-order__btn.disabled) {
-      border-color: var(--stroke-neutral-lighter);
+    &:has(.box-order__label>input.valid) {
+      border-color: var(--stroke-positive-default);
     }
   }
   &__label {
@@ -87,8 +87,8 @@
     }
     &.disabled {
       pointer-events: none;
-      color: var(--disabled-text--stroke);
-      background-color: var(--disabled-frame--stroke-light);
+      //color: var(--disabled-text--stroke);
+      //background-color: var(--disabled-frame--stroke-light);
     }
   }
   &__desc {
