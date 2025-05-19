@@ -74,6 +74,15 @@
       background-color: var(--stroke-neutral-lighter);
     }
   }
+
+  &__swiper-wrapp {
+    .box-hero__list-container::before {
+      background: linear-gradient(270deg, #fff 0%, rgba(250, 251, 255, 0) 100%);
+    }
+    .box-hero__list-container::after {
+      background: linear-gradient(90deg, #fff 0%, rgba(250, 250, 255, 0) 100%);
+    }
+  }
 }
 @media (max-width: 1500px) {
   .box-adout-cards {

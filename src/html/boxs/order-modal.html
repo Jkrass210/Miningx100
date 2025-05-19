@@ -1,0 +1,84 @@
+<div class="order-modal">
+  <div class="order-modal__wrapper modal">
+    <button class="modal__close btn-reset close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <use xlink:href="img/sprite.svg#filtrClose"></use>
+      </svg>
+    </button>
+    <div class="modal__wrapper">
+      <div class="modal__wrapper-main">
+        <div class="modal__btn-group-line">
+          <a href="#" class="link like">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#like"></use>
+            </svg>
+            <span class="counter">
+              23
+            </span>
+          </a>
+          <label class="comparison">
+            <input type="checkbox" name="comparison">
+            <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#comparCard"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
+        <div class="modal__box-price">
+          <h2 class="modal__title">
+            NovaMiner L9, 17 GH/s
+          </h2>
+          <p class="modal__price">
+            460 340 ₽
+          </p>
+        </div>
+        <form class="modal__form">
+          <div class="modal__input-group">
+            <ul class="modal__list list-reset">
+              <li>
+                <div class="modal__top-box">
+                  <p>Ваше имя</p>
+                </div>
+                <label class="modal__label">
+                  <input type="text" name="name" placeholder="Имя">
+                </label>
+              </li>
+              <li>
+                <div class="modal__top-box">
+                  <p>Номер телефона</p>
+                </div>
+                <label class="modal__label">
+                  <input type="text" name="phone" placeholder="Телефон">
+                </label>
+              </li>
+            </ul>
+            @@include('../components/counter.html')
+          </div>
+          <div class="modal__submit-box">
+            <button class="modal__submit btn-reset">
+              Отправить
+            </button>
+            <p>Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="modal__box-thanks">
+        <h3 class="modal__title">
+          Спасибо!
+        </h3>
+        <div class="modal__thanks-top-box">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#yesOk"></use>
+          </svg>
+          <p class="desc">
+            Ваша заявка принята, наш менеджер скоро свяжется с вами.
+          </p>
+        </div>
+        <button class="modal__thanks-close close-2 btn-reset">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

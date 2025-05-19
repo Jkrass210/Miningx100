@@ -16,7 +16,8 @@ export function initToggleTabs({
     }
 
     buttons.forEach((btn, index) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         const isActive = btn.classList.contains(activeClass);
 
         closeAll();

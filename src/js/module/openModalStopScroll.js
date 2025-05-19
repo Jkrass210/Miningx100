@@ -28,6 +28,7 @@ export const openModalStopScroll = (triggerId, closeBtnClass = 'filtr__close') =
   // Обработчик клика на кнопку закрытия
   if (closeBtn) {
     closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       e.stopPropagation();
       toggleFilter(false);
     });

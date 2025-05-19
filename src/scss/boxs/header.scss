@@ -59,6 +59,9 @@
           &:focus-visible,&:hover,&:active {
             color: var(--text-accent-default);
           }
+          &.active {
+            color: var(--text-accent-default);
+          }
         }
       }
     }

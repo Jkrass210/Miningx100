@@ -162,6 +162,9 @@
     z-index: 1;
     .search1 {
       padding: 0;
+      &__form-wrapp {
+        padding: 0 17px 12px;
+      }
       &__form {
         gap: 8px;
       }
@@ -408,9 +411,9 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        width: 27px;
-        min-width: 27px;
-        height: 27px;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
         border-radius: 8px;
         &.border {
           border: 1px solid var(--blue-300);

@@ -26,8 +26,12 @@
     position: absolute;
     inset: 0;
     background: var(--component-neutral-default);
+    transition: background 0.4s ease-in-out;
     &:focus,&:focus-visible {
       outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background: var(--component-neutral-hover);
     }
   }
   &__marker-wrapp {

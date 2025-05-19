@@ -7,6 +7,7 @@
     display: none;
   }
   &__form {
+    margin: 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -105,6 +106,9 @@
       background-color: var(--surface-darker-400);
       transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
     }
+    &__for-drop1 {
+      padding: 12px 32px;
+    }
     &__label {
       min-width: 320px;
       border-radius: 12px;
@@ -113,6 +117,14 @@
       .cursor {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .search1 {
+    &__for-drop1 {
+      padding: 12px 11px;
     }
   }
 }

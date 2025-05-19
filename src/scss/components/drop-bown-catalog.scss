@@ -1,5 +1,10 @@
 .drop-bown-catalog {
   position: relative;
+  &.non {
+    .drop-bown-catalog__btn {
+      color: var(--text-neutral-button-default-dark);
+    }
+  }
   &__btn {
     display: flex;
     align-items: center;
@@ -35,6 +40,9 @@
       svg {
         transform: rotate(180deg);
       }
+    }
+    &.non {
+      color: var(--text-neutral-button-default-dark);
     }
   }
   &__box {

@@ -3,6 +3,14 @@
   padding-bottom: 200px;
   &__container-top {
     margin-bottom: 64px;
+    .notetext {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      color: var(--text-neutral-button-default-dark);
+      transition: color 0.4s ease-in-out;
+    }
   }
   &__container-bottom {
     max-width: 1920px;

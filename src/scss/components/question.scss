@@ -22,7 +22,11 @@
         display: block;
       }
     }
+    span {
+      text-align: start;
+    }
     svg {
+      min-width: 20px;
       transition: transform 0.4s ease-in-out;
     }
     &:focus,&:focus-visible {

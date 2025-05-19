@@ -74,7 +74,7 @@
           </button>
         </div>
         <div class="detailed-card-sec1__btn-group">
-          <button class="btn-order btn-reset">
+          <button class="btn-order btn-reset open-modal-3">
             Быстрый заказ
           </button>
           <a href="#" class="link like">
@@ -93,6 +93,112 @@
               </svg>
             </span>
           </label>
+
+
+
+          <div class="detailed-card-sec1__order-modal order-modal modal-3">
+            <div class="order-modal__wrapper modal">
+              <button class="modal__close btn-reset close">
+                <svg id="filtrClose" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="modal__wrapper">
+                <div class="modal__wrapper-main">
+                  <div class="modal__btn-group-line">
+                    <button href="#" class="link btn-reset like favorite ${isFavoriteActive ? 'active' : ''}" data-id="${id}" style="pointer-events: none;">
+                      <svg id="like" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.9956 3.42388C6.6627 1.8656 4.43999 1.44643 2.76996 2.87334C1.09993 4.30026 0.864808 6.68598 2.17629 8.3736C3.26671 9.77674 6.56668 12.7361 7.64823 13.6939C7.76923 13.801 7.82973 13.8546 7.9003 13.8757C7.9619 13.8941 8.0293 13.8941 8.09089 13.8757C8.16146 13.8546 8.22196 13.801 8.34296 13.6939C9.42452 12.7361 12.7245 9.77674 13.8149 8.3736C15.1264 6.68598 14.92 4.28525 13.2212 2.87334C11.5225 1.46144 9.3285 1.8656 7.9956 3.42388Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span class="counter">
+                        23
+                      </span>
+                    </button>
+                    <label class="comparison" style="pointer-events: none;">
+                      <input type="checkbox" name="comparison" ${isComparisonChecked ? 'checked' : ''}>
+                      <span>
+                        <svg id="comparCard" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 7.33333L2 14M10 7.33333L10 14M6 2L6 14M14 2V14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="modal__box-price">
+                    <h2 class="modal__title">${title}</h2>
+                    <p class="modal__price">${price}</p>
+                  </div>
+                  <form class="modal__form" method="POST" enctype="multipart/form-data" action="/local/ajax/order_form.php">
+                    <input type="hidden" name="nameProduct" value="${title}">
+                    <input type="hidden" name="priceProduct" value="${price}">
+                    <div class="modal__input-group">
+                      <ul class="modal__list list-reset">
+                        <li>
+                          <div class="modal__top-box">
+                            <p>Ваше имя</p>
+                          </div>
+                          <label class="modal__label">
+                            <input type="text" name="name" placeholder="Имя">
+                          </label>
+                        </li>
+                        <li>
+                          <div class="modal__top-box">
+                            <p>Номер телефона</p>
+                          </div>
+                          <label class="modal__label">
+                            <input type="text" name="phone" placeholder="Телефон">
+                          </label>
+                        </li>
+                      </ul>
+                      <div class="counter">
+                        <button class="counter__btn btn-reset minus">
+                          <svg id="minus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.3335 8H12.6668" stroke="#4263F7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <input class="counter__input" type="text" name="counter" value="1">
+                        <button class="counter__btn btn-reset plus">
+                          <svg id="plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.00016 3.33301V12.6663M3.3335 7.99967H12.6668" stroke="#4263F7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="modal__submit-box">
+                      <button class="modal__submit btn-reset">
+                        Отправить
+                      </button>
+                      <p>Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a></p>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal__box-thanks" id="result">
+                  <h3 class="modal__title">
+                    Спасибо!
+                  </h3>
+                  <div class="modal__thanks-top-box">
+                      <svg id="yesOk" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_4613_28147)">
+                          <path d="M6.25002 10.0003L8.75002 12.5003L13.75 7.50033M18.3334 10.0003C18.3334 14.6027 14.6024 18.3337 10 18.3337C5.39765 18.3337 1.66669 14.6027 1.66669 10.0003C1.66669 5.39795 5.39765 1.66699 10 1.66699C14.6024 1.66699 18.3334 5.39795 18.3334 10.0003Z" stroke="#00B327" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4613_28147">
+                            <rect width="20" height="20" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    <p class="desc">
+                      Ваша заявка принята, наш менеджер скоро свяжется с вами.
+                    </p>
+                  </div>
+                  <button class="modal__thanks-close close-2 btn-reset">
+                    Закрыть
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>

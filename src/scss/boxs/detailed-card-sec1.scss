@@ -318,6 +318,15 @@
       }
     }
   }
+
+  &__order-modal {
+    &.order-modal {
+      display: none;
+      &.active {
+        display: flex;
+      }
+    }
+  }
 }
 
 @media (max-width: 1030px) {
