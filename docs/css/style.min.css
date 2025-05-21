@@ -5180,7 +5180,21 @@ body.loading footer {
     width: 100%;
   }
   .detailed-card-sec1__btn-group {
-    display: none;
+    padding: 16px 24px;
+    border-top: 1px solid var(--stroke-neutral-lighter);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 205;
+    width: 100%;
+    font-size: 13px;
+    line-height: 123%;
+    background-color: var(--background-normal);
+    box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.1);
+  }
+  .detailed-card-sec1__btn-group .btn-order {
+    margin-right: 16px;
+    flex: 1;
   }
   .detailed-card-sec1__box-characteristic {
     margin-bottom: 0;
@@ -5423,6 +5437,12 @@ body.loading footer {
 }
 .detailed-card-sec3__about {
   width: 47.9166666667%;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  color: var(--text-neutral-darker);
 }
 .detailed-card-sec3__list-about {
   display: flex;
@@ -5766,12 +5786,6 @@ body.loading footer {
   border-radius: 100px;
   background-color: var(--component-warning-primary-default);
 }
-.box-marks__list li div.number5 span {
-  width: 70%;
-}
-.box-marks__list li div.number4 span {
-  width: 2%;
-}
 .box-marks__wrapp-btn {
   display: flex;
 }
@@ -5816,6 +5830,20 @@ body.loading footer {
   line-height: 143%;
   color: var(--text-neutral-button-default-dark);
   transition: color 0.4s ease-in-out;
+}
+.box-comparison.disable .box-comparison__btn {
+  pointer-events: none;
+}
+.box-comparison.disable .line__btn-group {
+  pointer-events: none;
+}
+.box-comparison.disable .box-comparison__delete-list {
+  border-color: var(--stroke-neutral-lighter);
+  color: var(--disabled-text--stroke);
+}
+.box-comparison.disable .box-comparison__btn-swiper-group .btn-swiper-comparison {
+  border-color: var(--stroke-neutral-lighter);
+  color: var(--disabled-text--stroke);
 }
 .box-comparison__container-top {
   margin-bottom: 64px;
@@ -6012,6 +6040,7 @@ body.loading footer {
   gap: 16px;
 }
 .card8__box-img {
+  overflow: hidden;
   border: 1px solid var(--stroke-neutral-lighter);
   border-radius: 16px;
   position: relative;
@@ -7153,6 +7182,7 @@ body.loading footer {
   justify-content: center;
   border: 1px solid var(--stroke-neutral-lighter);
   border-radius: 8px;
+  background-color: var(--surface-lighter);
 }
 .section-catalog-page-disable::after {
   position: absolute;

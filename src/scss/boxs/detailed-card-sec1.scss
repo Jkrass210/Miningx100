@@ -341,7 +341,21 @@
       width: 100%;
     }
     &__btn-group {
-      display: none;
+      padding: 16px 24px;
+      border-top: 1px solid var(--stroke-neutral-lighter);
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 205;
+      width: 100%;
+      font-size: 13px;
+      line-height: 123%;
+      background-color: var(--background-normal);
+      box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.1);
+      .btn-order {
+        margin-right: 16px;
+        flex: 1;
+      }
     }
     &__box-characteristic {
       margin-bottom: 0;

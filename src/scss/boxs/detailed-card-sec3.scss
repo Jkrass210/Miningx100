@@ -132,6 +132,12 @@
   }
   &__about {
     width: calc(529 / 1104 * 100%);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.02em;
+    color: var(--text-neutral-darker);
   }
   &__list-about {
     display: flex;

@@ -99,7 +99,7 @@ export function rendOrder() {
                   <button class="modal__submit btn-reset">
                     Отправить
                   </button>
-                  <p>Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a></p>
+                  <p>Нажимая на кнопку, я соглашаюсь на обработку <a href="/privacy-policy/">Персональных данных</a></p>
                 </div>
               </form>
             </div>

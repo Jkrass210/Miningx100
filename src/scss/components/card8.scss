@@ -29,6 +29,7 @@
     gap: 16px;
   }
   &__box-img {
+    overflow: hidden;
     border: 1px solid var(--stroke-neutral-lighter);
     border-radius: 16px;
     position: relative;

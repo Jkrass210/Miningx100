@@ -31,6 +31,7 @@ import { rendOrder } from './module/rendOrder.js';
 import { initCounter } from './module/initCounter.js';
 import { initClearSearchInput } from './module/initClearSearchInput.js';
 import { initSmoothScroll } from './module/initSmoothScroll.js';
+import { calculateReviewRatings } from './module/calculateReviewRatings.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -473,4 +474,8 @@ if (document.querySelectorAll('.search1')){
 
 if (document.querySelectorAll('.detailed-card-sec3__link')){
   initSmoothScroll();
+}
+
+if (document.querySelector('.detailed-reviews')) {
+  calculateReviewRatings();
 }

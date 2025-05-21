@@ -13,6 +13,24 @@
     color: var(--text-neutral-button-default-dark);
     transition: color 0.4s ease-in-out;
   }
+  &.disable {
+    .box-comparison__btn {
+      pointer-events: none;
+    }
+    .line__btn-group {
+      pointer-events: none;
+    }
+    .box-comparison__delete-list {
+      border-color: var(--stroke-neutral-lighter);
+      color: var(--disabled-text--stroke);
+    }
+    .box-comparison__btn-swiper-group {
+      .btn-swiper-comparison  {
+        border-color: var(--stroke-neutral-lighter);
+        color: var(--disabled-text--stroke);
+      }
+    }
+  }
   &__container-top {
     margin-bottom: 64px;
   }

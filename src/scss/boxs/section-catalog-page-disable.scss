@@ -9,6 +9,7 @@
   justify-content: center;
   border: 1px solid var(--stroke-neutral-lighter);
   border-radius: 8px;
+  background-color: var(--surface-lighter);
   &::after {
     position: absolute;
     content: "";
