@@ -1,8 +1,8 @@
 .title-search-result {
-  &:has(.search-title.main_top){
+  /*&:has(.search-title.main_top){
     max-width: 360px;
     width: 100% !important;
-  }
+  }*/
   padding: 10px 0 0;
   border: 1px solid var(--stroke-neutral-lighter);
   border-radius: 12px;

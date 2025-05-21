@@ -6,6 +6,7 @@ import { responsiveSwiper } from './module/responsiveSwiper.js';
 import { testimonials } from './module/testimonials.js';
 import { animationReview } from './module/animationReview.js';
 import { initToggleTabs } from './module/initToggleTabs.js';
+import { initToggleTabsNew } from './module/initToggleTabsNew.js';
 import { setupFormValidation } from './module/setupFormValidation.js';
 import { gridAnimation } from './module/gridAnimation.js';
 //import { iconAnimation } from './module/iconAnimation.js';
@@ -28,6 +29,8 @@ import { initModals } from './module/initModals.js';
 import { initRatingStars } from './module/initRatingStars.js';
 import { rendOrder } from './module/rendOrder.js';
 import { initCounter } from './module/initCounter.js';
+import { initClearSearchInput } from './module/initClearSearchInput.js';
+import { initSmoothScroll } from './module/initSmoothScroll.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -95,7 +98,7 @@ if (document.querySelector('.box-reviews')) {
 }
 
 if (document.querySelector('.box-questions__list-wrapp')) {
-  initToggleTabs({
+  initToggleTabsNew({
     wrapperSelector: '.box-questions__list-wrapp',
     buttonSelector: '.question__btn',
     contentSelector: '.question__box-answer',
@@ -463,3 +466,11 @@ if (document.querySelectorAll('.card2').length > 0) {
 if (document.querySelector('.detailed-card-sec1__order-modal')){
   initCounter(document.querySelector('.detailed-card-sec1__order-modal'));
 };
+
+if (document.querySelectorAll('.search1')){
+  initClearSearchInput()
+}
+
+if (document.querySelectorAll('.detailed-card-sec3__link')){
+  initSmoothScroll();
+}

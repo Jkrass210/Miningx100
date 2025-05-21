@@ -1,16 +1,20 @@
 .box-comparison {
   padding-top: 80px;
   padding-bottom: 200px;
+  .notetext {
+    display: block;
+    max-width: 1804px;
+    padding: 0 48px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--text-neutral-button-default-dark);
+    transition: color 0.4s ease-in-out;
+  }
   &__container-top {
     margin-bottom: 64px;
-    .notetext {
-      font-family: var(--font-family);
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 143%;
-      color: var(--text-neutral-button-default-dark);
-      transition: color 0.4s ease-in-out;
-    }
   }
   &__container-bottom {
     max-width: 1920px;

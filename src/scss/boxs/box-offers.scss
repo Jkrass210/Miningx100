@@ -66,6 +66,7 @@
 
 @media (max-width: 1030px) {
   .box-offers {
+    padding-bottom: 80px;
     &__container {
       overflow: hidden;
     }
@@ -128,6 +129,7 @@
 
 @media (max-width: 767px) {
   .box-offers {
+    padding-bottom: 64px;
     &__top-line {
       margin-bottom: 29px;
     }

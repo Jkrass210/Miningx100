@@ -30,6 +30,7 @@
     border: 1px solid var(--stroke-neutral-lighter);
     border-radius: 20px;
     li {
+      flex: 1;
       border-right: 1px solid var(--stroke-neutral-lighter);
       &:last-child {
         border: none;

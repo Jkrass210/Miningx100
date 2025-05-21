@@ -21,14 +21,14 @@
     font-size: 18px;
     line-height: 133%;
     color: var(--text-neutral-dark);
-    a {
+    span {
       color: var(--text-accent-default);
-      &:focus,&:focus-visible {
+      /*&:focus,&:focus-visible {
         outline: none;
       }
       &:focus-visible,&:hover,&:active {
         color: var(--text-neutral-dark);
-      }
+      }*/
     }
   }
   &__bottom-box {

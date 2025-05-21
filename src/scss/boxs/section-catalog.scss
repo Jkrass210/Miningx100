@@ -35,6 +35,25 @@
     row-gap: 64px;
 
     .card2 {
+      &.disabled {
+        .card2__bottom-info {
+          .top {
+            .right {
+              .signal {
+                span {
+                  background-color: var(--surface-dark);
+                }
+              }
+              p {
+                color: var(--disabled-text--stroke);
+              }
+            }
+          }
+          .bottom {
+            pointer-events: none;
+          }
+        }
+      }
       &__box-img {
         &::before {
           padding-top: 70%;
@@ -258,24 +277,6 @@
             &::before {
               padding-top: 83%;
             }
-          }
-        }
-      }
-    }
-  }
-  .catalog-page {
-    .card2 {
-      &__bottom-info {
-        padding-top: 16px;
-        .top {
-          flex-direction: column;
-          gap: 4px;
-        }
-        .bottom {
-          flex-wrap: wrap;
-          .btn-order {
-            width: 100%;
-            max-width: 166px;
           }
         }
       }

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пользовательское соглашение - MINING100</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+  
+  <script src="js/cleave-min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/fslightbox-min.js" defer></script>
+  <script src="js/gsap-min.js" defer></script>
+  <script src="js/ScrollTrigger-min.js" defer></script>
+  <script type="module" src="js/main-min.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header fixed" id="header">
+  <div class="header__container container2">
+    <div class="header__content">
+      <div class="header__left">
+        <div class="header__box-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="header__box-search">
+          <div class="search1">
+  <button class="search1__btn btn-reset">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <use xlink:href="img/sprite.svg#search2"></use>
+    </svg>
+  </button>
+  <div class="search1__form-wrapp">
+    <form class="search1__form">
+      <label class="search1__label input-container">
+        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+      </label>
+      <button class="search1__close btn-reset">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#closeSearch"></use>
+        </svg>
+      </button>
+      <button class="search1__submit btn-reset" type="submit">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+        <span>Найти</span>
+      </button>
+    </form>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="header__centre">
+        <div class="header__hidden-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="drop-bown-catalog">
+  <a href="#" class="drop-bown-catalog__btn btn-reset">
+    <span>Каталог</span>
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#catalogDropTop"></use>
+    </svg>
+  </a>
+  <div class="drop-bown-catalog__box">
+    <h3 class="title">Майнеры<span>1 078</span></h3>
+    <div class="catalog-wrapp">
+      <div class="catalog-box">
+        <h4>Производители</h4>
+        <ul class="catalog-box__list list-reset">
+          <li>
+            <a href="">Bitmain</a>
+          </li>
+          <li>
+            <a href="">MicroBT</a>
+          </li>
+          <li>
+            <a href="">Goldschell</a>
+          </li>
+          <li>
+            <a href="">ICERIVER</a>
+          </li>
+          <li>
+            <a href="">JasMiner</a>
+          </li>
+          <li>
+            <a href="">Canaan</a>
+          </li>
+        </ul>
+      </div>
+      <div class="catalog-box">
+        <h4>Быстрый поиск</h4>
+        <ul class="catalog-box__list list-reset">
+          <li>
+            <a href="">Рекомендуем</a>
+          </li>
+          <li>
+            <a href="">Со скидкой</a>
+          </li>
+          <li>
+            <a href="">Новинки</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="header__nav-wrapp">
+          <nav class="nav1">
+            <ul class="nav1__list list-reset">
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+              <li>
+                <a href="#">Вопросы & Ответы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header__right">
+        <div class="header__btn-info-group-wrapp">
+          <div class="header__btn-info-group">
+            <a href="#" class="link like">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#like"></use>
+              </svg>
+              <span class="counter">
+                23
+              </span>
+            </a>
+            <a href="#" class="link comparison">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#comparison"></use>
+              </svg>
+              <span class="counter">
+                23
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="header__phone-box">
+          <div class="signal">
+            <span></span>
+          </div>
+          <a href="tel:+78002220128">8 (800) 222-01-28</a>
+        </div>
+        <div class="header__network-group">
+          <a href="#" class="link tg">
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+              <use xlink:href="img/sprite.svg#tg"></use>
+            </svg>
+          </a>
+          <a href="#" class="link wu">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#wu"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__hidden-mob">
+          <button class="burger btn-reset" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__burger-menu burger-menu" id-for-open="burger">
+    <div class="burger-menu__top-line">
+      <div class="burger-menu__container container2">
+        <div class="burger-menu__top-content">
+          <div class="header__box-logo">
+            <a href="/" class="header__logo">
+              <img src="img/logo/logo.svg">
+            </a>
+          </div>
+          <button class="burger-menu__close close btn-reset">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#burgerClose"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="burger-menu__content">
+      <div class="burger-menu__container container">
+        <div class="burger-menu__box-group">
+          <div class="burger-menu__top-box">
+            <div class="burger-menu__box-search">
+              <div class="search1">
+  <button class="search1__btn btn-reset">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <use xlink:href="img/sprite.svg#search2"></use>
+    </svg>
+  </button>
+  <div class="search1__form-wrapp">
+    <form class="search1__form">
+      <label class="search1__label input-container">
+        <input class="search1__input" type="text" name="search" placeholder="Поиск">
+      </label>
+      <button class="search1__close btn-reset">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#closeSearch"></use>
+        </svg>
+      </button>
+      <button class="search1__submit btn-reset" type="submit">
+        <!--<svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <use xlink:href="img/sprite.svg#search2"></use>
+        </svg>-->
+        <span>Найти</span>
+      </button>
+    </form>
+  </div>
+</div>
+            </div>
+            <div class="burger-menu__box-nav1"></div>
+          </div>
+          <div class="burger-menu__bottom-box">
+            <ul class="burger-menu__list-link list-reset">
+              <li>
+                <a href="#">Telegram</a>
+              </li>
+              <li>
+                <a href="#">WhatsApp</a>
+              </li>
+              <li>
+                <a href="tel:+78002220128">8 (800) 222-01-28</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="box-questions-answers box-privacy-policy box-user-agreement">
+  <div class="box-questions-answers__container box-privacy-policy__container container2">
+    <div class="box-questions-answers__content box-privacy-policy__contebt">
+      <div class="box-questions-answers__box-title box-privacy-policy__box-title">
+        <h2 class="box-privacy-policy__title">
+          Пользовательское соглашение
+        </h2>
+      </div>
+      <ul class="box-questions-answers__list list-reset">
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+          <p>Настоящее Пользовательское соглашение (далее – Соглашение) регулирует отношения между Пользователем и владельцем сайта <a href="https://miningx100.ru/">https://miningx100.ru/</a> —  (далее – Оператор), в отношении использования сайта и его сервисов.</p>
+          <p>
+            Пользуясь сайтом, Пользователь соглашается с условиями Соглашения. Если не согласны — пожалуйста, прекратите использование сайта.
+          </p>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>1. Термины</h3>
+            <p>Пользователь — любое физическое лицо, добровольно использующее сайт <a href="https://miningx100.ru/">https://miningx100.ru/</a>.</p>
+            <p>Оператор, владелец сайта и всех его компонентов.</p>
+            <p>Сайт — веб-ресурс по адресу <a href="https://miningx100.ru/">https://miningx100.ru/</a>, включая все связанные поддомены и страницы.</p>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>2. Предмет соглашения</h3>
+            <p>2.1. Оператор предоставляет доступ к информации, функционалу и возможностям сайта.</p>
+            <p>2.2. Пользователь обязуется использовать сайт только в рамках действующего законодательства РФ и настоящего Соглашения.</p>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>3. Права и обязанности сторон</h3>
+            <p>3.1. Пользователь имеет право:</p>
+            <ul>
+              <li>
+                Получать доступ к сайту и его сервисам;
+              </li>
+              <li>
+                Оставлять заявки, запрашивать информацию;
+              </li>
+              <li>
+                Свободно знакомиться с материалами сайта в личных некоммерческих целях.
+              </li>
+            </ul>
+            <p>3.2. Пользователь обязуется:</p>
+            <ul>
+              <li>
+                Не использовать сайт в целях, противоречащих законодательству РФ;
+              </li>
+              <li>
+                Не нарушать работоспособность сайта;
+              </li>
+              <li>
+                Не использовать автоматические скрипты без согласия Оператора;
+              </li>
+              <li>
+                Не размещать ложные, оскорбительные или вредоносные данные.
+              </li>
+            </ul>
+            <p>3.3. Оператор имеет право:</p>
+            <ul>
+              <li>
+                Изменять содержимое сайта без предварительного уведомления;
+              </li>
+              <li>
+                Ограничить доступ к сайту в случае нарушения условий Соглашения;
+              </li>
+              <li>
+                Обновлять или дополнять тексты, разделы и функционал сайта.
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>4. Интеллектуальная собственность</h3>
+            <p>4.1. Все материалы на сайте (тексты, изображения, логотипы, элементы дизайна, программный код и др.) являются собственностью Оператора либо используются на законных основаниях.</p>
+            <P>4.2. Любое копирование, распространение или публикация материалов сайта возможны только с письменного разрешения Оператора.</P>
+            <p>4.3. Использование бренда MiningX100 без разрешения запрещено.</p>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>5. Ответственность сторон</h3>
+            <p>5.1. Оператор не несет ответственности за:</p>
+            <ul>
+              <li>
+                Действия третьих лиц, нарушивших работу сайта;
+              </li>
+              <li>
+                Ущерб, причинённый в результате использования сайта;
+              </li>
+              <li>
+                Достоверность информации, предоставляемой Пользователями.
+              </li>
+            </ul>
+            <P>5.2. Пользователь несёт ответственность за достоверность предоставляемых данных и действия, совершаемые с использованием сайта.</P>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>6. Конфиденциальность</h3>
+            <p>6.1. Все персональные данные обрабатываются в соответствии с Политикой конфиденциальности, размещенной на сайте.</p>
+            <p>6.2. Передавая данные через формы обратной связи, Пользователь даёт согласие на их обработку.</p>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>7. Заключительные положения</h3>
+            <p>7.1. Настоящее Соглашение вступает в силу с момента начала использования сайта.</p>
+            <p>7.2. Оператор вправе в любое время изменять Соглашение. Актуальная версия всегда доступна по адресу: <a href="https://miningx100.ru/">https://miningx100.ru/terms</a></p>
+            <p>7.3. Использование сайта после внесения изменений означает согласие с ними.</p>
+          </div>
+        </li>
+        <li class="box-questions-answers__item">
+          <div class="question-info">
+            <h3>8. Контакты</h3>
+            <ul>
+              <li>
+                <a href="mailto:info@miningx100.com">info@miningx100.com</a>
+              </li>
+              <li>
+                <a href="#">Остаповский проезд 5с17</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="box-anchor">
+  <ul class="box-anchor__list list-reset">
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          Начало
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          1. Термины
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          2. Предмет соглашения
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          3. Права и обязанности сторон
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          4. Интеллектуальная собственность
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          5. Ответственность сторон
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          6. Конфиденциальность
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          7. Заключительные положения
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <use xlink:href="img/sprite.svg#anchorIcon"></use>
+        </svg>
+        <span class="text">
+          8. Контакты
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+  </div>
+</section>
+    <section class="box-order section">
+  <div class="box-order__container container">
+    <div class="box-order__content">
+      <div class="box-order__wrapp-info">
+        <h2 class="box-order__title section-title">
+          Оставьте заявку на бесплатную консультацию
+        </h2>
+        <div class="box-order__wrapp_form">
+          <form class="box-order__form">
+            <label class="box-order__label">
+              <input type="text" name="phone" placeholder="Номер телефона">
+            </label>
+            <button type="submit" class="box-order__btn btn-reset">
+              <span>Отправить</span>
+            </button>
+          </form>
+          <p class="box-order__desc">
+            Нажимая на кнопку, я соглашаюсь на обработку <a href="#">Персональных данных</a>
+          </p>
+        </div>
+      </div>
+      <div class="box-order__shipped none">
+        <p class="section-title">
+          Мы скоро свяжемся с вами!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+
+  <div class="cookies">
+    <!--если добавить класс active, то будет видно-->
+    <!--<div class="cookies__container container2">-->
+      <form class="cookies__form">
+        <p class="cookies__desc">
+          Мы используем cookies для более удобной работы с сайтом. <a href="#">Подробнее</a>
+        </p>
+        <button class="cookies__btn btn-reset">
+          Соглашаюсь
+        </button>
+      </form>
+    <!--</div>-->
+  </div>
+
+  <div class="footer__container container">
+    <div class="footer__content">
+      <div class="footer__top-box">
+        <div class="footer__box-logo">
+          <a href="/" class="header__logo">
+            <img src="img/logo/logo.svg">
+          </a>
+        </div>
+        <div class="footer__group-top-box">
+          <div class="footer__top-centre">
+            <nav class="footer__nav2">
+              <a href="#" class="footer__title-link">Каталог</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="#">Рекомендуем</a>
+                </li>
+                <li>
+                  <a href="#">Со скидкой</a>
+                </li>
+                <li>
+                  <a href="#">Новинки</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__nav2">
+              <a href="#" class="footer__title-link">О компании</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="#">Отследить заказ</a>
+                </li>
+                <li>
+                  <a href="#">Вопросы & Ответы</a>
+                </li>
+                <li>
+                  <a href="#">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__top-end">
+            <nav class="footer__nav2 nav2">
+              <a href="#" class="footer__title-link">Контакты</a>
+              <ul class="footer__list list-reset">
+                <li>
+                  <a href="tel:+78002220128">8 (800) 222-01-28</a>
+                </li>
+                <li>
+                  <a href="mailto:mailexample@gmail.com">mailexample@gmail.com</a>
+                </li>
+                <li>
+                  <a href="#">Остаповский проезд 5с17</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-box">
+        <div class="footer__group-network">
+          <a href="#" class="footer__network-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#footerTg"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__network-link">
+            <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+              <use xlink:href="img/sprite.svg#footerUt"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__bottom-line">
+          <p>© 2025 MININGX100. Все права защищены</p>
+          <ul class="footer__bottom-line-list list-reset">
+            <li>
+              <a href="#">Политика обработки файлов Cookie</a>
+            </li>
+            <li>
+              <a href="#">Пользовательское соглашение</a>
+            </li>
+            <li>
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-fixed">
+    <div class="footer-fixed__container container">
+      <div class="footer-fixed__content">
+        <a href="#" class="footer-fixed__btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <use xlink:href="img/sprite.svg#footerFixedBtn"></use>
+          </svg>
+          <span class="text">
+            Каталог
+          </span>
+        </a>
+        <div class="footer-fixed__box-btn-info-group"></div>
+      </div>
+    </div>
+    <div class="footer-fixed__container-detailed container">
+      <div class="detailed-card-sec1__btn-group">
+        <button class="btn-order btn-reset">
+          Быстрый заказ
+        </button>
+        <a href="#" class="link like">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+          <span class="counter">
+            23
+          </span>
+        </a>
+        <label class="comparison">
+          <input type="checkbox" name="comparison">
+          <span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#comparCard"></use>
+            </svg>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

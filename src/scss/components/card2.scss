@@ -2,7 +2,51 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 32px;
+  &.disabled {
+    .card2__box-img {
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #fafafa96;
+      }
+    }
+    .card2__box-info {
+      .box-price {
+        .actual-price {
+          color: var(--disabled-text--stroke);
+        }
+        .new-price {
+          display: none;
+        }
+        .old-price {
+          display: none;
+        }
+        .percent-price {
+          display: none;
+        }
+        .disabled-price {
+          display: inline-block;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 133%;
+          color: var(--disabled-text--stroke);
+        }
+      }
+    }
+    .card2__title {
+      a {
+        pointer-events: none;
+      }
+    }
+    .btn-order {
+      pointer-events: none;
+    }
+  }
   &__top-info {
     display: flex;
     flex-direction: column;
@@ -24,6 +68,7 @@
     border: 1px solid var(--stroke-neutral-lighter);
     border-radius: 16px;
     position: absolute;
+    overflow: hidden;
     inset: 0;
     background: var(--component-neutral-default);
     transition: background 0.4s ease-in-out;
@@ -32,6 +77,11 @@
     }
     &:focus-visible,&:hover,&:active {
       background: var(--component-neutral-hover);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
   &__marker-wrapp {
@@ -68,7 +118,7 @@
     .box-price {
       margin-bottom: 2px;
       display: flex;
-      align-items: end;
+      align-items: center;
       flex-wrap: wrap;
       gap: 8px;
       span {
@@ -86,17 +136,22 @@
         &.old-price {
           font-weight: 500;
           font-size: 12px;
-          line-height: 133%;
           text-decoration: line-through;
           color: var(--text-neutral-light);
         }
         &.percent-price {
           font-weight: 500;
           font-size: 12px;
-          line-height: 133%;
           color: var(--text-negative-default);
         }
-        
+        &.disabled-price {
+          display: none;
+        }
+      }
+      .group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
     }
   }
@@ -120,6 +175,7 @@
   }
   &__list-specific {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     div {
       display: flex;
@@ -163,6 +219,9 @@
         margin-bottom: 8px;
         column-gap: 8px;
         row-gap: 0;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
       }
     }
     &__img-link {

@@ -1,0 +1,38 @@
+.section-catalog-page-disable {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--stroke-neutral-lighter);
+  border-radius: 8px;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 200%;
+    width: 1px;
+    background-color: var(--stroke-neutral-lighter);
+    transform: rotate(45deg);
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    height: 200%;
+    width: 1px;
+    background-color: var(--stroke-neutral-lighter);
+    transform: rotate(-45deg);
+  }
+  p {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--text-neutral-light);
+  }
+}
