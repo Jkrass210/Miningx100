@@ -70,7 +70,7 @@
     position: absolute;
     overflow: hidden;
     inset: 0;
-    background: var(--component-neutral-default);
+    //background: var(--component-neutral-default);
     transition: background 0.4s ease-in-out;
     &:focus,&:focus-visible {
       outline: none;
@@ -124,7 +124,7 @@
       span {
         white-space: nowrap;
         font-family: var(--font-family);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 16px;
         line-height: 150%;
         &.actual-price {
@@ -196,6 +196,9 @@
       }
     }
   }
+}
+.item-card2 {
+  height: 100%;
 }
 @media (max-width: 1030px) {
   .card2 {

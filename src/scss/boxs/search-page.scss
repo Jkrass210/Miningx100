@@ -3,6 +3,14 @@
     padding-top: 80px;
   }
 
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    color: var(--text-neutral-header);
+  }
+
   &__content {
     display: flex;
 

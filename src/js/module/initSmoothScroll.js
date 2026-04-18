@@ -1,5 +1,5 @@
-export function initSmoothScroll() {
-  const links = document.querySelectorAll('a.detailed-card-sec3__link[href^="#"]');
+export function initSmoothScroll(links) {
+  //const links = document.querySelectorAll('a.detailed-card-sec3__link[href^="#"]');
 
   links.forEach(link => {
     link.addEventListener('click', function(e) {

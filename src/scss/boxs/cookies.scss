@@ -54,3 +54,18 @@
     }
   }
 }
+
+@media (max-width: 1030px) {
+  .cookies {
+    bottom: 92px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cookies {
+    max-width: 340px;
+    &__form {
+      max-width: 340px;
+    }
+  }
+}

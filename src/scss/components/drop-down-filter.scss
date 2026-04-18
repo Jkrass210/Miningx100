@@ -36,7 +36,8 @@
     display: none;
     flex-direction: column;
     gap: 12px;
-    padding-top: 16px;
+    margin-top: 16px;
+    width: 97%;
     max-height: 220px;
     overflow-y: scroll;
 
@@ -57,5 +58,21 @@
   .drop-down-filter__list {
     scrollbar-width: thin;
     scrollbar-color: var(--surface-darker) transparent;
+  }
+}
+
+@media (max-width: 1500px) {
+  .drop-down-filter {
+    &__list {
+      width: 97%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .drop-down-filter {
+    &__list {
+      width: 99%;
+    }
   }
 }

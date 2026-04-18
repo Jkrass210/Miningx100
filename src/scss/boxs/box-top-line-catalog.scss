@@ -65,6 +65,12 @@
         border-radius: 8px;
         background-color: var(--background-normal);
         transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+        &.null {
+          pointer-events: none;
+          background-color: var(--disabled-frame--stroke-light);
+          border-color: var(--disabled-frame--stroke-light);
+          color: var(--neutral-300);
+        }
         .counter {
           display: none;
         }

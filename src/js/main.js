@@ -32,6 +32,7 @@ import { initCounter } from './module/initCounter.js';
 import { initClearSearchInput } from './module/initClearSearchInput.js';
 import { initSmoothScroll } from './module/initSmoothScroll.js';
 import { calculateReviewRatings } from './module/calculateReviewRatings.js';
+import { cookies } from './module/cookies.js';
 
 
 if (document.querySelector(".search1") && document.querySelector(".header__box-search") && document.querySelector(".header__hidden-mob")) {
@@ -473,9 +474,19 @@ if (document.querySelectorAll('.search1')){
 }
 
 if (document.querySelectorAll('.detailed-card-sec3__link')){
-  initSmoothScroll();
+  const links = document.querySelectorAll('a.detailed-card-sec3__link[href^="#"]');
+  initSmoothScroll(links);
+}
+
+if (document.querySelectorAll('.detailed-card-sec1__btn-all')){
+  const links = document.querySelectorAll('a.detailed-card-sec1__btn-all[href^="#"]');
+  initSmoothScroll(links);
 }
 
 if (document.querySelector('.detailed-reviews')) {
   calculateReviewRatings();
+}
+
+if (document.querySelector('.cookies')) {
+  cookies();
 }

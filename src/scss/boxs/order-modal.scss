@@ -12,11 +12,12 @@
   align-items: center;
   justify-content: center;
   background-color: var(--surface-darker-400);
+  transition: opacity 0.3s ease;
 
   &.active {
     z-index: 201;
     opacity: 1;
-    visibility: visible;
+    //visibility: visible;
   }
   .modal__box-thanks {
     gap: 16px;

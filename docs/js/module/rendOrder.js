@@ -189,10 +189,14 @@ export function rendOrder() {
     const counterInput = modal.querySelector('.counter__input');
     const minusBtn = modal.querySelector('.counter__btn.minus');
     const plusBtn = modal.querySelector('.counter__btn.plus');
+    const priceElement = modal.querySelector('.modal__price');
 
+    // Получаем исходную цену за один товар
+    let pricePerItem = parsePrice(priceElement.textContent);
 
     // Проверяем начальное значение и обновляем стиль кнопки минус
     updateMinusButton();
+    updatePrice();
 
     // Обработчик для кнопки минус
     minusBtn.addEventListener('click', function (e) {
@@ -200,6 +204,7 @@ export function rendOrder() {
       let value = parseInt(counterInput.value);
       if (value > 1) {
         counterInput.value = value - 1;
+        updatePrice();
       }
       updateMinusButton();
       counterInput.style.width = (counterInput.scrollWidth + 1) + 'px';
@@ -210,6 +215,7 @@ export function rendOrder() {
       e.preventDefault();
       let value = parseInt(counterInput.value);
       counterInput.value = value + 1;
+      updatePrice();
       updateMinusButton();
       counterInput.style.width = (counterInput.scrollWidth + 1) + 'px';
     });
@@ -223,6 +229,25 @@ export function rendOrder() {
       }
     }
 
+    // Функция для обновления цены
+    function updatePrice() {
+      const quantity = parseInt(counterInput.value);
+      const totalPrice = pricePerItem * quantity;
+      priceElement.textContent = formatPrice(totalPrice);
+    }
+
+    // Функция для парсинга цены из строки
+    function parsePrice(priceString) {
+      // Удаляем все нецифровые символы и пробелы
+      return parseInt(priceString.replace(/[^\d]/g, ''));
+    }
+
+    // Функция для форматирования цены с пробелами и символом рубля
+    function formatPrice(price) {
+      // Добавляем пробелы как разделители тысяч и символ рубля
+      return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+    }
+
     // Дополнительно: валидация ввода вручную
     counterInput.addEventListener('input', function () {
       // Удаляем все нецифровые символы
@@ -234,6 +259,7 @@ export function rendOrder() {
       }
 
       updateMinusButton();
+      updatePrice();
     });
 
     // Обработчик для проверки значения при потере фокуса
@@ -242,6 +268,7 @@ export function rendOrder() {
         this.value = 1;
       }
       updateMinusButton();
+      updatePrice();
     });
   }
 
